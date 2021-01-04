@@ -10,7 +10,7 @@ FlashPro Express projects containing pre-generated programming files are also av
 
 To download or clone the repository:
 
-    $ git clone https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit.git
+    $ git clone https://github.com/Mi-V-Soft-RISC-V/PolarFire-Eval-Kit.git
 
     $ Running from the zipped sources
     1. Download the zipped sources via the "Code" button using "Download Zip" button
