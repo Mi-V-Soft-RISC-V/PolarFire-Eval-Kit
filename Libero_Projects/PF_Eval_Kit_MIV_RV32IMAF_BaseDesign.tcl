@@ -129,14 +129,13 @@ if {"$config" == "CFG1"} then {
 	}
 }
 
-
+pre_configure_place_and_route
 
 if {"$design_flow_stage" == "SYNTHESIZE"} then {
 	puts "\n---------------------------------------------------------------------------------------------------------"
     puts "Begin Synthesis..."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
-	pre_configure_place_and_route
     run_tool -name {SYNTHESIZE}
     save_project
 
@@ -151,7 +150,6 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
     puts "Begin Place and Route..."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
-	pre_configure_place_and_route
 	run_verify_timing
 	save_project
 
@@ -160,15 +158,12 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
 
-
 } elseif {"$design_flow_stage" == "GENERATE_BITSTREAM"} then {
 
 	puts "\n---------------------------------------------------------------------------------------------------------"
     puts "Generating Bitstream..."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
-
-	pre_configure_place_and_route
 	run_verify_timing
     run_tool -name {GENERATEPROGRAMMINGDATA}
     run_tool -name {GENERATEPROGRAMMINGFILE}
@@ -179,17 +174,13 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
 
-
 } elseif {"$design_flow_stage" == "EXPORT_PROGRAMMING_FILE"} then {
 
 	puts "\n---------------------------------------------------------------------------------------------------------"
     puts "Exporting Programming Files..."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
-
-	pre_configure_place_and_route
 	run_verify_timing
-	run_tool -name {GENERATEPROGRAMMINGDATA}
 	run_tool -name {GENERATEPROGRAMMINGFILE}
 
 		export_prog_job \
