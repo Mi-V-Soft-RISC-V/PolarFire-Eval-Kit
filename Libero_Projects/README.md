@@ -26,7 +26,7 @@ This folder contains Tcl scripts that build Libero SoC v2021.2 design projects f
 | CFG1    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: MACC (Pipelined)</li><li>Interfaces: AHB Master (mirrored), APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
 | CFG2    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IM</li><li>Multiplier: Fabric</li><li>Interfaces: AXI4 Master (mirrored), APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
 | CFG3    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: I</li><li>Multiplier: none</li><li>Interfaces: APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
-| CFG4    | This design is only available on production silicon. The design configuration is specifically for use with the Crypto processor example firmware and the CoreSysServices example firmware. The memory map of the design is printed in tcl once the design is created.|
+| CFG4    | This design is supported on PolarFire production silicon. The design configuration is specifically for use with the User Crypto processor example firmware and the CoreSysServices_PF example firmware. The memory map of the design is printed in tcl console once the design is created.|
 
 
 

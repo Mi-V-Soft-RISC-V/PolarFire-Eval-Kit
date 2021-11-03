@@ -17,10 +17,9 @@ set_root BaseDesign
 puts "\n---------------------------------------------------------------------------------------------------------"
 puts "Applying Design Constraints..."
 puts "---------------------------------------------------------------------------------------------------------\n"
-##  ./import/components/IMC_CFG4/components
+
 import_files -io_pdc ./import/components/IMC_CFG4/constraints/io_constraints.pdc
 import_files -sdc ./import/components/IMC_CFG4/constraints/timing_user_constraints.sdc
-#import_files -sdc ./import/constraints/io_jtag_constraints.sdc
 import_files -fp_pdc ./import/components/IMC_CFG4/constraints/fp_constraints.pdc
 
 
@@ -47,3 +46,16 @@ puts "\n------------------------------------------------------------------------
 puts "Design Constraints Applied."
 puts "---------------------------------------------------------------------------------------------------------\n"
 
+puts "\n---------------------------------------------------------------------------------------------------------"
+puts "CFG4 Memory Map"
+puts "\n---------------------------------------------------------------------------------------------------------"
+
+puts "| Component             | Address Offset  | Range  | High Address |"
+puts "| Crypto_Buffer_0       | 0x0100_0000     | 16MB   | 0x01FF_FFFF  |"
+puts "| AHBS_TO_AHBM_Bridge   | 0x0200_0000     | 16MB   | 0x02FF_FFFF  |"
+puts "| UART_IF_0             | 0x7000_0000     | 4KB    | 0x0000_0FFF  |"
+puts "| CoreGPIO_OUT_0        | 0x7000_1000     | 4KB    | 0x0000_1FFF  |"
+puts "| SPI_Controller        | 0x7000_2000     | 4KB    | 0x0000_2FFF  |"
+puts "| SystemServices_0      | 0x7000_3000     | 4KB    | 0x0000_3FFF  |"
+puts "| LSRAM_0               | 0x8000_0000     | 64kB   | 0x8000_FFFF  |"
+puts "| DDR3_Subsys_0         | 0x8001_0000     | 15MB   | 0x80FF_FFFF  |"
