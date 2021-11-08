@@ -233,14 +233,14 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 			-bitstream_file_type {TRUSTED_FACILITY} \
 			-bitstream_file_components {}
 		save_project
-	} elseif {"$config" == "CFG3"} then
+	} elseif {"$config" == "CFG3"} then {
 		export_prog_job \
 			-job_file_name {PF_Eval_Kit_MIV_RV32_CFG3_BaseDesign} \
 			-export_dir {./MIV_CFG3_BD/designer/BaseDesign/export} \
 			-bitstream_file_type {TRUSTED_FACILITY} \
 			-bitstream_file_components {}
 		save_project
-	} elseif {"$config" == "CFG4"} then
+	} elseif {"$config" == "CFG4"} then {
 		export_prog_job \
 			-job_file_name {PF_Eval_Kit_MIV_RV32_CFG4_BaseDesign} \
 			-export_dir {./MIV_CFG4_BD/designer/BaseDesign/export} \
