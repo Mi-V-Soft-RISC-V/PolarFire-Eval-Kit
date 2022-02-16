@@ -2,7 +2,7 @@
 # Family: PolarFire
 # Part Number: MPF300TS-1FCG1152I
 # Create and Configure the core component DDR3_Subsys
-create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_DDR3:2.4.112} -component_name {DDR3_Subsys} -params {\
+create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_DDR3:*} -download_core -component_name {DDR3_Subsys} -params {\
 "ADDRESS_MIRROR:false" \
 "ADDRESS_ORDERING:CHIP_ROW_BANK_COL" \
 "AUTO_SELF_REFRESH:1" \

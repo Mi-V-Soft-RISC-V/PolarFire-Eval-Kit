@@ -2,7 +2,7 @@
 # Family: PolarFire
 # Part Number: MPF300TS-1FCG1152I
 # Create and Configure the core component SystemServices
-create_and_configure_core -core_vlnv {Actel:SgCore:PF_SYSTEM_SERVICES:3.0.100} -component_name {SystemServices} -params {\
+create_and_configure_core -core_vlnv {Actel:SgCore:PF_SYSTEM_SERVICES:*} -download_core -component_name {SystemServices} -params {\
 "AUTHBITSTREAM:true"  \
 "AUTHIAPIMG:true"  \
 "DCSERVICE:true"  \
