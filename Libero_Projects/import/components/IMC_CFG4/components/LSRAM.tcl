@@ -2,7 +2,7 @@
 # Family: PolarFire
 # Part Number: MPF300TS-1FCG1152I
 # Create and Configure the core component LSRAM
-create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_SRAM_AHBL_AXI:1.2.108} -component_name {LSRAM} -params {\
+create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_SRAM_AHBL_AXI:*} -download_core -component_name {LSRAM} -params {\
 "AXI4_AWIDTH:32" \
 "AXI4_DWIDTH:64" \
 "AXI4_IDWIDTH:8" \

@@ -2,7 +2,7 @@
 # Family: PolarFire
 # Part Number: MPF300TS-1FCG1152I
 # Create and Configure the core component crypto_processor
-create_and_configure_core -core_vlnv {Actel:SgCore:PF_CRYPTO:1.0.106} -component_name {crypto_processor} -params {\
+create_and_configure_core -core_vlnv {Actel:SgCore:PF_CRYPTO:*} -download_core -component_name {crypto_processor} -params {\
 "DLL_FREQUENCY:125"  \
 "DLL_JITTER_TOLERANCE:Medium_Low"  \
 "ENABLE_ALARM:false"  \
