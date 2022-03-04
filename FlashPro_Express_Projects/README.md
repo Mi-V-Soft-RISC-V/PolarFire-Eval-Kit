@@ -22,9 +22,9 @@ The programming files contained under this folder were exported from the designs
 ## Design Features
 
 > MI-V Extended Subsystem Design Guide Configurations:
-> * For **DGC1: SPI Write & Boot** design features, refer to [DGC1 README](import/components/IMC_DGC1/README.md)
-> * For **DGC3: PF uPROM Boot** design features, refer to [DGC3 README](import/components/IMC_DGC3/README.md)
-> * For **DGC4: Basic Peripherals** design features, refer to [DGC4 README](import/components/IMC_DGC4/README.md)
+> * For **DGC1: SPI Write & Boot** design features, refer to [DGC1 README](../Libero_Projects/import/components/IMC_DGC1/README.md)
+> * For **DGC3: PF uPROM Boot** design features, refer to [DGC3 README](../Libero_Projects/import/components/IMC_DGC3/README.md)
+> * For **DGC4: Basic Peripherals** design features, refer to [DGC4 README](../Libero_Projects/import/components/IMC_DGC4/README.md)
 
 The following applies only to non MIV_ESS Design Guide: Design Guide Configurations (DGC1, DGC3 or DGC4)
 
