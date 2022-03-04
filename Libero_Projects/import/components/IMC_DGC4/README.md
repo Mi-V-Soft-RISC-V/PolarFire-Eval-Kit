@@ -1,8 +1,8 @@
 ## Mi-V Extended Subsystem Design Guide Configuration 4: Basic Peripherals
 This folder contains Tcl scripts that build Libero SoC v2021.3 MIV_ESS DGC4 design project for the PolarFire Eval Kit. The script is executed in Libero SoC to generate the sample design. 
-> Design is catered for Libero SoC v2021.3. Using older versions of Libero SoC will result in errors.
+> This design is compatible with Libero SoC v2021.3. Using older versions of Libero SoC will result in errors.
 
-#### PF_Avalanche_MIV_RV32_BaseDesign (no PolarFire Engineering Sample silicon project for DGC4)
+#### PF_Eval_Kit_MIV_RV32_BaseDesign (no PolarFire Engineering Sample silicon project for DGC4)
 
 | Config  | Description |
 | :------:|:----------------------------------------|
