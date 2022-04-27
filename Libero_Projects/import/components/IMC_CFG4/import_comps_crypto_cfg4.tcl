@@ -24,5 +24,5 @@ source ./import/components/IMC_CFG4/components/crypto_processor.tcl
 source ./import/components/IMC_CFG4/components/reset_gen.tcl 
 source ./import/components/IMC_CFG4/components/reset_sync_crypto_clk.tcl 
 source ./import/components/IMC_CFG4/components/reset_sync.tcl 
-source ./import/components/IMC_CFG4/components/top.tcl 
+source ./import/components/IMC_CFG4/components/build_sd_crypto_cfg4.tcl
 build_design_hierarchy

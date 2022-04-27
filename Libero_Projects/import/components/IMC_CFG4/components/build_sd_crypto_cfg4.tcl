@@ -1,3 +1,7 @@
+#MIV Cores    : MIV_RV32
+#
+#Libero's TCL top level script
+
 # Creating SmartDesign top
 set sd_name {BaseDesign}
 create_smartdesign -sd_name ${sd_name}
@@ -277,7 +281,10 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"ahbs_to_ahbm_bridge_0:AHBL_MSla
 
 # Re-enable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 1
+# Re-arrange SmartDesign layout
+sd_reset_layout -sd_name ${sd_name}
 # Save the smartDesign
 save_smartdesign -sd_name ${sd_name}
-# Generate SmartDesign top
+# Generate SmartDesign BaseDesign
 generate_component -component_name ${sd_name}
+
