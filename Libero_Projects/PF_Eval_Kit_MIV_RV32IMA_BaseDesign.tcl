@@ -32,6 +32,8 @@ if {"$design_flow_stage" == "ES"} then {
 #Edge case 3: If the argv2 is empty, assume PS
 if {"$die_variant" == ""} then {
 	set die_variant "PS"
+	puts "\n\rInfo: No 3rd Argument has been entered. \
+		  \r\nInfo: The default die type -'PS' will be used as target \ "
 }
 
 append project_folder_name MIV_ $config _BD
@@ -154,7 +156,6 @@ if {"$config" == "CFG1"} then {
 			invalid_third_argument
 		} else {
 			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-			no_third_argument_entered
 		}
 		download_required_direct_cores
 		source ./import/components/IMA_CFG1/import_sd_and_constraints_ima_cfg1.tcl
@@ -172,7 +173,6 @@ if {"$config" == "CFG1"} then {
 			invalid_third_argument
 		} else {
 			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-			no_third_argument_entered
 		}
 		download_required_direct_cores
 		source ./import/components/IMA_CFG2/import_sd_and_constraints_ima_cfg2.tcl
@@ -193,7 +193,6 @@ if {"$config" == "CFG1"} then {
 			invalid_third_argument
 		} else {
 			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-			no_third_argument_entered
 		}
 		download_required_direct_cores
 		source ./import/components/IMA_CFG1/import_sd_and_constraints_ima_cfg1.tcl
