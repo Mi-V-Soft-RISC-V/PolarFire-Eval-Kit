@@ -9,4 +9,4 @@ source ./import/components/IMC_DGC1/components/PF_CCC_C0.tcl
 source ./import/components/IMC_DGC1/components/PF_INIT_MONITOR_C0.tcl 
 source ./import/components/IMC_DGC1/components/PF_OSC_C0.tcl 
 source ./import/components/IMC_DGC1/components/SRC_MEM.tcl 
-source ./import/components/IMC_DGC1/components/top_lvl_dgc1.tcl
+source ./import/components/IMC_DGC1/components/build_sd_miv_ess_dgc1.tcl
