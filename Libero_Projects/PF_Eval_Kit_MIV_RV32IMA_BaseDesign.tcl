@@ -195,7 +195,7 @@ if {"$config" == "CFG1"} then {
 pre_configure_place_and_route
 
 if {"$config" == "CFG2"} then {
-	increase_loop_limit
+	configure_tool -name {SYNTHESIZE} -params {SYNPLIFY_OPTIONS:set_option -looplimit 4000} 
 }
 
 if {"$design_flow_stage" == "SYNTHESIZE"} then {
