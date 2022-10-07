@@ -1,6 +1,6 @@
 ## Mi-V Extended Subsystem Design Guide Configuration 4: Basic Peripherals
-This folder contains Tcl scripts that build Libero SoC v2022.1 MIV_ESS DGC4 design project for the PolarFire Eval Kit. The script is executed in Libero SoC to generate the sample design. 
-> This design is compatible with Libero SoC v2022.1. Using older versions of Libero SoC will result in errors.
+This folder contains Tcl scripts that build Libero SoC v2022.2 MIV_ESS DGC4 design project for the PolarFire Eval Kit. The script is executed in Libero SoC to generate the sample design. 
+> This design is compatible with Libero SoC v2022.2. Using older versions of Libero SoC will result in errors.
 
 #### PF_Eval_Kit_MIV_RV32_BaseDesign
 
@@ -55,19 +55,18 @@ The complete set of script arguments are documented here.
 There are two programs included with this configuration:
 * **miv-rv32i-systick-blinky.hex**: A Hex program configured to run from LSRAM's address (0x8000_0000). MIV_RV32 reset vector is setup to boot from 0x8000_0000.
 
-    > The example hex program was created using  miv-rv32i-systick-blinky in release mode (miv32imc-Release). For more information about the project go to bare metal example: [miv-rv32i-systick-blinky](https://github.com/Mi-V-Soft-RISC-V/miv-rv32-bare-metal-examples/tree/main/applications/miv-rv32-hal/miv-rv32i-systick-blinky)
+    > The example hex program was created using  miv-rv32i-systick-blinky in release mode (miv32imc-Release). For more information about the project go to bare metal example: [miv-rv32i-systick-blinky](https://mi-v-ecosystem.github.io/redirects/miv-soft/miv-rv32i-systick-blinky.md)
 
 
 ## <a name="Design Guide Configuration - DGC4: Basic Peripherals"></a> Design Guide Configuration - DGC4: Basic Peripherals
 
 ### Features
 The Libero designs include the following features:
-* A soft RISC-V processor.
+* A soft RISC-V processor operating at 50 MHz
 * A RISC-V debug block allowing on-target debug using SoftConsole
-* An Extended subsystem with peripheral cores
-* The operating frequency of the design is 50MHz
-* Target memory is LSRAM/TCM (32kB)
-* User peripherals: MIV_ESS (GPIO, UART), PF_uPROM
+* An Extended Subsystem with integrated peripherals
+* Target SRAM/TCM memory (32kB)
+* User peripherals: MIV_ESS (GPIO, UART)
 
 ### Boot Sequence Operation
 A more detailed description of the boot sequence can be found in this section.
@@ -83,11 +82,11 @@ A more detailed description of the boot sequence can be found in this section.
 | Peripheral                       | Address Start | Address End    |
 | ------------------------------:  |:-------------:|:--------------:|
 | PLIC                             | 0x7000_0000   | 0x70FF_FFFF    |
-| CoreUARTapb                      | 0x7100_0000   | 0x71FF_FFFF    |
+| UART                             | 0x7100_0000   | 0x71FF_FFFF    |
 | Timer                            | 0x7200_0000   | 0x72FF_FFFF    |
 | CoreTimer_0 / MIV_ESS_APBSLOT3   | 0x7300_0000   | 0x73FF_FFFF    |
 | CoreTimer_1 / MIV_ESS_APBSLOT4   | 0x7400_0000   | 0x74FF_FFFF    |
-| CoreGPIO_OUT                     | 0x7500_0000   | 0x75FF_FFFF    |
+| GPIO                             | 0x7500_0000   | 0x75FF_FFFF    |
 | SPI                              | 0x7600_0000   | 0x76FF_FFFF    |
 | uDMA                             | 0x7800_0000   | 0x78FF_FFFF    |
 | WDOG                             | 0x7900_0000   | 0x79FF_FFFF    |
