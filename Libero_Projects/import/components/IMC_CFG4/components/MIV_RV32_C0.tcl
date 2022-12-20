@@ -31,7 +31,7 @@ create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32:3.0.100} -component
 "DEBUGGER:true"  \
 "ECC_ENABLE:false"  \
 "FWD_REGS:false"  \
-"GEN_DECODE_RV32:0"  \
+"GEN_DECODE_RV32:3"  \
 "GEN_MUL_TYPE:0"  \
 "GPR_REGS:false"  \
 "INTERNAL_MTIME:true"  \
