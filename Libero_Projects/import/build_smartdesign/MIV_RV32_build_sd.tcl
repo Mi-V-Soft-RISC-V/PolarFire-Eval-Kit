@@ -172,8 +172,6 @@ if {$config eq "CFG2"} {sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu
 
 # Re-enable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 1
-# Presentation data
-	# sd_apply_presentation -sd_name ${sdName} -pm_model_file ${pres_data_path}
 # Re-arrange SmartDesign layout
 sd_reset_layout -sd_name ${sdName}
 # Save the smartDesign
