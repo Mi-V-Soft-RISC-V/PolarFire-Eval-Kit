@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+The file contains the job information from mapper to be displayed as part of the summary report.
+*******************************************************************************************-->
+<job_run_status name="Mapper">
+<report_link name="Detailed report">
+<data>C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD\synthesis\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc.srr</data>
+<title></title>
+</report_link>
+<job_status>
+<data>Completed</data>
+</job_status>
+<job_info>
+<info name="Notes">
+<data>58</data>
+<report_link name="more">
+<data>C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD\synthesis\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc\report\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc_notes.txt</data>
+</report_link>
+</info>
+<info name="Warnings">
+<data>32</data>
+<report_link name="more">
+<data>C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD\synthesis\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc\report\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc_warnings.txt</data>
+</report_link>
+</info>
+<info name="Errors">
+<data>0</data>
+<report_link name="more">
+<data>C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD\synthesis\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc\report\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc_errors.txt</data>
+</report_link>
+</info>
+<info name="CPU Time">
+<data>0h:01m:09s</data>
+</info>
+<info name="Real Time">
+<data>0h:01m:10s</data>
+</info>
+<info name="Peak Memory">
+<data>329MB</data>
+</info>
+<info name="Date &amp; Time">
+<data type="timestamp">1685094151</data>
+</info>
+</job_info>
+</job_run_status>

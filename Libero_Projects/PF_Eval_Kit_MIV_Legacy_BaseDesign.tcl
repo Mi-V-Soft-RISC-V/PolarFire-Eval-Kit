@@ -1,0 +1,136 @@
+# Parse user arguments
+set config [string toupper [lindex $argv 0]]
+set designFlow [string toupper [lindex $argv 1]]
+set dieType [string toupper [lindex $argv 2]]
+
+# Get the path of the currently executing script and set execution directory
+set scriptPath [info script]
+set scriptDir [file dirname $scriptPath]
+
+# Load the TCL file with all of the procedural blocks
+source $scriptDir/import/proc_blocks.tcl
+
+# Set valid configurations
+set hwPlatform "PF_EVAL"
+set hwFamily "POLARFIRE"
+set softCpu "MIV_RV32"
+set validConfigs [list "CFG1" "CFG2" "CFG3"]
+set validDesignFlows [list "SYNTHESIZE" "PLACE_AND_ROUTE" "GENERATE_BITSTREAM" "EXPORT_PROGRAMMING_FILE"]
+set validDieTypes [list "PS" "ES" ""]
+
+# Call procedures to validate user arguments
+set config [verify_config $config]
+set designFlow [verify_designFlow $designFlow]
+set dieType [verify_dieType $dieType]
+set sdBuildScript [get_config_builder $config $validConfigs $softCpu]
+get_die_configuration $hwPlatform $dieType
+print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlow $dieType \nDesign Build Script: $sdBuildScript"
+
+set sdName {BaseDesign}
+set cjdRstType [expr {$softCpu eq "MIV_RV32" ? "TRSTN" : "TRST"}]
+set swProgram "miv-rv32i-systick-blinky.hex"
+set swDeployment "SNVM"
+set overwrite_projects "yes"
+
+append target_board $hwPlatform _ $dieType
+append project_folder_name MIV_ $config _BD
+set projectDir $scriptDir/$project_folder_name
+append project_name $target_board _ $softCpu _ $config _ $sdName
+
+# Developer aid 2: delete Libero design if it already exists so as to not run into "project exists errors"
+if {$overwrite_projects == "yes"} {file delete -force -- $projectDir}
+
+if {[file exists $projectDir] == 1} then {
+	print_message "Error: A project with '$config' configuration already exists for the '$hwPlatform'."
+} else {
+	print_message "Creating a new project for the '$hwPlatform' board."
+	new_project \
+		-location $projectDir \
+		-name $project_name \
+		-project_description {} \
+		-block_mode 0 \
+		-standalone_peripheral_initialization 0 \
+		-instantiate_in_smartdesign 1 \
+		-ondemand_build_dh 1 \
+		-hdl {VERILOG} \
+		-family {PolarFire} \
+		-die $diePackage \
+		-package $dieSize \
+		-speed $dieSpeed \
+		-die_voltage {1.0} \
+		-part_range $tempGrade \
+		-adv_options {IO_DEFT_STD:LVCMOS 1.8V} \
+		-adv_options {RESTRICTPROBEPINS:1} \
+		-adv_options {RESTRICTSPIPINS:0} \
+		-adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} \
+		-adv_options "TEMPR:$tempGrade" \
+		-adv_options "VCCI_1.2_VOLTR:$tempGrade" \
+		-adv_options "VCCI_1.5_VOLTR:$tempGrade" \
+		-adv_options "VCCI_1.8_VOLTR:$tempGrade" \
+		-adv_options "VCCI_2.5_VOLTR:$tempGrade" \
+		-adv_options "VCCI_3.3_VOLTR:$tempGrade" \
+		-adv_options "VOLTR:$tempGrade"
+}
+
+# Download the required direct cores
+download_required_direct_cores "$hwPlatform" "$softCpu" "$config"
+
+# Copy the exampl software program into the project directory
+file copy -force $scriptDir/import/software_example/$config/hex $projectDir
+
+# Import and build the design's SmartDesign
+print_message "Building the $sdName..."
+source $scriptDir/import/build_smartdesign/$sdBuildScript
+print_message "$sdName Built."
+
+# Optimizations - add constraints, modify package files if needed
+print_message "Applying Design Optimizations and Constraints..."
+source $scriptDir/import/design_optimization.tcl
+print_message "Optimization and Constraints Applied."
+
+# Configure 'Place & Route' tool
+pre_configure_place_and_route
+
+# Run 'Synthesize' from the design flow
+if {"$designFlow" == "SYNTHESIZE"} then {
+	print_message "Starting Synthesis..."
+    run_tool -name {SYNTHESIZE}
+    save_project
+	print_message "Synthesis Complete."
+
+# Run 'Place & Route' from the design flow
+} elseif {"$designFlow" == "PLACE_AND_ROUTE"} then {
+	print_message "Starting Place and Route..."
+	run_verify_timing
+	save_project
+	print_message "Place and Route Completed successfully."
+
+# Run 'Generate Bitstream' from the design flow
+} elseif {"$designFlow" == "GENERATE_BITSTREAM"} then {
+	print_message "Generating Bitstream..."
+	run_verify_timing
+    run_tool -name {GENERATEPROGRAMMINGDATA}
+    run_tool -name {GENERATEPROGRAMMINGFILE}
+    save_project
+	print_message "Bitstream Generated successfully."
+
+# Run 'Export Programming Job File' from the design flow (into default location)
+} elseif {"$designFlow" == "EXPORT_PROGRAMMING_FILE"} then {
+	print_message "Exporting Programming Files..."
+
+	run_verify_timing
+	
+	run_tool -name {GENERATEPROGRAMMINGFILE}
+	export_prog_job \
+		-job_file_name $project_name \
+		-export_dir $projectDir/designer/$sdName/export \
+		-bitstream_file_type {TRUSTED_FACILITY} \
+		-bitstream_file_components {}
+	save_project
+	print_message "Programming Files Exported."
+
+} else {
+	print_message "Info: No design flow tool run."
+}
+
+# Done

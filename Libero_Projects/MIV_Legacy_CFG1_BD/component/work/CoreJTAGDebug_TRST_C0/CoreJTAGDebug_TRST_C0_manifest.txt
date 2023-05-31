@@ -1,0 +1,22 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.1 (Version 2023.1.0.6)
+
+Date      :  Fri May 26 10:38:08 2023
+Project   :  C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD
+Component :  CoreJTAGDebug_TRST_C0
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_Legacy_CFG1_BD/component/Actel/DirectCore/COREJTAGDEBUG/4.0.100/core/corejtagdebug.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_Legacy_CFG1_BD/component/Actel/DirectCore/COREJTAGDEBUG/4.0.100/core/corejtagdebug_ujtag_wrapper.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_Legacy_CFG1_BD/component/Actel/DirectCore/COREJTAGDEBUG/4.0.100/core/corejtagdebug_uj_jtag.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_Legacy_CFG1_BD/component/Actel/DirectCore/COREJTAGDEBUG/4.0.100/core/corejtagdebug_bufd.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_Legacy_CFG1_BD/component/work/CoreJTAGDebug_TRST_C0/CoreJTAGDebug_TRST_C0.v
+
+Stimulus files for all Simulation tools:
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_Legacy_CFG1_BD/component/Actel/DirectCore/COREJTAGDEBUG/4.0.100/mti/corejtagdebug_wave.do
+
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_Legacy_CFG1_BD/component/Actel/DirectCore/COREJTAGDEBUG/4.0.100/rtl/vlog/test/corejtagdebug_host_emulator.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_Legacy_CFG1_BD/component/Actel/DirectCore/COREJTAGDEBUG/4.0.100/rtl/vlog/test/corejtagdebug_jtag_tap.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_Legacy_CFG1_BD/component/Actel/DirectCore/COREJTAGDEBUG/4.0.100/rtl/vlog/test/corejtagdebug_testbench.v
+

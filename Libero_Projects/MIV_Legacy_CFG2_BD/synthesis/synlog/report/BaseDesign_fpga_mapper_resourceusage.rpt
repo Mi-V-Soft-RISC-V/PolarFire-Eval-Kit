@@ -1,0 +1,47 @@
+Resource Usage Report for BaseDesign 
+
+Mapping to part: mpf300tfcg1152-1
+Cell usage:
+BUFD            102 uses
+CLKINT          3 uses
+INIT            1 use
+OR4             672 uses
+UJTAG           1 use
+CFG1           45 uses
+CFG2           1320 uses
+CFG3           3735 uses
+CFG4           4433 uses
+
+Carry cells:
+ARI1            934 uses - used for arithmetic functions
+ARI1            520 uses - used for Wide-Mux implementation
+Total ARI1      1454 uses
+
+
+Sequential Cells: 
+SLE            5631 uses
+
+DSP Blocks:    2 of 924 (0%)
+ MACC_PA:         1 MultAdd
+ MACC_PA:         1 Mult
+
+I/O ports: 15
+I/O primitives: 10
+INBUF          5 uses
+OUTBUF         5 uses
+
+
+Global Clock Buffers: 3
+
+Total LUTs:    10987
+
+Extra resources required for RAM and MACC_PA interface logic during P&R:
+
+RAM64X12 Interface Logic : SLEs = 72; LUTs = 72;
+RAM1K20  Interface Logic : SLEs = 3096; LUTs = 3096;
+MACC_PA     Interface Logic : SLEs = 72; LUTs = 72;
+MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  5631 + 72 + 3096 + 72 = 8871;
+Total number of LUTs after P&R:  10987 + 72 + 3096 + 72 = 14227;
+

@@ -1,0 +1,416 @@
+# Thu May 25 13:57:45 2023
+
+
+Copyright (C) 1994-2022 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: T-2022.09M-SP2
+Install: C:\Microchip\Libero_SoC_v2023.1\SynplifyPro
+OS: Windows 10 or later
+Hostname: IRD-LT-M52413
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202209actsp2, Build 067R, Built Mar  9 2023 04:11:46, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 137MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 150MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 150MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 150MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 150MB)
+
+
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_matrix4x16.v":23:7:23:28|Found compile point of type hard on View view:COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog) 
+
+Begin environment creation (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 192MB peak: 192MB)
+
+@W: BN114 :|Removing instance CP_fanout_cell_COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s_inst (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+
+Finished environment creation (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 193MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 194MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 194MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_matrix4x16.v":23:7:23:28|Mapping Compile point view:COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog) because 
+		 no database from previous run found.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 193MB peak: 194MB)
+
+@W: BN114 :|Removing instance CP_fanout_cell_COREAHBLITE_LIB_COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s_verilog_0_inst (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@W: BN114 :|Removing instance CP_fanout_cell_COREAHBLITE_LIB_COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s_verilog_0_0_inst (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BZ173 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|ROM CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1[1:0] (in view: work.BaseDesign(verilog)) mapped in logic.
+@N: BZ173 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|ROM CoreAXITOAHBL_C0_0.CoreAXITOAHBL_C0_0.U_AHBMasterCtrl.HTRANS_1[1:0] (in view: work.BaseDesign(verilog)) mapped in logic.
+@N: BZ173 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|ROM CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HWRITE_1 (in view: work.BaseDesign(verilog)) mapped in logic.
+@N: MO106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|Found ROM CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HWRITE_1 (in view: work.BaseDesign(verilog)) with 15 words by 1 bit.
+@N: BZ173 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|ROM CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1[1:0] (in view: work.BaseDesign(verilog)) mapped in logic.
+@N: MO106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|Found ROM CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1[1:0] (in view: work.BaseDesign(verilog)) with 15 words by 2 bits.
+@N: BZ173 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|ROM CoreAXITOAHBL_C0_0.CoreAXITOAHBL_C0_0.U_AHBMasterCtrl.HWRITE_1 (in view: work.BaseDesign(verilog)) mapped in logic.
+@N: MO106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|Found ROM CoreAXITOAHBL_C0_0.CoreAXITOAHBL_C0_0.U_AHBMasterCtrl.HWRITE_1 (in view: work.BaseDesign(verilog)) with 15 words by 1 bit.
+@N: BZ173 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|ROM CoreAXITOAHBL_C0_0.CoreAXITOAHBL_C0_0.U_AHBMasterCtrl.HTRANS_1[1:0] (in view: work.BaseDesign(verilog)) mapped in logic.
+@N: MO106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|Found ROM CoreAXITOAHBL_C0_0.CoreAXITOAHBL_C0_0.U_AHBMasterCtrl.HTRANS_1[1:0] (in view: work.BaseDesign(verilog)) with 15 words by 2 bits.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 196MB peak: 196MB)
+
+Encoding state machine PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbcurr_state[2:0] (in view: work.BaseDesign(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_AhbToApbSM.ahbToApbSMState[4:0] (in view: work.BaseDesign(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_PenableScheduler.penableSchedulerState[2:0] (in view: work.BaseDesign(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[31] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[30] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[29] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[28] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[27] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[26] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[25] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[24] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[23] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[22] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[21] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[20] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[19] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[18] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[17] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[16] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[11] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[10] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[9] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_apbaddrdata.v":97:4:97:9|Register bit COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_ApbAddrData.nextHaddrReg[8] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavestage.v":84:4:84:9|Removing sequential instance masterDataInProg[3] (in view: COREAHBLITE_LIB.COREAHBLITE_SLAVESTAGE_0s_0_0_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavestage.v":84:4:84:9|Removing sequential instance masterDataInProg[2] (in view: COREAHBLITE_LIB.COREAHBLITE_SLAVESTAGE_0s_0_0_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavestage.v":84:4:84:9|Removing sequential instance masterDataInProg[1] (in view: COREAHBLITE_LIB.COREAHBLITE_SLAVESTAGE_0s_0_0_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+Encoding state machine arbRegSMCurrentState[15:0] (in view: COREAHBLITE_LIB.COREAHBLITE_SLAVEARBITER_Z4_1(verilog))
+original code -> new code
+   0000 -> 0000000000000001
+   0001 -> 0000000000000010
+   0010 -> 0000000000000100
+   0011 -> 0000000000001000
+   0100 -> 0000000000010000
+   0101 -> 0000000000100000
+   0110 -> 0000000001000000
+   0111 -> 0000000010000000
+   1000 -> 0000000100000000
+   1001 -> 0000001000000000
+   1010 -> 0000010000000000
+   1011 -> 0000100000000000
+   1100 -> 0001000000000000
+   1101 -> 0010000000000000
+   1110 -> 0100000000000000
+   1111 -> 1000000000000000
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit arbRegSMCurrentState[12] (in view view:COREAHBLITE_LIB.COREAHBLITE_SLAVEARBITER_Z4_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit arbRegSMCurrentState[8] (in view view:COREAHBLITE_LIB.COREAHBLITE_SLAVEARBITER_Z4_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit arbRegSMCurrentState[4] (in view view:COREAHBLITE_LIB.COREAHBLITE_SLAVEARBITER_Z4_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+Encoding state machine arbRegSMCurrentState[15:0] (in view: COREAHBLITE_LIB.COREAHBLITE_SLAVEARBITER_Z4_2(verilog))
+original code -> new code
+   0000 -> 0000000000000001
+   0001 -> 0000000000000010
+   0010 -> 0000000000000100
+   0011 -> 0000000000001000
+   0100 -> 0000000000010000
+   0101 -> 0000000000100000
+   0110 -> 0000000001000000
+   0111 -> 0000000010000000
+   1000 -> 0000000100000000
+   1001 -> 0000001000000000
+   1010 -> 0000010000000000
+   1011 -> 0000100000000000
+   1100 -> 0001000000000000
+   1101 -> 0010000000000000
+   1110 -> 0100000000000000
+   1111 -> 1000000000000000
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit arbRegSMCurrentState[12] (in view view:COREAHBLITE_LIB.COREAHBLITE_SLAVEARBITER_Z4_2(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit arbRegSMCurrentState[8] (in view view:COREAHBLITE_LIB.COREAHBLITE_SLAVEARBITER_Z4_2(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit arbRegSMCurrentState[0] (in view view:COREAHBLITE_LIB.COREAHBLITE_SLAVEARBITER_Z4_2(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+
+Starting factoring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 196MB peak: 196MB)
+
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavestage.v":84:4:84:9|Removing sequential instance slavestage_8.masterDataInProg[3] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavestage.v":84:4:84:9|Removing sequential instance slavestage_8.masterDataInProg[2] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog)) because it does not drive other instances.
+
+Finished factoring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 199MB peak: 199MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[7] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[3] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[15] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[11] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[7] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[3] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[15] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[6] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[14] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[10] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[2] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[14] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing sequential instance slavestage_7.slave_arbiter.arbRegSMCurrentState[11] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing sequential instance slavestage_7.slave_arbiter.arbRegSMCurrentState[2] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing sequential instance slavestage_8.slave_arbiter.arbRegSMCurrentState[6] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing sequential instance slavestage_8.slave_arbiter.arbRegSMCurrentState[10] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavestage.v":84:4:84:9|Removing sequential instance slavestage_8.masterDataInProg[0] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog)) because it does not drive other instances.
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:06s; Memory used current: 199MB peak: 199MB)
+
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[9] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[9] because it is equivalent to instance CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_7.slave_arbiter.arbRegSMCurrentState[5]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\work\pf_sram_ahb_c0\coreahblsram_pf_0\rtl\vlog\core\coreahblsram_ahblsram.v":548:9:548:14|Removing instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1\.wrap_cond[9] (in view: work.BaseDesign(verilog)) because it is equivalent to instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1\.wrap_cond[10] (in view: work.BaseDesign(verilog)). To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing sequential instance slavestage_7.slave_arbiter.arbRegSMCurrentState[5] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Removing sequential instance slavestage_8.slave_arbiter.arbRegSMCurrentState[1] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog)) because it does not drive other instances.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 200MB peak: 200MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 200MB peak: 201MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 200MB peak: 201MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 200MB peak: 201MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 201MB peak: 201MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:10s		     8.13ns		1071 /       305
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 202MB peak: 202MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:11s; Memory used current: 202MB peak: 203MB)
+
+
+End compile point sub-process log
+
+@N: MT615 |Found clock SYS_CLK with period 20.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Thu May 25 13:57:57 2023
+#
+
+
+Top view:               BaseDesign
+Requested Frequency:    6.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\designer\BaseDesign\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 9.476
+
+                                         Requested     Estimated     Requested     Estimated               Clock        Clock                
+Starting Clock                           Frequency     Frequency     Period        Period        Slack     Type         Group                
+---------------------------------------------------------------------------------------------------------------------------------------------
+COREJTAGDEBUG_Z13|N_2_inferred_clock     100.0 MHz     NA            10.000        NA            NA        inferred     Inferred_clkgroup_0_2
+SYS_CLK                                  50.0 MHz      95.0 MHz      20.000        10.524        9.476     declared     async1_1             
+TCK                                      6.0 MHz       NA            166.670       NA            NA        declared     async1_2             
+System                                   100.0 MHz     NA            10.000        NA            NA        system       system_clkgroup      
+=============================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks             |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------
+Starting  Ending   |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------
+SYS_CLK   System   |  20.000      9.531  |  No paths    -      |  No paths    -      |  No paths    -    
+SYS_CLK   SYS_CLK  |  20.000      9.476  |  No paths    -      |  No paths    -      |  No paths    -    
+=========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: SYS_CLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                          Starting                                            Arrival           
+Instance                                                                  Reference     Type     Pin     Net                  Time        Slack 
+                                                                          Clock                                                                 
+------------------------------------------------------------------------------------------------------------------------------------------------
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[3]        SYS_CLK       SLE      Q       inp[361]             0.218       9.476 
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[2]        SYS_CLK       SLE      Q       inp[376]             0.218       9.576 
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[1]        SYS_CLK       SLE      Q       inp[404]             0.218       9.637 
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[0]        SYS_CLK       SLE      Q       inp_0[390]           0.218       9.681 
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HADDRInt[28]        SYS_CLK       SLE      Q       inp[420]             0.218       10.590
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.masterRegAddrSel     SYS_CLK       SLE      Q       masterRegAddrSel     0.218       10.963
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HADDRInt[31]        SYS_CLK       SLE      Q       inp[417]             0.218       11.178
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HADDRInt[30]        SYS_CLK       SLE      Q       inp[418]             0.218       11.217
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HADDRInt[29]        SYS_CLK       SLE      Q       inp[419]             0.218       11.258
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.regHADDR[28]         SYS_CLK       SLE      Q       regHADDR[28]         0.218       11.724
+================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                           Starting                                                                                    Required          
+Instance                                                                                   Reference     Type        Pin          Net                                                  Time         Slack
+                                                                                           Clock                                                                                                         
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.476
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.476
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R1C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.476
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R1C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.476
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R2C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.476
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R2C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.476
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R3C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.476
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R3C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.476
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R4C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.476
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R4C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.476
+=========================================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      20.000
+    - Setup time:                            0.909
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         19.091
+
+    - Propagation time:                      9.614
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     9.476
+
+    Number of logic level(s):                10
+    Starting point:                          CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[3] / Q
+    Ending point:                            PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0 / A_WEN[0]
+    The start point is clocked by            SYS_CLK [rising] (rise=0.000 fall=10.000 period=20.000) on pin CLK
+    The end   point is clocked by            SYS_CLK [rising] (rise=0.000 fall=10.000 period=20.000) on pin A_CLK
+
+Instance / Net                                                                                                                Pin          Pin               Arrival     No. of    
+Name                                                                                                              Type        Name         Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[3]                                                SLE         Q            Out     0.218     0.218 r     -         
+inp[361]                                                                                                          Net         -            -       1.032     -           21        
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.m6                                            CFG4        D            In      -         1.250 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.m6                                            CFG4        Y            Out     0.232     1.482 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.HTRANS_M1[1]                                                                          Net         -            -       0.830     -           30        
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HADDR[28]                                                   CFG2        A            In      -         2.312 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HADDR[28]                                                   CFG2        Y            Out     0.051     2.363 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.HADDR_M1[28]                                                                          Net         -            -       0.124     -           2         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.PREGATEDHADDR[28]                                            CFG3        C            In      -         2.487 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.PREGATEDHADDR[28]                                            CFG3        Y            Out     0.148     2.635 r     -         
+PREGATEDHADDR[28]                                                                                                 Net         -            -       0.547     -           3         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.SADDRSEL_i_0_o2[8]                                           CFG2        A            In      -         3.181 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.SADDRSEL_i_0_o2[8]                                           CFG2        Y            Out     0.051     3.232 r     -         
+N_303                                                                                                             Net         -            -       0.623     -           8         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.SADDRSEL_i_0_o2_RNIO91F[8]                                   CFG4        D            In      -         3.855 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.SADDRSEL_i_0_o2_RNIO91F[8]                                   CFG4        Y            Out     0.212     4.067 f     -         
+N_72_i                                                                                                            Net         -            -       0.594     -           7         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState_ns_i_0_a2[4]               CFG4        D            In      -         4.662 f     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState_ns_i_0_a2[4]               CFG4        Y            Out     0.192     4.853 f     -         
+N_414_i                                                                                                           Net         -            -       0.830     -           30        
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.HWRITE_0_a2_0_a2                                              CFG4        C            In      -         5.683 f     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.HWRITE_0_a2_0_a2                                              CFG4        Y            Out     0.145     5.829 f     -         
+HWRITE_S8                                                                                                         Net         -            -       0.773     -           22        
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t[1]         CFG3        B            In      -         6.601 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t[1]         CFG3        Y            Out     0.088     6.689 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t[1]         Net         -            -       0.579     -           5         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.sram_wen_mem_2_sqmuxa     CFG3        C            In      -         7.268 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.sram_wen_mem_2_sqmuxa     CFG3        Y            Out     0.145     7.414 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.sram_wen_mem_2_sqmuxa     Net         -            -       0.118     -           1         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.mem_byteen_0_iv[2]        CFG3        C            In      -         7.532 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.mem_byteen_0_iv[2]        CFG3        Y            Out     0.145     7.677 f     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]                                                                  Net         -            -       1.937     -           64        
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0                            RAM1K20     A_WEN[0]     In      -         9.614 f     -         
+===================================================================================================================================================================================
+Total path delay (propagation time + setup) of 10.524 is 2.536(24.1%) logic and 7.987(75.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+Writing compile point status file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\synthesis\COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name                                            Status     Reason     
+----------------------------------------------------------------------
+COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s     Mapped     No database
+======================================================================
+
+Process took 0h:00m:12s realtime, 0h:00m:12s cputime
+# Thu May 25 13:57:57 2023
+
+###########################################################]

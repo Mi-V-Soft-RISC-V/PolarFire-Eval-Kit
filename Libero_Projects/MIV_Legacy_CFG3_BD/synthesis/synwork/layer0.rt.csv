@@ -1,0 +1,5 @@
+Library, Design Unit ,Compile time , Hardware Gen ,Optimization Stg1 ,Optimization Stg2 , Peak Mem Usage, Incr Mem Usage, Hardware Gen ,Optimization Stg1 ,Optimization Stg2
+work, MIV_RV32IMA_L1_AXI_C0_MIV_RV32IMA_L1_AXI_C0_0_MIV_RV32IMA_L1_AXI_ROCKET,0h:00m:01s,0h:00m:00s,0h:00m:00s,0h:00m:01s,   325 MB,    19 MB,     0 MB,     3 MB,    16 MB
+work, MIV_RV32IMA_L1_AXI_C0_MIV_RV32IMA_L1_AXI_C0_0_MIV_RV32IMA_L1_AXI_DCACHE_DCACHE,0h:00m:02s,0h:00m:00s,0h:00m:00s,0h:00m:01s,   380 MB,     5 MB,     0 MB,     5 MB,     0 MB
+work, MIV_RV32IMA_L1_AXI_C0_MIV_RV32IMA_L1_AXI_C0_0_MIV_RV32IMA_L1_AXI_TLDEBUG_MODULE_INNER_DM_INNER,0h:00m:02s,0h:00m:00s,0h:00m:00s,0h:00m:01s,   380 MB,    22 MB,     7 MB,    10 MB,     5 MB
+COREAXITOAHBL_LIB, COREAXITOAHBL_AHBMasterCtrl_Z8,0h:00m:01s,0h:00m:00s,0h:00m:00s,0h:00m:01s,   380 MB,     9 MB,     1 MB,     7 MB,     1 MB

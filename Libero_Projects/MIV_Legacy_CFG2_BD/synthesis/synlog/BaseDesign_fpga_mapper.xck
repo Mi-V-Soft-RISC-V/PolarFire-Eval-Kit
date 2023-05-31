@@ -1,0 +1,4 @@
+CKID0001:@|S:MIV_RV32IMA_L1_AHB_C0_0.MIV_RV32IMA_L1_AHB_C0_0.TCK@|E:MIV_RV32IMA_L1_AHB_C0_0.MIV_RV32IMA_L1_AHB_C0_0.ChiselTop0.dtm.dmiReqReg_addr[0]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:MIV_RV32IMA_L1_AHB_C0_0.MIV_RV32IMA_L1_AHB_C0_0.ChiselTop0.debug_1.io_dmi_dmiClock@|E:MIV_RV32IMA_L1_AHB_C0_0.MIV_RV32IMA_L1_AHB_C0_0.ChiselTop0.debug_1.dmOuter.source1.mem_0_hartsel[0]@|F:@syn_sample_clock_path1==CKID0002@|M:ClockId0002 
+CKID0003:@|S:CoreJTAGDebug_TRST_C0_0.CoreJTAGDebug_TRST_C0_0.genblk1\.genblk1\.genblk1\.UJTAG_inst@|E:CoreJTAGDebug_TRST_C0_0.CoreJTAGDebug_TRST_C0_0.genblk3\.genblk1\.UJ_JTAG.count[0]@|F:@syn_sample_clock_path2==CKID0003@|M:ClockId0003 
+CKID0004:@|S:SYS_CLK@|E:CoreTimer_C0_0.CoreTimer_C0_0.iPRDATA[22]@|F:@syn_sample_clock_path==CKID0004@|M:ClockId0004 

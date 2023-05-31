@@ -1,0 +1,388 @@
+# Fri May 26 10:41:20 2023
+
+
+Copyright (C) 1994-2022 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: T-2022.09M-SP2
+Install: C:\Microchip\Libero_SoC_v2023.1\SynplifyPro
+OS: Windows 10 or later
+Hostname: IRD-LT-M52413
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202209actsp2, Build 067R, Built Mar  9 2023 04:11:46, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 129MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 142MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 142MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 133MB peak: 142MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 134MB peak: 142MB)
+
+
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_matrix4x16.v":23:7:23:28|Found compile point of type hard on View view:COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog) 
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tldebug_module_debug.v":64:7:64:94|Found compile point of type hard on View view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc_1(verilog) 
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_fpu_ecc.v":64:7:64:77|Found compile point of type hard on View view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc_0(verilog) 
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_rocket.v":64:7:64:80|Found compile point of type hard on View view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc(verilog) 
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_rocket_tile_tile_ecc.v":64:7:64:90|Found compile point of type hard on View view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Top level view:work.BaseDesign(verilog) 
+
+Start loading ILMs (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 218MB peak: 218MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 213MB peak: 227MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\basedesign\basedesign.v":9:7:9:16|Mapping Top level view:work.BaseDesign(verilog) because 
+		 no database from previous run found.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 213MB peak: 227MB)
+
+@N: MO111 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_ecc.v":113:34:113:40|Tristate driver DRV_TDO (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_32768_0_0s_26s_0s(verilog)) on net DRV_TDO (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_32768_0_0s_26s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver DRV_TDO_t (in view: work.MIV_RV32IMAF_L1_AHB_C0(verilog)) on net DRV_TDO (in view: work.MIV_RV32IMAF_L1_AHB_C0(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\pf_sram_ahb_c0\coreahblsram_pf_0\rtl\vlog\core\coreahblsram_ahblsram.v":196:31:196:42|Tristate driver BUSY (in view: work.PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_CoreAHBLSRAM_AHBLSram_Z11(verilog)) on net BUSY (in view: work.PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_CoreAHBLSRAM_AHBLSram_Z11(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\corejtagdebug\4.0.100\core\corejtagdebug.v":32:8:32:11|Tristate driver UTMS (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) on net UTMS (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\corejtagdebug\4.0.100\core\corejtagdebug.v":31:8:31:13|Tristate driver UTRSTB (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) on net UTRSTB (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\corejtagdebug\4.0.100\core\corejtagdebug.v":190:8:190:52|Tristate driver UJTAG_BYPASS_TDO_3_1 (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) on net UJTAG_BYPASS_TDO_3_1 (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\corejtagdebug\4.0.100\core\corejtagdebug.v":183:8:183:52|Tristate driver UJTAG_BYPASS_TDO_2_1 (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) on net UJTAG_BYPASS_TDO_2_1 (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\corejtagdebug\4.0.100\core\corejtagdebug.v":176:8:176:52|Tristate driver UJTAG_BYPASS_TDO_1_1 (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) on net UJTAG_BYPASS_TDO_1_1 (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\corejtagdebug\4.0.100\core\corejtagdebug.v":169:8:169:52|Tristate driver UJTAG_BYPASS_TDO_0_1 (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) on net UJTAG_BYPASS_TDO_0_1 (in view: COREJTAGDEBUG_LIB.COREJTAGDEBUG_Z9(verilog)) has its enable tied to GND.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 223MB peak: 227MB)
+
+Encoding state machine slavestage_7.slave_arbiter.arbRegSMCurrentState[15:0] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog))
+original code -> new code
+   0000 -> 0000000000000001
+   0001 -> 0000000000000010
+   0010 -> 0000000000000100
+   0011 -> 0000000000001000
+   0100 -> 0000000000010000
+   0101 -> 0000000000100000
+   0110 -> 0000000001000000
+   0111 -> 0000000010000000
+   1000 -> 0000000100000000
+   1001 -> 0000001000000000
+   1010 -> 0000010000000000
+   1011 -> 0000100000000000
+   1100 -> 0001000000000000
+   1101 -> 0010000000000000
+   1110 -> 0100000000000000
+   1111 -> 1000000000000000
+Encoding state machine slavestage_8.slave_arbiter.arbRegSMCurrentState[15:0] (in view: COREAHBLITE_LIB.COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s(verilog))
+original code -> new code
+   0000 -> 0000000000000001
+   0001 -> 0000000000000010
+   0010 -> 0000000000000100
+   0011 -> 0000000000001000
+   0100 -> 0000000000010000
+   0101 -> 0000000000100000
+   0110 -> 0000000001000000
+   0111 -> 0000000010000000
+   1000 -> 0000000100000000
+   1001 -> 0000001000000000
+   1010 -> 0000010000000000
+   1011 -> 0000100000000000
+   1100 -> 0001000000000000
+   1101 -> 0010000000000000
+   1110 -> 0100000000000000
+   1111 -> 1000000000000000
+Encoding state machine ahbToApbSMState[4:0] (in view: COREAHBTOAPB3_LIB.CoreAHBtoAPB3_AhbToApbSM_0s_0_1_0_1_2_3_4(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_ahbtoapbsm.v":265:4:265:9|Removing sequential instance COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_AhbToApbSM.PWRITE because it is equivalent to instance COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_AhbToApbSM.ahbToApbSMState[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+Encoding state machine penableSchedulerState[2:0] (in view: COREAHBTOAPB3_LIB.CoreAHBtoAPB3_PenableScheduler_0s_0_1_2(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\coreuartapb_c0\coreuartapb_c0_0\rtl\vlog\core\clock_gen.v":283:6:283:11|Found counter in view:work.CoreUARTapb_C0_CoreUARTapb_C0_0_Clock_gen_0s_0s(verilog) instance genblk1\.baud_cntr[12:0] 
+Encoding state machine xmit_state[5:0] (in view: work.CoreUARTapb_C0_CoreUARTapb_C0_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s(verilog))
+original code -> new code
+   00000000000000000000000000000000 -> 000001
+   00000000000000000000000000000001 -> 000010
+   00000000000000000000000000000010 -> 000100
+   00000000000000000000000000000011 -> 001000
+   00000000000000000000000000000100 -> 010000
+   00000000000000000000000000000101 -> 100000
+Encoding state machine rx_state[3:0] (in view: work.CoreUARTapb_C0_CoreUARTapb_C0_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\coreuartapb_c0\coreuartapb_c0_0\rtl\vlog\core\rx_async.v":286:0:286:5|There are no possible illegal states for state machine rx_state[3:0] (in view: work.CoreUARTapb_C0_CoreUARTapb_C0_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)); safe FSM implementation is not required.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\coreuartapb_c0\coreuartapb_c0_0\rtl\vlog\core\rx_async.v":261:0:261:5|Removing instance CoreUARTapb_C0_0.CoreUARTapb_C0_0.uUART.make_RX.last_bit[2] because it is equivalent to instance CoreUARTapb_C0_0.CoreUARTapb_C0_0.uUART.make_RX.last_bit[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlfifofixer_system_bus.v":329:2:329:7|Found counter in view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_SYSTEM_BUS_SBUS(verilog) instance SystemBusFromTiletile.SystemBus_TLFIFOFixer._T_292[9:0] 
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlfifofixer_system_bus.v":329:2:329:7|Found counter in view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_SYSTEM_BUS_SBUS(verilog) instance SystemBusFromTiletile.SystemBus_TLFIFOFixer._T_320[9:0] 
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param[15:0] is 2 words by 16 bits.
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[9].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[10].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[11].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[12].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[13].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[14].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram0_[15].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[9].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[10].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[11].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[12].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[13].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[14].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_param_ram1_[15].
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_4.v":198:2:198:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode[8:0] is 2 words by 9 bits.
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram0_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram0_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram0_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram0_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram0_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram0_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram0_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram0_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram0_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram1_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram1_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram1_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram1_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram1_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram1_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram1_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram1_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_4.ram_opcode_ram1_[8].
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.Queue_2.ram_opcode[21:0] is 2 words by 22 bits.
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[9].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[10].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[11].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[12].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[13].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[14].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[15].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[16].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[17].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[18].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[19].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[20].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[21].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[9].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[10].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[11].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[12].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[13].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[14].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[15].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[16].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[17].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[18].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[19].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[20].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[21].
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_1.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.Queue_3.ram_opcode[38:0] is 2 words by 39 bits.
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_3.ram_opcode_ram0_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_3.ram_opcode_ram0_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_3.ram_opcode_ram0_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_3.ram_opcode_ram0_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_3.ram_opcode_ram0_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_slave_TLBuffer.Queue_3.ram_opcode_ram0_[5].
+
+Only the first 100 messages of id 'FX493' are reported. To see all messages use 'report_messages -log C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD\synthesis\BaseDesign\BaseDesign.srr -id FX493' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {FX493} -count unlimited' in the Tcl shell.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_1.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_opcode[38:0] is 2 words by 39 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_5.v":264:2:264:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_5.ram_param[9:0] is 2 words by 10 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_5.v":264:2:264:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_5.ram_error is 2 words by 1 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_1.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.Queue_3.ram_error is 2 words by 1 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.Queue_2.ram_data[31:0] is 2 words by 32 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_data[31:0] is 2 words by 32 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address[30:0] is 2 words by 31 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_6.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_source[4:0] is 2 words by 5 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_6.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_size[1:0] is 2 words by 2 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.pbus.PeripheryBus_slave_TLFragmenter_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source[38:0] is 2 words by 39 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_1.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.pbus.PeripheryBus_slave_TLFragmenter_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_opcode[38:0] is 2 words by 39 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.pbus.PeripheryBus_slave_TLFragmenter_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_data[31:0] is 2 words by 32 bits.
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_coreplex_local_interrupter_clint.v":563:2:563:7|Found counter in view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_COREPLEX_LOCAL_INTERRUPTER_CLINT(verilog) instance time\$[63:0] 
+Encoding state machine dmInner.dmInner.ctrlStateReg[2:0] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc_1(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_16.v":306:2:306:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.converter.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_opcode[38:0] is 2 words by 39 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_16.v":306:2:306:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.converter.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_error is 2 words by 1 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_16.v":306:2:306:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_TLTO_AHB.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_opcode[38:0] is 2 words by 39 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_16.v":306:2:306:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_TLTO_AHB.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_error is 2 words by 1 bits.
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlerror_error.v":401:2:401:7|Found counter in view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_TLERROR_ERROR(verilog) instance _T_136[9:0] 
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlerror_error.v":401:2:401:7|Found counter in view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_TLERROR_ERROR(verilog) instance _T_191[9:0] 
+Encoding state machine ahbcurr_state[2:0] (in view: work.PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_CoreAHBLSRAM_AHBLSram_Z11(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MF179 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\pf_sram_ahb_c0\coreahblsram_pf_0\rtl\vlog\core\coreahblsram_ahblsram.v":567:25:567:81|Found 11 by 11 bit equality operator ('==') genblk1\.un1_genblk1\.wrap_cond_2 (in view: work.PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_CoreAHBLSRAM_AHBLSram_Z11(verilog))
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\pf_sram_ahb_c0\coreahblsram_pf_0\rtl\vlog\core\coreahblsram_ahblsram.v":653:9:653:14|Removing instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1.last_nibble[0] because it is equivalent to instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1.haddr_incr[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\pf_sram_ahb_c0\coreahblsram_pf_0\rtl\vlog\core\coreahblsram_ahblsram.v":653:9:653:14|Removing instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1.last_nibble[5] because it is equivalent to instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.HSIZE_d[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\coretimer\2.0.103\rtl\vlog\core\coretimer.v":262:4:262:9|Found counter in view:CORETIMER_LIB.CoreTimer_32s_1s_19s_0s_BaseDesign(verilog) instance Count[31:0] 
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\coretimer\2.0.103\rtl\vlog\core\coretimer.v":211:4:211:9|Found counter in view:CORETIMER_LIB.CoreTimer_32s_1s_19s_0s_BaseDesign(verilog) instance PreScale[9:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 245MB peak: 245MB)
+
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlatomic_automata_periphery_bus_slave_tlfragmenter.v":1196:2:1196:7|Removing sequential instance PeripheryBus_slave_TLFragmenter_TLAtomicAutomata._T_232_0_bits_address[27] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_PERIPHERY_BUS_PBUS(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlatomic_automata_periphery_bus_slave_tlfragmenter.v":1196:2:1196:7|Removing sequential instance PeripheryBus_slave_TLFragmenter_TLAtomicAutomata._T_232_0_bits_address[28] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_PERIPHERY_BUS_PBUS(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlatomic_automata_periphery_bus_slave_tlfragmenter.v":1196:2:1196:7|Removing sequential instance PeripheryBus_slave_TLFragmenter_TLAtomicAutomata._T_232_0_bits_address[29] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_PERIPHERY_BUS_PBUS(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_repeater.v":176:2:176:7|Removing sequential instance PeripheryBus_slave_TLFragmenter.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_REPEATER.saved_opcode[2] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_PERIPHERY_BUS_PBUS(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_repeater.v":176:2:176:7|Removing sequential instance PeripheryBus_slave_TLFragmenter.Repeater_1.saved_opcode[2] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_PERIPHERY_BUS_PBUS(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_repeater_2.v":176:2:176:7|Removing sequential instance PeripheryBus_slave_TLFragmenter.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_REPEATER_2.saved_opcode[2] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_PERIPHERY_BUS_PBUS(verilog)) because it does not drive other instances.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\pf_sram_ahb_c0\coreahblsram_pf_0\rtl\vlog\core\coreahblsram_ahblsram.v":653:9:653:14|Removing instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1.last_nibble[6] because it is equivalent to instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1.haddr_incr[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\actel\directcore\coreahbtoapb3\3.2.101\rtl\vlog\core\coreahbtoapb3_penablescheduler.v":111:4:111:9|Removing instance COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_PenableScheduler.PENABLE because it is equivalent to instance COREAHBTOAPB3_C0_0.COREAHBTOAPB3_C0_0.U_PenableScheduler.penableSchedulerState[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished factoring (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:19s; Memory used current: 268MB peak: 268MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address_ram1_[27] (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address_ram0_[27] (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address_ram1_[28] (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address_ram0_[28] (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address_ram1_[29] (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue.v":286:2:286:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address_ram0_[29] (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlerror_error.v":401:2:401:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.error._T_387_0 (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_5.ram_param.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_5.ram_param_ram1_[0] (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_5.ram_param.SystemBus_slave_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_5.ram_param_ram0_[0] (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:27s; CPU Time elapsed 0h:00m:27s; Memory used current: 271MB peak: 297MB)
+
+@W: BN132 :|Removing instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.Queue_2.ram_opcode.SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[21] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.Queue_2.ram_opcode.SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram0_[20]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :|Removing instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.Queue_2.ram_opcode.SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[21] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBus_slave_TLBuffer.Queue_2.ram_opcode.SystemBus_slave_TLBuffer.Queue_2.ram_opcode_ram1_[20]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlto_ahb.v":537:2:537:7|Removing instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_TLTO_AHB._T_167_addr[30] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_TLTO_AHB._T_167_addr[29]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\pf_sram_ahb_c0\coreahblsram_pf_0\rtl\vlog\core\coreahblsram_ahblsram.v":548:9:548:14|Removing instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1\.wrap_cond[9] (in view: work.BaseDesign(verilog)) because it is equivalent to instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1\.wrap_cond[10] (in view: work.BaseDesign(verilog)). To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:30s; CPU Time elapsed 0h:00m:30s; Memory used current: 272MB peak: 297MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:00m:38s; Memory used current: 272MB peak: 297MB)
+
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\pf_sram_ahb_c0\coreahblsram_pf_0\rtl\vlog\core\coreahblsram_ahblsram.v":548:9:548:14|Removing instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1.wrap_cond[0] because it is equivalent to instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1.haddr_incr[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:39s; CPU Time elapsed 0h:00m:39s; Memory used current: 272MB peak: 297MB)
+
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlfragmenter_periphery_bus_slave_tlfragmenter.v":1090:2:1090:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.pbus.PeripheryBus_slave_TLFragmenter._T_612 (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlfragmenter_periphery_bus_slave_tlfragmenter.v":1090:2:1090:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.pbus.PeripheryBus_slave_TLFragmenter._T_836 (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlfragmenter_periphery_bus_slave_tlfragmenter.v":1090:2:1090:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.pbus.PeripheryBus_slave_TLFragmenter._T_1060 (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_10.v":210:2:210:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.plic.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_extra\[0\][6] (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlfragmenter_periphery_bus_slave_tlfragmenter.v":1090:2:1090:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.pbus.PeripheryBus_slave_TLFragmenter._T_1232 (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlfragmenter_periphery_bus_slave_tlfragmenter.v":1090:2:1090:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.pbus.PeripheryBus_slave_TLFragmenter._T_1008 (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_tlfragmenter_periphery_bus_slave_tlfragmenter.v":1090:2:1090:7|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.pbus.PeripheryBus_slave_TLFragmenter._T_784 (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+
+Finished preparing to map (Real Time elapsed 0h:00m:43s; CPU Time elapsed 0h:00m:43s; Memory used current: 265MB peak: 297MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:48s; CPU Time elapsed 0h:00m:48s; Memory used current: 310MB peak: 336MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:49s		   -32.02ns		5252 /      3199
+   2		0h:00m:49s		   -32.02ns		5217 /      3199
+
+   3		0h:00m:51s		   -32.02ns		5217 /      3199
+
+
+   4		0h:00m:52s		   -32.02ns		5217 /      3199
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:55s; CPU Time elapsed 0h:00m:55s; Memory used current: 313MB peak: 336MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:56s; CPU Time elapsed 0h:00m:56s; Memory used current: 314MB peak: 336MB)
+
+
+End compile point sub-process log
+
+Writing compile point status file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD\synthesis\BaseDesign\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name           Status     Reason     
+-------------------------------------
+BaseDesign     Mapped     No database
+=====================================
+
+Process took 0h:00m:57s realtime, 0h:00m:57s cputime
+# Fri May 26 10:42:18 2023
+
+###########################################################]

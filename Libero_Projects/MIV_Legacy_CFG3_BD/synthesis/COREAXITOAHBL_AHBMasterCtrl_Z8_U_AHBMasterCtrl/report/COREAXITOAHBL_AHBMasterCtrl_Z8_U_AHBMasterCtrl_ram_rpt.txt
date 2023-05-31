@@ -1,0 +1,26 @@
+
+#####  START OF RAM REPORT FOR COMPILE POINT: COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl  #####
+
+#####  LSRAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH(A/B)     LOW-POWER_MODE     ECC     A_DOUT_PIPE_REG(EN/ARST/SRST)     B_DOUT_PIPE_REG(EN/ARST/SRST)     WRITE_MODE(A/B)     COMMENTS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================================================================================================================================================================
+
+#####  URAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH     LOW-POWER_MODE     ECC     R_ADDR_REG(EN/ARST/SRST)     R_DATA_PIPE_REG(EN/ARST/SRST)     COMMENTS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+================================================================================================================================================================================================================
+
+#####  REG/LOGIC REPORT  #####
+
+RTL_INSTANCE                                                            PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS                                                                            
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CoreAXITOAHBL_C0_0.CoreAXITOAHBL_C0_0.U_AHBMasterCtrl.HTRANS_1[1:0]     ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
+                                                                                                                                                                                                  
+CoreAXITOAHBL_C0_0.CoreAXITOAHBL_C0_0.U_AHBMasterCtrl.HWRITE_1          ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
+==================================================================================================================================================================================================
+
+#####  END OF RAM REPORT FOR COMPILE POINT: COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl  #####
+

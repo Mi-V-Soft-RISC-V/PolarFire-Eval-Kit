@@ -1,0 +1,16 @@
+Software Version: 2023.1.0.6
+Opened 'C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\designer\BaseDesign\BaseDesign_fp\BaseDesign.pro'
+PDB file 'C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\designer\BaseDesign\BaseDesign.pdb' has been loaded successfully.
+DESIGN : BaseDesign;  CHECKSUM : 91CD;  PDB_VERSION : 1.9
+Info: Programming Interface selected is JTAG.
+File/Folder 'C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\designer\BaseDesign\BaseDesign.ppd' will be overwritten.
+Successfully exported PPD file for currently secured device: 'C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\designer\BaseDesign\BaseDesign.ppd'; file programs Fabric and sNVM.
+BITS component bitstream digest: e628346f15f57b0bb57f2a9a7ba39a841126caa067b4873fa03d218c2fd0001c
+Fabric component bitstream digest: 0c6cdda72349a97c7fb810e4e04dfd72986651dd48502f53d72935ea96a9a303
+sNVM component bitstream digest: e27d3ece5463ea992f7682a7c76a138b5047e3f706675aac0f51aff3912c46da
+EOB component bitstream digest: 0ddf53eedba9ecd39d45f84897e513468c0ecdad5a07b3336a22ec37f7496068
+Entire bitstream digest: c77d345dda88c87dfb9d0f6af7fcb657ca3082450dc546898bde5b5186e4ced7
+Finished: Thu May 25 14:19:07 2023 (Elapsed time 00:01:46)
+
+Project saved.
+Project closed.

@@ -1,355 +1,152 @@
+# Parse user arguments
 set config [string toupper [lindex $argv 0]]
-set design_flow_stage [string toupper [lindex $argv 1]]
-set die_variant [string toupper [lindex $argv 2]]
+set designFlow [string toupper [lindex $argv 1]]
+set dieType [string toupper [lindex $argv 2]]
 
-set hw_platform PF_Eval_Kit
-set soft_cpu MIV_RV32
-set sd_reference BaseDesign
+# Get the path of the currently executing script and set execution directory
+set scriptPath [info script]
+set scriptDir [file dirname $scriptPath]
 
-#
-# Procedure blocks start
-proc create_new_project_label { } {
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nCreating a new project for the 'PF_Eval_Kit' board. \
-		  \r\n-------------------------------------------------------------------------------"
-}
+# Load the TCL file with all of the procedural blocks
+source $scriptDir/import/proc_blocks.tcl
 
-proc project_exists { } {
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nError: A project exists for the 'PF_Eval_Kit' with this configuration. \
-		  \r\n-------------------------------------------------------------------------------"
-}
+# Set valid configurations
+set hwPlatform "PF_EVAL"
+set hwFamily "POLARFIRE"
+set softCpu "MIV_RV32"
+set validConfigs [list "CFG1" "CFG2" "CFG3" "CFG4" "DGC1" "DGC3" "DGC4"]
+set validDesignFlows [list "SYNTHESIZE" "PLACE_AND_ROUTE" "GENERATE_BITSTREAM" "EXPORT_PROGRAMMING_FILE"]
+set validDieTypes [list "PS" "ES" ""]
 
-proc no_first_argument_entered { } {
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nInfo: No 1st Argument has been entered. \
-		  \r\nInfo: Enter the 1st Argument responsible for type of design configuration -'CFG1..CFGn' \
-		  \r\nInfo: Default 'CFG1' design has been selected. \
-		  \r\n-------------------------------------------------------------------------------"
-}
+# Call procedures to validate user arguments
+set config [verify_config $config]
+set designFlow [verify_designFlow $designFlow]
+set dieType [verify_dieType $dieType]
+set sdBuildScript [get_config_builder $config $validConfigs $softCpu]
+get_die_configuration $hwPlatform $dieType
+print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlow $dieType \nDesign Build Script: $sdBuildScript"
 
-proc invalid_first_argument { } {
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nError: Wrong 1st Argument has been entered. No valid configuration detected. \
-		  \r\nInfo: Make sure you enter a valid first argument -'CFG1..CFGn'. \
-		  \r\n-------------------------------------------------------------------------------"
-}
+set sdName {BaseDesign}
+set cjdRstType [expr {$softCpu eq "MIV_RV32" ? "TRSTN" : "TRST"}]
+set swProgram "miv-rv32i-systick-blinky.hex"
+set swDeployment "SNVM"
+set overwrite_projects "yes"
 
-proc no_second_argument_entered { } {
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nInfo: No 2nd Argument has been entered. \
-		  \r\nInfo: Enter the 2nd Argument after the 1st to be taken further in the Design Flow. \
-		  \r\n-------------------------------------------------------------------------------"
-}
-
-proc invalid_second_argument { } {
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nError: Wrong 2nd Argument has been entered. \
-		  \r\nInfo: Make sure you enter a valid 2nd argument -'Synthesize...Export_Programming_File'.\
-		  \r\n-------------------------------------------------------------------------------"
-}
-
-proc no_third_argument_entered { } {
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nInfo: No 3rd Argument has been entered. \
-		  \r\nInfo: Assuming the default 'PS' die type as target \
-		  \r\n-------------------------------------------------------------------------------"
-}
-
-proc invalid_third_argument { } {
-	puts "\n------------------------------------------------------------------------------- \
-          \r\nError: Wrong 3rd Argument has been entered. \
-          \r\nInfo: Make sure you enter 'PS' or 'ES' to specify die target type. \
-		  \r\n-------------------------------------------------------------------------------"
-}
-
-proc  base_design_built { } {
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nInfo: BaseDesign built. \
-		  \r\n-------------------------------------------------------------------------------"
-}
-
-proc download_required_direct_cores  { } {
-	#download_core -vlnv {Actel:DirectCore:CoreUARTapb:5.7.100} -location {www.microchip-ip.com/repositories/DirectCore}
-	download_core -vlnv {Actel:DirectCore:CoreTimer:2.0.103} -location {www.microchip-ip.com/repositories/DirectCore}
-	download_core -vlnv {Actel:DirectCore:CORERESET_PF:2.3.100} -location {www.microchip-ip.com/repositories/DirectCore}
-	download_core -vlnv {Actel:DirectCore:COREJTAGDEBUG:4.0.100} -location {www.microchip-ip.com/repositories/DirectCore}
-	#download_core -vlnv {Actel:DirectCore:CoreGPIO:3.2.102} -location {www.microchip-ip.com/repositories/DirectCore}
-	download_core -vlnv {Actel:DirectCore:COREAXITOAHBL:3.6.101} -location {www.microchip-ip.com/repositories/DirectCore}
-	#download_core -vlnv {Actel:DirectCore:CoreAPB3:4.2.100} -location {www.microchip-ip.com/repositories/DirectCore}
-	download_core -vlnv {Actel:DirectCore:COREAHBTOAPB3:3.2.101} -location {www.microchip-ip.com/repositories/DirectCore}
-	download_core -vlnv {Actel:DirectCore:CoreAHBLite:5.6.105} -location {www.microchip-ip.com/repositories/DirectCore}
-	download_core -vlnv {Microsemi:MiV:MIV_RV32:3.0.100} -location {www.microchip-ip.com/repositories/DirectCore}
-	download_core -vlnv {Microsemi:MiV:MIV_RV32IMA_L1_AHB:2.3.100} -location {www.microchip-ip.com/repositories/DirectCore} 
-	download_core -vlnv {Microsemi:MiV:MIV_RV32IMA_L1_AXI:2.1.100} -location {www.microchip-ip.com/repositories/DirectCore} 
-	download_core -vlnv {Microsemi:MiV:MIV_RV32IMAF_L1_AHB:2.1.100} -location {www.microchip-ip.com/repositories/DirectCore} 
-}
-
-proc pre_configure_place_and_route { } {
-	# Configuring Place_and_Route tool for a timing pass.
-	configure_tool -name {PLACEROUTE} -params {EFFORT_LEVEL:false} -params {REPAIR_MIN_DELAY:true} -params {TDPR:true}
-}
-
-proc run_verify_timing { } {
-	run_tool -name {VERIFYTIMING}	
-}
-# Procedure blocks end
-#
-
-#Filter for argument argv0: config
-if {$config == ""} then {
-	set config "CFG1"
-	no_first_argument_entered
-} elseif {$config != "CFG1"
-		  && $config != "CFG2"
-		  && $config != "CFG3"
-		  && $config != "CFG4"
-		  && $config != "DGC1"
-		  && $config != "DGC3"
-		  && $config != "DGC4"} then {
-	puts "config is: $config"
-	invalid_first_argument
-	exit 1
-} else {
-	puts "Info: Configuration selected: $config"
-}
-
-#Filter for argument argv1: design flow
-if {$design_flow_stage == ""} then {
-	no_second_argument_entered
-} elseif {$design_flow_stage == "SYNTHESIZE"
-		  || $design_flow_stage == "PLACE_AND_ROUTE"
-		  || $design_flow_stage == "GENERATE_BITSTREAM"
-		  || $design_flow_stage == "EXPORT_PROGRAMMING_FILE"} then {
-	puts "Info: Design flow run tool selected: $design_flow_stage"
-} elseif {$design_flow_stage == "ES" 
-		  || $design_flow_stage == "PS"} then {
-	set die_variant "$design_flow_stage"
-} else {
-	invalid_second_argument
-	exit 1
-}
-
-#Filter for argument argv2: die type
-if {$die_variant == ""} {
-	set die_variant "PS"
-	no_third_argument_entered
-} elseif {$die_variant == "PS"
-		  || $die_variant == "ES"} then {
-	puts "Info: Die type selected: $die_variant"
-} else {
-	invalid_third_argument
-	exit 1
-}
-
-append target_board $hw_platform _ $die_variant
+append target_board $hwPlatform _ $dieType
 append project_folder_name MIV_ $config _BD
-set project_dir "./$project_folder_name"
-append project_name $target_board _ $soft_cpu _ $config _ $sd_reference
+set projectDir $scriptDir/$project_folder_name
+append project_name $target_board _ $softCpu _ $config _ $sdName
 
-if {"$config" == "CFG1"} then {
-	if {[file exists $project_dir] == 1} then {
-		project_exists
-	} else {
-		create_new_project_label
-		if {"$die_variant" == "PS"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-		} elseif {"$die_variant" == "ES"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS_ES} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {EXT} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:EXT} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:EXT}
-		} else {
-			invalid_third_argument
-			exit 1
-		}
-		download_required_direct_cores
-		source ./import/components/IMC_CFG1/import_sd_and_constraints_imc_cfg1.tcl
-		save_project
-        base_design_built
-	}
-} elseif {"$config" == "CFG2"} then {
-	if {[file exists $project_dir] == 1} then {
-		project_exists
-	} else {
-		create_new_project_label
-		if {"$die_variant" == "PS"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-		} elseif {"$die_variant" == "ES"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS_ES} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {EXT} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:EXT} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:EXT}
-		} else {
-			invalid_third_argument
-			exit 1
-		}
-		download_required_direct_cores
-		source ./import/components/IMC_CFG2/import_sd_and_constraints_imc_cfg2.tcl
-		save_project
-        base_design_built
-	}
-} elseif {"$config" == "CFG3"} then {
-	if {[file exists $project_dir] == 1} then {
-		project_exists
-	} else {
-		create_new_project_label
-		if {"$die_variant" == "PS"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-		} elseif {"$die_variant" == "ES"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS_ES} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {EXT} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:EXT} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:EXT}
-		} else {
-			invalid_third_argument
-			exit 1
-		}
-		download_required_direct_cores
-		source ./import/components/IMC_CFG3/import_sd_and_constraints_imc_cfg3.tcl
-		save_project
-        base_design_built
-	}
-} elseif {"$config" == "CFG4"} then {
-	if {[file exists $project_dir] == 1} then {
-		project_exists
-	} else {
-		create_new_project_label
-		if {"$die_variant" == "PS"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-		} elseif {"$die_variant" == "ES"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS_ES} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {EXT} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:EXT} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:EXT}
-		} else {
-			invalid_third_argument
-			exit 1
-		}
-		download_required_direct_cores
-		file copy ./import/components/IMC_CFG4/hex/miv-rv32-ndrbg-services.hex $project_dir    
-		source ./import/components/IMC_CFG4/import_sd_and_constraints_crypto_cfg4.tcl
-		save_project
-		base_design_built
-	}
-} elseif {"$config" == "DGC1"} then {
-	if {[file exists $project_dir] == 1} then {
-		project_exists
-	} else {
-		create_new_project_label
-		if {"$die_variant" == "PS"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-		} elseif {"$die_variant" == "ES"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS_ES} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {EXT} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:EXT} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:EXT}
-		} else {
-			invalid_third_argument
-			exit 1
-		}
-		download_required_direct_cores  
-		file copy ./import/components/IMC_DGC1/hex/miv-rv32i-systick-blinky.hex $project_dir    
-		file copy ./import/components/IMC_DGC1/bootloader_elf  ./MIV_DGC1_BD
-		source ./import/components/IMC_DGC1/import_sd_and_constraints_miv_ess_dgc1.tcl
-		save_project
-		base_design_built
-	}
-} elseif {"$config" == "DGC3"} then {
-	if {[file exists $project_dir] == 1} then {
-		project_exists
-	} else {
-		create_new_project_label
-		if {"$die_variant" == "PS"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-		} elseif {"$die_variant" == "ES"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS_ES} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {EXT} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:EXT} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:EXT}
-		} else {
-			invalid_third_argument
-			exit 1
-		}
-		download_required_direct_cores   
-		file copy ./import/components/IMC_DGC3/hex/miv-rv32i-systick-blinky.hex $project_dir    
-		source ./import/components/IMC_DGC3/import_sd_and_constraints_miv_ess_dgc3.tcl
-		save_project
-		base_design_built
-	}
-} elseif {"$config" == "DGC4"} then {
-	if {[file exists $project_dir] == 1} then {
-		project_exists
-	} else {
-		create_new_project_label
-		if {"$die_variant" == "PS"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {IND} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:IND} -adv_options {VCCI_1.2_VOLTR:IND} -adv_options {VCCI_1.5_VOLTR:IND} -adv_options {VCCI_1.8_VOLTR:IND} -adv_options {VCCI_2.5_VOLTR:IND} -adv_options {VCCI_3.3_VOLTR:IND} -adv_options {VOLTR:IND}
-		} elseif {"$die_variant" == "ES"} then {
-			new_project -location $project_dir -name $project_name -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {PolarFire} -die {MPF300TS_ES} -package {FCG1152} -speed {-1} -die_voltage {1.0} -part_range {EXT} -adv_options {IO_DEFT_STD:LVCMOS 1.8V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} -adv_options {TEMPR:EXT} -adv_options {VCCI_1.2_VOLTR:EXT} -adv_options {VCCI_1.5_VOLTR:EXT} -adv_options {VCCI_1.8_VOLTR:EXT} -adv_options {VCCI_2.5_VOLTR:EXT} -adv_options {VCCI_3.3_VOLTR:EXT} -adv_options {VOLTR:EXT}
-		} else {
-			invalid_third_argument
-			exit 1
-		}
-		download_required_direct_cores
-		file copy ./import/components/IMC_DGC4/hex/miv-rv32i-systick-blinky.hex $project_dir    
-		source ./import/components/IMC_DGC4/import_sd_and_constraints_miv_ess_dgc4.tcl
-		save_project
-		base_design_built
-	}
+# Developer aid 2: delete Libero design if it already exists so as to not run into "project exists errors"
+if {$overwrite_projects == "yes"} {file delete -force -- $projectDir}
+
+if {[file exists $projectDir] == 1} then {
+	print_message "Error: A project with '$config' configuration already exists for the '$hwPlatform'."
 } else {
-		invalid_first_argument
-		exit 1
+	print_message "Creating a new project for the '$hwPlatform' board."
+	new_project \
+		-location $projectDir \
+		-name $project_name \
+		-project_description {} \
+		-block_mode 0 \
+		-standalone_peripheral_initialization 0 \
+		-instantiate_in_smartdesign 1 \
+		-ondemand_build_dh 1 \
+		-hdl {VERILOG} \
+		-family {PolarFire} \
+		-die $diePackage \
+		-package $dieSize \
+		-speed $dieSpeed \
+		-die_voltage {1.0} \
+		-part_range $tempGrade \
+		-adv_options {IO_DEFT_STD:LVCMOS 1.8V} \
+		-adv_options {RESTRICTPROBEPINS:1} \
+		-adv_options {RESTRICTSPIPINS:0} \
+		-adv_options {SYSTEM_CONTROLLER_SUSPEND_MODE:0} \
+		-adv_options "TEMPR:$tempGrade" \
+		-adv_options "VCCI_1.2_VOLTR:$tempGrade" \
+		-adv_options "VCCI_1.5_VOLTR:$tempGrade" \
+		-adv_options "VCCI_1.8_VOLTR:$tempGrade" \
+		-adv_options "VCCI_2.5_VOLTR:$tempGrade" \
+		-adv_options "VCCI_3.3_VOLTR:$tempGrade" \
+		-adv_options "VOLTR:$tempGrade"
 }
 
+# Download the required direct cores
+download_required_direct_cores "$hwPlatform" "$softCpu" "$config"
+
+# Copy the example software program into the project directory (and bootloader elf for DGC1 and DGC2 configs)
+file copy -force $scriptDir/import/software_example/$config/hex $projectDir
+if {$config in {"DGC1" "DGC2"}} {file copy -force $scriptDir/import/software_example/$config/bootloader_elf $projectDir}
+
+# Import and build the design's SmartDesign
+print_message "Building the $sdName..."
+source $scriptDir/import/build_smartdesign/$sdBuildScript
+print_message "$sdName Built."
+
+# Optimizations - add constraints, modify package files if needed
+print_message "Applying Design Optimizations and Constraints..."
+source $scriptDir/import/design_optimization.tcl
+print_message "Optimization and Constraints Applied."
+
+# Configure 'Place & Route' tool
 pre_configure_place_and_route
 
-if {"$design_flow_stage" == "SYNTHESIZE"} then {
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nBegin Synthesis... \
-		  \r\n-------------------------------------------------------------------------------"
-
+# Run 'Synthesize' from the design flow
+if {"$designFlow" == "SYNTHESIZE"} then {
+	print_message "Starting Synthesis..."
     run_tool -name {SYNTHESIZE}
     save_project
+	print_message "Synthesis Complete."
 
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nSynthesis Complete. \
-		  \r\n-------------------------------------------------------------------------------"
-
-
-} elseif {"$design_flow_stage" == "PLACE_AND_ROUTE"} then {
-
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nBegin Place and Route... \
-		  \r\n-------------------------------------------------------------------------------"
-
+# Run 'Place & Route' from the design flow
+} elseif {"$designFlow" == "PLACE_AND_ROUTE"} then {
+	print_message "Starting Place and Route..."
 	run_verify_timing
 	save_project
+	print_message "Place and Route Completed successfully."
 
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nPlace and Route Complete. \
-		  \r\n-------------------------------------------------------------------------------"
+	# Generate Design Initialization Data -- only specific PolarFire Eval TCM designs
+	if {($hwFamily == "POLARFIRE") && ($config == "CFG3")} {
+		configure_ram_device "$config" "$sdName" "$projectDir"
+	}
 
-
-} elseif {"$design_flow_stage" == "GENERATE_BITSTREAM"} then {
-
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nGenerating Bitstream... \
-		  \r\n-------------------------------------------------------------------------------"
-
+# Run 'Generate Bitstream' from the design flow
+} elseif {"$designFlow" == "GENERATE_BITSTREAM"} then {
+	# Generate Design Initialization Data -- only specific PolarFire Eval TCM designs
+	if {($hwFamily == "POLARFIRE") && ($config == "CFG3")} {
+		configure_ram_device "$config" "$sdName"
+	}
+	
+	print_message "Generating Bitstream..."
 	run_verify_timing
     run_tool -name {GENERATEPROGRAMMINGDATA}
     run_tool -name {GENERATEPROGRAMMINGFILE}
     save_project
+	print_message "Bitstream Generated successfully."
 
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nBitstream Generated. \
-		  \r\n-------------------------------------------------------------------------------"
-
-
-} elseif {"$design_flow_stage" == "EXPORT_PROGRAMMING_FILE"} then {
-
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nExporting Programming Files... \
-		  \r\n-------------------------------------------------------------------------------"
+# Run 'Export Programming Job File' from the design flow (into default location)
+} elseif {"$designFlow" == "EXPORT_PROGRAMMING_FILE"} then {
+	print_message "Exporting Programming Files..."
 
 	run_verify_timing
+
 	run_tool -name {GENERATEPROGRAMMINGFILE}
-	
-	
+	# Generate Design Initialization Data -- only specific PolarFire Eval TCM designs
+	if {($hwFamily == "POLARFIRE") && ($config == "CFG3")} {
+		configure_ram_device "$config" "$sdName"
+	}
+
 	export_prog_job \
 		-job_file_name $project_name \
-		-export_dir $project_dir/designer/BaseDesign/export \
+		-export_dir $projectDir/designer/$sdName/export \
 		-bitstream_file_type {TRUSTED_FACILITY} \
 		-bitstream_file_components {}
 	save_project
-
-
-	puts "\n------------------------------------------------------------------------------- \
-		  \r\nProgramming Files Exported. \
-		  \r\n-------------------------------------------------------------------------------"
+	print_message "Programming Files Exported."
 
 } else {
-	puts "Info: No design flow tool run."
+	print_message "Info: No design flow tool run."
 }
+
+# Done

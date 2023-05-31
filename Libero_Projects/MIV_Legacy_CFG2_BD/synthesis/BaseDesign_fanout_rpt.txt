@@ -1,0 +1,13 @@
+
+########			REPORT FOR HIGH FANOUT NETS			########
+
+CLOCK GLOBAL THRESHOLD - 2
+ASYNC GLOBAL THRESHOLD - 800
+GLOBAL THRESHOLD - 5000
+
+NET NAME                                                        CLOCK LOADS     ASYNC RST LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+SYS_CLK                                                         5479            0                   0              5479             YES                  
+CoreJTAGDebug_TRST_C0_0.CoreJTAGDebug_TRST_C0_0.TGT_TCK_GLB     313             0                   0              313              YES                  
+CoreJTAGDebug_TRST_C0_0.CoreJTAGDebug_TRST_C0_0.iUDRCK          17              0                   1              18               YES                  
+=========================================================================================================================================================

@@ -1,0 +1,106 @@
+INFO: Reading User SDC file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG2_BD\constraint\BaseDesign_derived_constraints.sdc.
+INFO: Reading User SDC file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG2_BD\constraint\io_jtag_constraints.sdc.
+INFO: Reading User SDC file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG2_BD\constraint\io_sys_constraints.sdc.
+INFO: The option "Abort flow if errors are found in SDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated SDC files. Please uncheck the option to ignore the errors and continue running the tool.
+
+No errors or warnings found.
+INFO: The option "Abort flow if errors are found in PDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated PDC files. Please uncheck the option to ignore the errors and continue running the tool
+***** Place and Route Configurations *****
+Timing-driven            : ON
+Power-driven             : OFF
+I/O Register Combining   : OFF
+Global Pins Demotion     : ON
+Driver Replication       : OFF
+High-effort              : OFF
+Repair min-delay         : ON
+Incremental              : OFF
+Inter-clock optimization : ON
+
+INFO: Reading User PDC file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG2_BD\constraint\io\io_constraints.pdc. 0 error(s) and 0 warning(s)
+
+ Running Timing based Global Demotion. 
+        Demoted 0 global pins.
+
+ Timing based Global Demotion completed successfully. 
+
+Running the I/O Bank and Globals Assigner.
+Info:  I/O Bank and Globals Assigner identified 10 fixed I/O macros, 0 unfixed I/O macros
+
+I/O Bank and Globals Assigner completed successfully.
+Total time spent in I/O Bank and Globals Assigner: 7 seconds
+
+Placer V5.0 - 2023.1.0 
+Design: BaseDesign                      Started: Thu May 25 13:17:19 2023
+
+Initializing Normal-Effort Timing-Driven Placement ...
+Clustering ...
+Placing ...
+Improving placement ...
+End of placement.
+
+Placer Runtime Summary   :
+Clustering (1 pass)      : 10 seconds
+Placement                : 35 seconds
+Improvement              : 113 seconds
+
+Placer completed successfully.
+
+Design: BaseDesign                      
+Finished: Thu May 25 13:20:42 2023
+Total CPU Time:     00:03:54            Total Elapsed Time: 00:03:23
+Total Memory Usage: 1346.5 Mbytes
+                        o - o - o - o - o - o
+
+
+Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
+    Driver: CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/genblk3.genblk1.TGT_TCK_GLB_RNICJD7:Y
+       Net: CoreJTAGDebug_TRST_C0_0_TGT_TCK_0
+Clock pins: 6
+
+Router 
+Design: C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG2_BD\designer\BaseDesign\BaseDesignStarted: Thu May 25 13:20:58 2023
+
+
+Router completed successfully.
+
+Design: C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG2_BD\designer\BaseDesign\BaseDesign
+Finished: Thu May 25 13:22:04 2023
+Total CPU Time:     00:01:33            Total Elapsed Time: 00:01:06
+Total Memory Usage: 5328.4 Mbytes
+                        o - o - o - o - o - o
+
+Info: Iteration 1:
+  Worst minimum delay slack: -1.792 ns
+  Total violating paths eligible for improvement: 3
+  Total violating paths improved: 3
+Info: Iteration 2:
+  Worst minimum delay slack: -1.026 ns
+  Total violating paths eligible for improvement: 3
+  Total violating paths improved: 3
+Info: Iteration 3:
+  Worst minimum delay slack: -0.942 ns
+  Total violating paths eligible for improvement: 3
+  Total violating paths improved: 3
+Info: Iteration 4:
+  Worst minimum delay slack: -0.912 ns
+  Total violating paths eligible for improvement: 3
+  Total violating paths improved: 0
+Resource Usage
++---------------+-------+--------+------------+
+| Type          | Used  | Total  | Percentage |
++---------------+-------+--------+------------+
+| 4LUT          | 15040 | 299544 | 5.02       |
+| DFF           | 8867  | 299544 | 2.96       |
+| I/O Register  | 0     | 510    | 0.00       |
+| Logic Element | 17662 | 299544 | 5.90       |
++---------------+-------+--------+------------+
+
+I/O Placement
++--------+-------+------------+
+| Type   | Count | Percentage |
++--------+-------+------------+
+| Locked |  10   | 100.00%    |
+| Placed |  0    | 0.00%      |
++--------+-------+------------+
+
+Completed writing pin report files.

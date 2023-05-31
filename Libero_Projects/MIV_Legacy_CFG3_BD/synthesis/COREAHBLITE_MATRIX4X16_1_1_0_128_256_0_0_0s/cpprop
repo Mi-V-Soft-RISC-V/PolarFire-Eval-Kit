@@ -1,0 +1,9 @@
+n COREAHBLITE_LIB COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s verilog;
+av .compile_point_summary_status "Mapped";
+av .compile_point_summary_reason "No database";
+av .compile_point_update_model 0;
+av .compile_point_fast_synthesis "No";
+av .compile_point_cputime_used 12.2188;
+av .compile_point_starttime_stamp "Thu May 25 13:57:45 2023";
+av .compile_point_endtime_stamp "Thu May 25 13:57:57 2023";
+av .compile_point_realtime_used 11.883;

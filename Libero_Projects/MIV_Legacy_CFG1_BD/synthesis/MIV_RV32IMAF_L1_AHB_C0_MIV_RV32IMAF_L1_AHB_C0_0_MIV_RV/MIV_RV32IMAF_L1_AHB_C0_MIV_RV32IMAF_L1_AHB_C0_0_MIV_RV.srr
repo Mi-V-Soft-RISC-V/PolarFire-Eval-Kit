@@ -1,0 +1,477 @@
+# Fri May 26 10:41:22 2023
+
+
+Copyright (C) 1994-2022 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: T-2022.09M-SP2
+Install: C:\Microchip\Libero_SoC_v2023.1\SynplifyPro
+OS: Windows 10 or later
+Hostname: IRD-LT-M52413
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202209actsp2, Build 067R, Built Mar  9 2023 04:11:46, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 130MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 143MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 143MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 134MB peak: 143MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 135MB peak: 143MB)
+
+
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_fpu_ecc.v":64:7:64:77|Found compile point of type hard on View view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc_0(verilog) 
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_rocket.v":64:7:64:80|Found compile point of type hard on View view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc(verilog) 
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_rocket_tile_tile_ecc.v":64:7:64:90|Found compile point of type hard on View view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV(verilog) 
+
+Begin environment creation (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 199MB peak: 199MB)
+
+@W: BN114 :|Removing instance CP_fanout_cell_MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV_inst (in view: work.BaseDesign(verilog)) because it does not drive other instances.
+
+Finished environment creation (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 201MB peak: 201MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 201MB peak: 201MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 202MB peak: 202MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_rocket_tile_tile_ecc.v":64:7:64:90|Mapping Compile point view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV(verilog) because 
+		 no database from previous run found.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 202MB peak: 203MB)
+
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_ram_2048x32_ecc_g5.v":69:0:69:5|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.dcache.data.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0_EXT.ram31d24.RADDR_reg[10:9] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.dcache.data.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0_EXT.ram24d16.RADDR_reg[10:9]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_ram_2048x32_ecc_g5.v":69:0:69:5|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.dcache.data.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0_EXT.ram24d16.RADDR_reg[10:9] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.dcache.data.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0_EXT.ram15d8.RADDR_reg[10:9]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_ram_2048x32_ecc_g5.v":69:0:69:5|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.dcache.data.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0_EXT.ram7d0.RADDR_reg[10:9] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.dcache.data.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0_EXT.ram15d8.RADDR_reg[10:9]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 206MB peak: 206MB)
+
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_ecc.v":138:5:138:10|Removing sequential instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.genblk1\.sync_resetn[0] (in view: work.BaseDesign(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_11.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source[14:0] is 2 words by 15 bits.
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[9].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[10].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[11].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[12].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[13].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[14].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[9].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[10].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[11].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[12].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[13].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[14].
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_14.v":242:2:242:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_opcode[29:0] is 2 words by 30 bits.
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[9].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[10].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[11].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[12].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[13].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[14].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[15].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[16].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[17].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[18].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[19].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[20].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[21].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[22].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[23].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[24].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[25].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[26].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[27].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[28].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[29].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[9].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[10].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[11].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[12].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[13].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[14].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[15].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[16].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[17].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[18].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[19].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[20].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[21].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[22].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[23].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[24].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[25].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[26].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[27].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[28].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[29].
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_6.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param[8:0] is 2 words by 9 bits.
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram0_[0].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram0_[1].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram0_[2].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram0_[3].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram0_[4].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram0_[5].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram0_[6].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram0_[7].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram0_[8].
+@N: FX493 |Applying initial value "0" on instance SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_param_ram1_[0].
+
+Only the first 100 messages of id 'FX493' are reported. To see all messages use 'report_messages -log C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD\synthesis\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV.srr -id FX493' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {FX493} -count unlimited' in the Tcl shell.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_14.v":242:2:242:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_data[31:0] is 2 words by 32 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_6.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_data[31:0] is 2 words by 32 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_6.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE_1.ram_error is 2 words by 1 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_11.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_data[31:0] is 2 words by 32 bits.
+@N: MF135 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_11.v":286:2:286:7|RAM MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_address[31:0] is 2 words by 32 bits.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_11.v":286:2:286:7|Removing instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_opcode.SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[2] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_opcode.SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_11.v":286:2:286:7|Removing instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_opcode.SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[3] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_opcode.SystemBus_TLBuffer.Queue_3.ram_opcode_ram0_[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_11.v":286:2:286:7|Removing instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_opcode.SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[2] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_opcode.SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_queue_11.v":286:2:286:7|Removing instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_opcode.SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[3] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.ram_opcode.SystemBus_TLBuffer.Queue_3.ram_opcode_ram1_[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+Encoding state machine release_state[6:0] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_DCACHE_DCACHE_0s_1s(verilog))
+original code -> new code
+   000 -> 0000000
+   001 -> 0000011
+   010 -> 0000101
+   011 -> 0001001
+   101 -> 0010001
+   110 -> 0100001
+   111 -> 1000001
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_dcache_dcache_ecc.v":2954:2:2954:7|Found counter in view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_DCACHE_DCACHE_0s_1s(verilog) instance flushCounter[6:0] 
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_dcache_dcache_ecc.v":2954:2:2954:7|Found counter in view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_DCACHE_DCACHE_0s_1s(verilog) instance lrscCount[4:0] 
+@N: MF179 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_dcache_dcache_ecc.v":1929:18:1929:46|Found 19 by 19 bit equality operator ('==') _T_486 (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_DCACHE_DCACHE_0s_1s(verilog))
+@N: MF179 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_dcache_dcache_ecc.v":1764:19:1764:37|Found 11 by 11 bit equality operator ('==') _T_1527 (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_DCACHE_DCACHE_0s_1s(verilog))
+@N: MF179 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_dcache_dcache_ecc.v":1820:19:1820:37|Found 11 by 11 bit equality operator ('==') _T_1583 (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_DCACHE_DCACHE_0s_1s(verilog))
+@N: MF179 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_dcache_dcache_ecc.v":1755:25:1755:44|Found 26 by 26 bit equality operator ('==') lrscAddrMatch (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_DCACHE_DCACHE_0s_1s(verilog))
+Encoding state machine genblk1\.RAM_ST[2:0] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMA_L1_AHB_RAM_INIT_1s_MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MO231 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_ram_init.v":78:4:78:9|Found counter in view:work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMA_L1_AHB_RAM_INIT_1s_MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV(verilog) instance genblk1\.ADDR[10:0] 
+@N: MF179 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_icache_icache_ecc.v":330:18:330:34|Found 19 by 19 bit equality operator ('==') _T_293 (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_ICACHE_ICACHE_0s_1s(verilog))
+@N: MF179 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_compare_rec_fn.v":184:17:184:37|Found 24 by 24 bit equality operator ('==') fpiu.dcmp._T_60 (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc_0(verilog))
+@N: MF179 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_compare_rec_fn.v":179:37:179:58|Found 9 by 9 bit equality operator ('==') fpiu.dcmp.eqExps (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc_0(verilog))
+Encoding state machine div.state[6:0] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RVc(verilog))
+original code -> new code
+   000 -> 0000000
+   001 -> 0000011
+   010 -> 0000101
+   011 -> 0001001
+   101 -> 0010001
+   110 -> 0100001
+   111 -> 1000001
+
+Starting factoring (Real Time elapsed 0h:00m:27s; CPU Time elapsed 0h:00m:27s; Memory used current: 216MB peak: 216MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:30s; CPU Time elapsed 0h:00m:30s; Memory used current: 232MB peak: 232MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_data_arrays_0_0_ext_ecc.v":98:0:98:5|Removing sequential instance frontend.icache.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0_0_EXT.last_write_address[9] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV(verilog)) because it does not drive other instances.
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:35s; CPU Time elapsed 0h:00m:35s; Memory used current: 232MB peak: 243MB)
+
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_dcache_dcache_ecc.v":2954:2:2954:7|Removing instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.dcache.release_state[4] because it is equivalent to instance MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.dcache.release_state[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_dcache_dcache_ecc.v":2954:2:2954:7|Removing sequential instance dcache.release_state[3] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV(verilog)) because it does not drive other instances.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:00m:38s; Memory used current: 235MB peak: 243MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:55s; CPU Time elapsed 0h:00m:55s; Memory used current: 237MB peak: 243MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:56s; CPU Time elapsed 0h:00m:56s; Memory used current: 237MB peak: 243MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:01m:00s; CPU Time elapsed 0h:01m:00s; Memory used current: 237MB peak: 243MB)
+
+@N: BN362 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg1_bd\component\work\miv_rv32imaf_l1_ahb_c0\miv_rv32imaf_l1_ahb_c0_0\core\miv_rv32imaf_l1_ahb_data_arrays_0_0_ext_ecc.v":98:0:98:5|Removing sequential instance frontend.icache.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0.MIV_RV32IMAF_L1_AHB_DATA_ARRAYS_0_0_EXT.last_write_address[10] (in view: work.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV(verilog)) because it does not drive other instances.
+
+Finished technology mapping (Real Time elapsed 0h:01m:07s; CPU Time elapsed 0h:01m:06s; Memory used current: 276MB peak: 319MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:01m:07s		     3.01ns		5575 /      2582
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:01m:12s; CPU Time elapsed 0h:01m:11s; Memory used current: 279MB peak: 319MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:01m:12s; CPU Time elapsed 0h:01m:12s; Memory used current: 280MB peak: 319MB)
+
+
+End compile point sub-process log
+
+@N: MT615 |Found clock SYS_CLK with period 20.00ns 
+@W: MT420 |Found inferred clock COREJTAGDEBUG_Z9|N_2_inferred_clock with period 10.00ns. Please declare a user-defined clock on net CoreJTAGDebug_TRST_C0_0.CoreJTAGDebug_TRST_C0_0.N_2.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Fri May 26 10:42:36 2023
+#
+
+
+Top view:               BaseDesign
+Requested Frequency:    6.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD\designer\BaseDesign\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 4.474
+
+                                        Requested     Estimated     Requested     Estimated               Clock        Clock                
+Starting Clock                          Frequency     Frequency     Period        Period        Slack     Type         Group                
+--------------------------------------------------------------------------------------------------------------------------------------------
+COREJTAGDEBUG_Z9|N_2_inferred_clock     100.0 MHz     NA            10.000        NA            NA        inferred     Inferred_clkgroup_0_2
+SYS_CLK                                 50.0 MHz      64.8 MHz      20.000        15.429        4.571     declared     async1_1             
+TCK                                     6.0 MHz       NA            166.670       NA            NA        declared     async1_2             
+System                                  100.0 MHz     NA            10.000        NA            NA        system       system_clkgroup      
+============================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                        |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------
+Starting                             Ending   |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------
+SYS_CLK                              System   |  20.000      4.474  |  No paths    -      |  No paths    -      |  No paths    -    
+SYS_CLK                              SYS_CLK  |  20.000      4.571  |  No paths    -      |  No paths    -      |  No paths    -    
+COREJTAGDEBUG_Z9|N_2_inferred_clock  SYS_CLK  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+====================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: SYS_CLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                                                                                                                                                                                                                               Starting                                    Arrival          
+Instance                                                                                                                                                                                                                                                                                       Reference     Type     Pin     Net          Time        Slack
+                                                                                                                                                                                                                                                                                               Clock                                                        
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.value_1                                                                                                                         SYS_CLK       SLE      Q       value_1      0.218       4.474
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[7]     SYS_CLK       SLE      Q       ram1_7       0.218       5.304
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.Queue_3.value_1                                                                                                                                                                                           SYS_CLK       SLE      Q       value_1      0.218       5.316
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[5]     SYS_CLK       SLE      Q       ram1_5       0.218       5.349
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[7]     SYS_CLK       SLE      Q       ram0_7       0.218       5.402
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram1_[6]     SYS_CLK       SLE      Q       ram1_6       0.218       5.403
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[5]     SYS_CLK       SLE      Q       ram0_5       0.218       5.446
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_434[3]                                                                                                                                                                        SYS_CLK       SLE      Q       inp[125]     0.218       5.461
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0_[6]     SYS_CLK       SLE      Q       ram0_6       0.218       5.500
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_434[5]                                                                                                                                                                        SYS_CLK       SLE      Q       inp[123]     0.201       5.503
+============================================================================================================================================================================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                           Starting                                                                                    Required          
+Instance                                                                                   Reference     Type        Pin            Net                                                Time         Slack
+                                                                                           Clock                                                                                                         
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0     SYS_CLK       RAM1K20     B_ADDR[5]      PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[0]     19.303       4.474
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0     SYS_CLK       RAM1K20     B_ADDR[6]      PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[1]     19.303       4.474
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0     SYS_CLK       RAM1K20     B_ADDR[8]      PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[3]     19.303       4.474
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0     SYS_CLK       RAM1K20     B_ADDR[9]      PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[4]     19.303       4.474
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0     SYS_CLK       RAM1K20     B_ADDR[12]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[7]     19.303       4.474
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R1C0     SYS_CLK       RAM1K20     B_ADDR[5]      PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[0]     19.303       4.474
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R1C0     SYS_CLK       RAM1K20     B_ADDR[6]      PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[1]     19.303       4.474
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R1C0     SYS_CLK       RAM1K20     B_ADDR[8]      PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[3]     19.303       4.474
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R1C0     SYS_CLK       RAM1K20     B_ADDR[9]      PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[4]     19.303       4.474
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R1C0     SYS_CLK       RAM1K20     B_ADDR[12]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[7]     19.303       4.474
+=========================================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      20.000
+    - Setup time:                            0.697
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         19.303
+
+    - Propagation time:                      14.829
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     4.474
+
+    Number of logic level(s):                13
+    Starting point:                          MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.value_1 / Q
+    Ending point:                            PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0 / B_ADDR[5]
+    The start point is clocked by            SYS_CLK [rising] (rise=0.000 fall=10.000 period=20.000) on pin CLK
+    The end   point is clocked by            System [rising] on pin B_CLK
+
+Instance / Net                                                                                                                                                                                                                                                                                                      Pin           Pin               Arrival      No. of    
+Name                                                                                                                                                                                                                                                                                                    Type        Name          Dir     Delay     Time         Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.value_1                                                                                                                                  SLE         Q             Out     0.218     0.218 r      -         
+value_1                                                                                                                                                                                                                                                                                                 Net         -             -       1.008     -            83        
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0__RNIMCV01[7]     CFG3        B             In      -         1.227 r      -         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.tile.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source.SystemBus_TLBuffer.MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV32IMAF_L1_AHB_QUEUE.ram_source_ram0__RNIMCV01[7]     CFG3        Y             Out     0.088     1.314 r      -         
+auto_anon_out_a_bits_param[2]                                                                                                                                                                                                                                                                           Net         -             -       0.948     -            2         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_220_1                                                                                                                                                                                  CFG3        C             In      -         2.262 r      -         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_220_1                                                                                                                                                                                  CFG3        Y             Out     0.132     2.394 f      -         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_220_1                                                                                                                                                                                  Net         -             -       0.547     -            3         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_223                                                                                                                                                                                    CFG4        B             In      -         2.941 f      -         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_223                                                                                                                                                                                    CFG4        Y             Out     0.077     3.019 f      -         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_223                                                                                                                                                                                    Net         -             -       0.623     -            8         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_518_1_3                                                                                                                                                                                CFG4        D             In      -         3.642 f      -         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_518_1_3                                                                                                                                                                                CFG4        Y             Out     0.232     3.874 r      -         
+inp_0[33]                                                                                                                                                                                                                                                                                               Net         -             -       1.110     -            81        
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_574[66]                                                                                                                                                                                CFG4        C             In      -         4.984 r      -         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.sbus.SystemBusFromTiletile.SystemBus_TLCacheCork._T_574[66]                                                                                                                                                                                CFG4        Y             Out     0.148     5.131 r      -         
+inp[458]                                                                                                                                                                                                                                                                                                Net         -             -       0.974     -            12        
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.converter._m2_e                                                                                                                                                                                                                            CFG2        B             In      -         6.106 r      -         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.converter._m2_e                                                                                                                                                                                                                            CFG2        Y             Out     0.088     6.193 f      -         
+inp[370]                                                                                                                                                                                                                                                                                                Net         -             -       1.001     -            8         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.converter._T_167_last_0_sqmuxa_1                                                                                                                                                                                                           CFG2        A             In      -         7.194 f      -         
+MIV_RV32IMAF_L1_AHB_C0_0.MIV_RV32IMAF_L1_AHB_C0_0.ChiselTop0.converter._T_167_last_0_sqmuxa_1                                                                                                                                                                                                           CFG2        Y             Out     0.048     7.242 f      -         
+inp[367]                                                                                                                                                                                                                                                                                                Net         -             -       0.990     -            14        
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.PREGATEDHADDR_u_0[28]                                                                                                                                                                                                                              CFG4        D             In      -         8.232 f      -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.PREGATEDHADDR_u_0[28]                                                                                                                                                                                                                              CFG4        Y             Out     0.232     8.463 f      -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.address_decode.ADDR[28]                                                                                                                                                                                                                            Net         -             -       0.718     -            16        
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.address_decode.g_modes\.g_mem_1\.sdec_raw112                                                                                                                                                                                                       CFG4        D             In      -         9.181 f      -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.address_decode.g_modes\.g_mem_1\.sdec_raw112                                                                                                                                                                                                       CFG4        Y             Out     0.232     9.413 r      -         
+inp[289]                                                                                                                                                                                                                                                                                                Net         -             -       0.974     -            4         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.un1_m1_0_a2                                                                                                                                                                                                                           CFG4        C             In      -         10.387 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.un1_m1_0_a2                                                                                                                                                                                                                           CFG4        Y             Out     0.148     10.535 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.un1_MASTERADDRINPROG_1_sqmuxa_i_0                                                                                                                                                                                                     Net         -             -       0.674     -            12        
+d_m1_e_0                                                                                                                                                                                                                                                                                                CFG2        A             In      -         11.209 r     -         
+d_m1_e_0                                                                                                                                                                                                                                                                                                CFG2        Y             Out     0.051     11.260 r     -         
+d_N_6_mux                                                                                                                                                                                                                                                                                               Net         -             -       0.609     -            7         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t_0_1[2]                                                                                                                                                                                           CFG4        D             In      -         11.869 r     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t_0_1[2]                                                                                                                                                                                           CFG4        Y             Out     0.232     12.101 f     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR_1[0]                                                                                                                                                                                                                                                        Net         -             -       0.118     -            1         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t_0[2]                                                                                                                                                                                             CFG4        D             In      -         12.219 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t_0[2]                                                                                                                                                                                             CFG4        Y             Out     0.192     12.411 f     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.W_ADDR[0]                                                                                                                                                                                                                                                          Net         -             -       2.418     -            128       
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0                                                                                                                                                                                                                  RAM1K20     B_ADDR[5]     In      -         14.829 f     -         
+===========================================================================================================================================================================================================================================================================================================================================================================
+Total path delay (propagation time + setup) of 15.526 is 2.813(18.1%) logic and 12.713(81.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+Writing compile point status file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG1_BD\synthesis\MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name                                                       Status     Reason     
+---------------------------------------------------------------------------------
+MIV_RV32IMAF_L1_AHB_C0_MIV_RV32IMAF_L1_AHB_C0_0_MIV_RV     Mapped     No database
+=================================================================================
+
+Process took 0h:01m:13s realtime, 0h:01m:13s cputime
+# Fri May 26 10:42:36 2023
+
+###########################################################]

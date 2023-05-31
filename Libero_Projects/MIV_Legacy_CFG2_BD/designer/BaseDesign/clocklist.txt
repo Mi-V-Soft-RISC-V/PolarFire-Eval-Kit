@@ -1,0 +1,2 @@
+"SYS_CLK",20,"SYS_CLK","SYS_CLK"
+"TCK",166.67,"TCK","TCK"

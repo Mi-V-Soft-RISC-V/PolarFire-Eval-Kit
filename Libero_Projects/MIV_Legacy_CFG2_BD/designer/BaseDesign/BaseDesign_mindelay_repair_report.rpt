@@ -1,0 +1,336 @@
+-------------------------------------
+ External Hold Repair Report 
+-------------------------------------
+ Iteration 1  
+ Total I/O ports improved: 3       
+-------------------------------------
+
+I/O port 1
+------------------------------------
+Port name:                  SW_7
+------------------------------------
+Input
+------------------------------------
+Port max-delay slack:       1018 ps
+Port min-delay slack:      -1792 ps
+I/O input delay value:    OFF -> 11 
+Max-delay inserted:         1025 ps
+Min-delay inserted:          295 ps
+
+I/O port 2
+------------------------------------
+Port name:                  SW_8
+------------------------------------
+Input
+------------------------------------
+Port max-delay slack:        980 ps
+Port min-delay slack:      -1747 ps
+I/O input delay value:    OFF -> 10 
+Max-delay inserted:          989 ps
+Min-delay inserted:          282 ps
+
+I/O port 3
+------------------------------------
+Port name:                    RX
+------------------------------------
+Input
+------------------------------------
+Port max-delay slack:        630 ps
+Port min-delay slack:      -1466 ps
+I/O input delay value:    OFF -> 0  
+Max-delay inserted:          628 ps
+Min-delay inserted:          159 ps
+
+
+
+-------------------------------------
+ Min-delay Repair Report 
+-------------------------------------
+ Iteration 1  
+ Total paths eligible for improvement: 3       
+ Total paths improved: 0       
+-------------------------------------
+
+Path 1
+-------------------------------------
+From: SW_7
+  To: CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_0_.gpin1:D
+-------------------------------------
+Path min-delay slack:     -1792 ps
+Min-delay inserted by
+External Hold Repair:       295 ps
+-------------------------------------
+... This path is ignored in current iteraton of Min-delay Repair.
+
+
+Path 2
+-------------------------------------
+From: SW_8
+  To: CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_1_.gpin1:D
+-------------------------------------
+Path min-delay slack:     -1747 ps
+Min-delay inserted by
+External Hold Repair:       282 ps
+-------------------------------------
+... This path is ignored in current iteraton of Min-delay Repair.
+
+
+Path 3
+-------------------------------------
+From: RX
+  To: CoreUARTapb_C0_0/CoreUARTapb_C0_0/uUART/make_RX/samples[2]:D
+-------------------------------------
+Path min-delay slack:     -1466 ps
+Min-delay inserted by
+External Hold Repair:       159 ps
+-------------------------------------
+... This path is ignored in current iteraton of Min-delay Repair.
+
+
+
+-------------------------------------
+ External Hold Repair Report 
+-------------------------------------
+ Iteration 2  
+ Total I/O ports improved: 3       
+-------------------------------------
+
+I/O port 1
+------------------------------------
+Port name:                  SW_8
+------------------------------------
+Input
+------------------------------------
+Port max-delay slack:        145 ps
+Port min-delay slack:       -999 ps
+I/O input delay value:     10 -> 14 
+Max-delay inserted:          144 ps
+Min-delay inserted:           50 ps
+
+I/O port 2
+------------------------------------
+Port name:                  SW_7
+------------------------------------
+Input
+------------------------------------
+Port max-delay slack:        152 ps
+Port min-delay slack:      -1016 ps
+I/O input delay value:     11 -> 15 
+Max-delay inserted:          144 ps
+Min-delay inserted:           49 ps
+
+I/O port 3
+------------------------------------
+Port name:                    RX
+------------------------------------
+Input
+------------------------------------
+Port max-delay slack:        119 ps
+Port min-delay slack:      -1026 ps
+I/O input delay value:      0 -> 3  
+Max-delay inserted:          108 ps
+Min-delay inserted:           37 ps
+
+
+
+-------------------------------------
+ Min-delay Repair Report 
+-------------------------------------
+ Iteration 2  
+ Total paths eligible for improvement: 3       
+ Total paths improved: 0       
+-------------------------------------
+
+Path 1
+-------------------------------------
+From: RX
+  To: CoreUARTapb_C0_0/CoreUARTapb_C0_0/uUART/make_RX/samples[2]:D
+-------------------------------------
+Path min-delay slack:     -1026 ps
+Min-delay inserted by
+External Hold Repair:        37 ps
+-------------------------------------
+... This path is ignored in current iteraton of Min-delay Repair.
+
+
+Path 2
+-------------------------------------
+From: SW_7
+  To: CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_0_.gpin1:D
+-------------------------------------
+Path min-delay slack:     -1016 ps
+Min-delay inserted by
+External Hold Repair:        49 ps
+-------------------------------------
+... This path is ignored in current iteraton of Min-delay Repair.
+
+
+Path 3
+-------------------------------------
+From: SW_8
+  To: CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_1_.gpin1:D
+-------------------------------------
+Path min-delay slack:      -999 ps
+Min-delay inserted by
+External Hold Repair:        50 ps
+-------------------------------------
+... This path is ignored in current iteraton of Min-delay Repair.
+
+
+
+-------------------------------------
+ External Hold Repair Report 
+-------------------------------------
+ Iteration 3  
+ Total I/O ports improved: 3       
+-------------------------------------
+
+I/O port 1
+------------------------------------
+Port name:                    RX
+------------------------------------
+Input
+------------------------------------
+Port max-delay slack:         31 ps
+Port min-delay slack:       -942 ps
+I/O input delay value:      3 -> 4  
+Max-delay inserted:           36 ps
+Min-delay inserted:           12 ps
+
+I/O port 2
+------------------------------------
+Port name:                  SW_7
+------------------------------------
+Input
+------------------------------------
+Port max-delay slack:         29 ps
+Port min-delay slack:       -923 ps
+I/O input delay value:     15 -> 16 
+Max-delay inserted:           36 ps
+Min-delay inserted:           12 ps
+
+I/O port 3
+------------------------------------
+Port name:                  SW_8
+------------------------------------
+Input
+------------------------------------
+Port max-delay slack:         22 ps
+Port min-delay slack:       -911 ps
+I/O input delay value:     14 -> 15 
+Max-delay inserted:           36 ps
+Min-delay inserted:           12 ps
+
+
+
+-------------------------------------
+ Min-delay Repair Report 
+-------------------------------------
+ Iteration 3  
+ Total paths eligible for improvement: 3       
+ Total paths improved: 0       
+-------------------------------------
+
+Path 1
+-------------------------------------
+From: RX
+  To: CoreUARTapb_C0_0/CoreUARTapb_C0_0/uUART/make_RX/samples[2]:D
+-------------------------------------
+Path min-delay slack:      -942 ps
+Min-delay inserted by
+External Hold Repair:        12 ps
+-------------------------------------
+... This path is ignored in current iteraton of Min-delay Repair.
+
+
+Path 2
+-------------------------------------
+From: SW_7
+  To: CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_0_.gpin1:D
+-------------------------------------
+Path min-delay slack:      -923 ps
+Min-delay inserted by
+External Hold Repair:        12 ps
+-------------------------------------
+... This path is ignored in current iteraton of Min-delay Repair.
+
+
+Path 3
+-------------------------------------
+From: SW_8
+  To: CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_1_.gpin1:D
+-------------------------------------
+Path min-delay slack:      -911 ps
+Min-delay inserted by
+External Hold Repair:        12 ps
+-------------------------------------
+... This path is ignored in current iteraton of Min-delay Repair.
+
+
+
+-------------------------------------
+ External Hold Repair Report 
+-------------------------------------
+ Iteration 4  
+ Total I/O ports improved: 0       
+-------------------------------------
+
+
+
+-------------------------------------
+ Min-delay Repair Report 
+-------------------------------------
+ Iteration 4  
+ Total paths eligible for improvement: 3       
+ Total paths improved: 0       
+-------------------------------------
+
+Path 1
+-------------------------------------
+From: RX
+  To: CoreUARTapb_C0_0/CoreUARTapb_C0_0/uUART/make_RX/samples[2]:D
+-------------------------------------
+Path min-delay slack:      -912 ps
+-------------------------------------
+... None of the following nets could be modified:
+      RX_c
+      RX
+      RX_ibuf/YIN
+
+Path 2
+-------------------------------------
+From: SW_7
+  To: CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_0_.gpin1:D
+-------------------------------------
+Path min-delay slack:      -909 ps
+-------------------------------------
+... None of the following nets could be modified:
+      SW_7_c
+      SW_7
+      SW_7_ibuf/YIN
+
+Path 3
+-------------------------------------
+From: SW_8
+  To: CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_1_.gpin1:D
+-------------------------------------
+Path min-delay slack:      -899 ps
+-------------------------------------
+... None of the following nets could be modified:
+      SW_8_c
+      SW_8
+      SW_8_ibuf/YIN
+
+
+
+
+Note:
+    [1]: A net cannot be modified for repair if:
+         - it is hardwired, preserved, or global;
+         - the sink pin is a clock pin;
+         - the sink pin has negative max-delay slack allowance;
+
+    [2]: A location is not feasible for inserting a delay buffer if the estimated minimum delay to be inserted might exceed the max-delay slack allowance of the sink pin.
+
+
+

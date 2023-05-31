@@ -1,0 +1,447 @@
+# Thu May 25 13:56:49 2023
+
+
+Copyright (C) 1994-2022 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: T-2022.09M-SP2
+Install: C:\Microchip\Libero_SoC_v2023.1\SynplifyPro
+OS: Windows 10 or later
+Hostname: IRD-LT-M52413
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202209actsp2, Build 067R, Built Mar  9 2023 04:11:46, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 131MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 144MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 144MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 144MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 136MB peak: 144MB)
+
+
+@N: MF104 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":22:7:22:33|Found compile point of type hard on View view:COREAXITOAHBL_LIB.COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:COREAXITOAHBL_LIB.COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0(verilog) 
+
+Begin environment creation (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 179MB peak: 179MB)
+
+
+Finished environment creation (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 179MB peak: 179MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 179MB peak: 180MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 179MB peak: 180MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":22:7:22:33|Mapping Compile point view:COREAXITOAHBL_LIB.COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0(verilog) because 
+		 no database from previous run found.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 179MB peak: 180MB)
+
+@N: BZ173 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|ROM HTRANS_1[1:0] (in view: COREAXITOAHBL_LIB.COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0(verilog)) mapped in logic.
+@N: BZ173 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|ROM HTRANS_1[1:0] (in view: COREAXITOAHBL_LIB.COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0(verilog)) mapped in logic.
+@N: MO106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|Found ROM HTRANS_1[1:0] (in view: COREAXITOAHBL_LIB.COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0(verilog)) with 15 words by 2 bits.
+@N: BZ173 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|ROM HWRITE_1 (in view: COREAXITOAHBL_LIB.COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0(verilog)) mapped in logic.
+@N: MO106 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreaxitoahbl\3.6.101\rtl\vlog\core\coreaxitoahbl_ahbmasterctrl.v":490:4:490:7|Found ROM HWRITE_1 (in view: COREAXITOAHBL_LIB.COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0(verilog)) with 15 words by 1 bit.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 185MB peak: 185MB)
+
+Encoding state machine CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[15:0] (in view: work.BaseDesign(verilog))
+original code -> new code
+   0000 -> 0000000000000001
+   0001 -> 0000000000000010
+   0010 -> 0000000000000100
+   0011 -> 0000000000001000
+   0100 -> 0000000000010000
+   0101 -> 0000000000100000
+   0110 -> 0000000001000000
+   0111 -> 0000000010000000
+   1000 -> 0000000100000000
+   1001 -> 0000001000000000
+   1010 -> 0000010000000000
+   1011 -> 0000100000000000
+   1100 -> 0001000000000000
+   1101 -> 0010000000000000
+   1110 -> 0100000000000000
+   1111 -> 1000000000000000
+Encoding state machine PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbcurr_state[2:0] (in view: work.BaseDesign(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[15] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[12] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[11] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[8] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[7] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[3] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[0] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[9] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\actel\directcore\coreahblite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":449:4:449:9|Register bit CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.arbRegSMCurrentState[1] (in view view:work.BaseDesign(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+
+Starting factoring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 192MB peak: 192MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 205MB peak: 205MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 199MB peak: 205MB)
+
+@W: BN132 :"c:\esip_projects\fpga_bu_esip\gh-libsd-pf-eval\libero_projects\miv_legacy_cfg3_bd\component\work\pf_sram_ahb_c0\coreahblsram_pf_0\rtl\vlog\core\coreahblsram_ahblsram.v":548:9:548:14|Removing instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1\.wrap_cond[9] (in view: work.BaseDesign(verilog)) because it is equivalent to instance PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.genblk1\.wrap_cond[10] (in view: work.BaseDesign(verilog)). To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:13s; Memory used current: 199MB peak: 205MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:17s; Memory used current: 199MB peak: 205MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:17s; Memory used current: 199MB peak: 205MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:19s; Memory used current: 200MB peak: 205MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:21s; Memory used current: 247MB peak: 247MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:22s		     6.92ns		1371 /       431
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:23s; Memory used current: 247MB peak: 248MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 247MB peak: 248MB)
+
+
+End compile point sub-process log
+
+@N: MT615 |Found clock SYS_CLK with period 20.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Thu May 25 13:57:15 2023
+#
+
+
+Top view:               BaseDesign
+Requested Frequency:    6.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\designer\BaseDesign\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 9.153
+
+                                         Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock                           Frequency     Frequency     Period        Period        Slack      Type         Group                
+----------------------------------------------------------------------------------------------------------------------------------------------
+COREJTAGDEBUG_Z13|N_2_inferred_clock     100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_0_2
+SYS_CLK                                  50.0 MHz      92.2 MHz      20.000        10.847        9.153      declared     async1_1             
+TCK                                      6.0 MHz       NA            166.670       NA            NA         declared     async1_2             
+System                                   100.0 MHz     NA            10.000        NA            11.742     system       system_clkgroup      
+==============================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------
+Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------
+System    SYS_CLK  |  20.000      11.742  |  No paths    -      |  No paths    -      |  No paths    -    
+SYS_CLK   System   |  20.000      9.207   |  No paths    -      |  No paths    -      |  No paths    -    
+SYS_CLK   SYS_CLK  |  20.000      9.153   |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: SYS_CLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                            Starting                                                                                                Arrival           
+Instance                                                                                    Reference     Type        Pin           Net                                                             Time        Slack 
+                                                                                            Clock                                                                                                                     
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[0]                          SYS_CLK       SLE         Q             currState[0]                                                    0.218       9.153 
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[1]                          SYS_CLK       SLE         Q             currState[1]                                                    0.218       9.213 
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[3]                          SYS_CLK       SLE         Q             currState[3]                                                    0.218       9.250 
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[2]                          SYS_CLK       SLE         Q             currState[2]                                                    0.218       9.704 
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     SYS_CLK       RAM1K20     A_DOUT[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[20\]     3.023       10.966
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     SYS_CLK       RAM1K20     A_DOUT[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[21\]     3.023       10.966
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     SYS_CLK       RAM1K20     A_DOUT[2]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[22\]     3.023       10.966
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     SYS_CLK       RAM1K20     A_DOUT[3]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[23\]     3.023       10.966
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     SYS_CLK       RAM1K20     A_DOUT[4]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[24\]     3.023       10.966
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     SYS_CLK       RAM1K20     A_DOUT[5]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[25\]     3.023       10.966
+======================================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                           Starting                                                                                    Required          
+Instance                                                                                   Reference     Type        Pin          Net                                                  Time         Slack
+                                                                                           Clock                                                                                                         
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.153
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.153
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R1C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.153
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R1C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.153
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R2C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.153
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R2C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.153
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R3C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.153
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R3C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.153
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R4C0     SYS_CLK       RAM1K20     A_WEN[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]     19.091       9.153
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R4C0     SYS_CLK       RAM1K20     A_WEN[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[3]     19.091       9.153
+=========================================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      20.000
+    - Setup time:                            0.909
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         19.091
+
+    - Propagation time:                      9.938
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     9.153
+
+    Number of logic level(s):                12
+    Starting point:                          CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[0] / Q
+    Ending point:                            PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0 / A_WEN[0]
+    The start point is clocked by            SYS_CLK [rising] (rise=0.000 fall=10.000 period=20.000) on pin CLK
+    The end   point is clocked by            SYS_CLK [rising] (rise=0.000 fall=10.000 period=20.000) on pin A_CLK
+
+Instance / Net                                                                                                                Pin          Pin               Arrival     No. of    
+Name                                                                                                              Type        Name         Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.currState[0]                                                SLE         Q            Out     0.218     0.218 r     -         
+currState[0]                                                                                                      Net         -            -       0.781     -           23        
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.un1_wrFIFORdAddr_d118                         CFG3        C            In      -         0.999 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.un1_wrFIFORdAddr_d118                         CFG3        Y            Out     0.148     1.147 r     -         
+un1_wrFIFORdAddr_d118                                                                                             Net         -            -       0.547     -           3         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.un1_wrFIFORdAddr_d118_RNIK3RN1                CFG3        B            In      -         1.694 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.un1_wrFIFORdAddr_d118_RNIK3RN1                CFG3        Y            Out     0.083     1.777 r     -         
+HTRANS_1[1]                                                                                                       Net         -            -       0.824     -           29        
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.HADDR[31]                                     CFG2        A            In      -         2.600 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.HADDR[31]                                     CFG2        Y            Out     0.051     2.651 r     -         
+HADDR[31]                                                                                                         Net         -            -       0.124     -           2         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.PREGATEDHADDR[31]                                            CFG3        A            In      -         2.775 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.PREGATEDHADDR[31]                                            CFG3        Y            Out     0.051     2.826 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.address_decode.ADDR[31]                                      Net         -            -       0.718     -           16        
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.address_decode.g_modes\.g_mem_1\.sdec_raw112                 CFG4        B            In      -         3.544 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.address_decode.g_modes\.g_mem_1\.sdec_raw112                 CFG4        Y            Out     0.083     3.627 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.sAddrDec[8]                                                  Net         -            -       0.547     -           3         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.SADDRSEL[8]                                                  CFG2        A            In      -         4.174 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.SADDRSEL[8]                                                  CFG2        Y            Out     0.051     4.224 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.MADDRSEL[1]                                     Net         -            -       0.594     -           7         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.un1_MASTERADDRINPROG_1_sqmuxa                   CFG4        D            In      -         4.819 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.un1_MASTERADDRINPROG_1_sqmuxa                   CFG4        Y            Out     0.168     4.987 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.un1_MASTERADDRINPROG_1_sqmuxa_i_0               Net         -            -       0.118     -           1         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.MASTERADDRINPROG_iv_i[1]                        CFG3        C            In      -         5.104 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.slave_arbiter.MASTERADDRINPROG_iv_i[1]                        CFG3        Y            Out     0.148     5.252 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.masterAddrInProg[1]                                           Net         -            -       0.817     -           28        
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.HWRITE_1                                                      CFG4        B            In      -         6.069 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.slavestage_8.HWRITE_1                                                      CFG4        Y            Out     0.083     6.152 r     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.HWRITE                    Net         -            -       0.773     -           22        
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t[1]         CFG3        B            In      -         6.925 r     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t[1]         CFG3        Y            Out     0.088     7.013 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.ahbsram_addr_t[1]         Net         -            -       0.579     -           5         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.sram_wen_mem_2_sqmuxa     CFG3        C            In      -         7.592 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.sram_wen_mem_2_sqmuxa     CFG3        Y            Out     0.145     7.738 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.sram_wen_mem_2_sqmuxa     Net         -            -       0.118     -           1         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.mem_byteen_0_iv[2]        CFG3        C            In      -         7.856 f     -         
+PF_SRAM_AHB_C0_0.COREAHBLSRAM_PF_0.genblk1\.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram.mem_byteen_0_iv[2]        CFG3        Y            Out     0.145     8.001 f     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.WBYTE_EN[2]                                                                  Net         -            -       1.937     -           64        
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R0C0                            RAM1K20     A_WEN[0]     In      -         9.938 f     -         
+===================================================================================================================================================================================
+Total path delay (propagation time + setup) of 10.847 is 2.371(21.9%) logic and 8.477(78.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                            Starting                                                                                               Arrival           
+Instance                                                                                    Reference     Type        Pin           Net                                                            Time        Slack 
+                                                                                            Clock                                                                                                                    
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     System        RAM1K20     B_DOUT[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[0\]     2.241       11.742
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     System        RAM1K20     B_DOUT[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[1\]     2.241       11.742
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     System        RAM1K20     B_DOUT[2]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[2\]     2.241       11.742
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     System        RAM1K20     B_DOUT[3]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[3\]     2.241       11.742
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     System        RAM1K20     B_DOUT[4]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[4\]     2.241       11.742
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     System        RAM1K20     B_DOUT[5]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[5\]     2.241       11.742
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     System        RAM1K20     B_DOUT[6]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[6\]     2.241       11.742
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0     System        RAM1K20     B_DOUT[7]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[7\]     2.241       11.742
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R47C0     System        RAM1K20     B_DOUT[0]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR47\[0\]     2.241       11.773
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R47C0     System        RAM1K20     B_DOUT[1]     PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR47\[1\]     2.241       11.773
+=====================================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                 Starting                                                                                                     Required           
+Instance                                                                         Reference     Type     Pin     Net                                                                           Time         Slack 
+                                                                                 Clock                                                                                                                           
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[40]     System        SLE      D       CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrData[40]     20.000       11.742
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[41]     System        SLE      D       CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrData[41]     20.000       11.742
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[42]     System        SLE      D       CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrData[42]     20.000       11.742
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[43]     System        SLE      D       CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrData[43]     20.000       11.742
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[44]     System        SLE      D       CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrData[44]     20.000       11.742
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[45]     System        SLE      D       CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrData[45]     20.000       11.742
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[46]     System        SLE      D       CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrData[46]     20.000       11.742
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[47]     System        SLE      D       CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrData[47]     20.000       11.742
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.rdFIFOWrData_reg32[40]     System        SLE      D       rdFIFOWrData[40]                                                              20.000       11.742
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.rdFIFOWrData_reg32[41]     System        SLE      D       rdFIFOWrData[41]                                                              20.000       11.742
+=================================================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      20.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         20.000
+
+    - Propagation time:                      8.258
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 11.742
+
+    Number of logic level(s):                8
+    Starting point:                          PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0 / B_DOUT[0]
+    Ending point:                            CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[40] / D
+    The start point is clocked by            System [rising] on pin B_CLK
+    The end   point is clocked by            SYS_CLK [rising] (rise=0.000 fall=10.000 period=20.000) on pin CLK
+
+Instance / Net                                                                                                Pin           Pin               Arrival     No. of    
+Name                                                                                              Type        Name          Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM_R63C0           RAM1K20     B_DOUT[0]     Out     2.241     2.241 r     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\R_DATA_TEMPR63\[0\]                                        Net         -             -       0.948     -           1         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.OR4_777                                                      OR4         D             In      -         3.189 r     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.OR4_777                                                      OR4         Y             Out     0.282     3.471 r     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.OR4_777_Y                                                    Net         -             -       0.948     -           1         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.OR4_654                                                      OR4         D             In      -         4.419 r     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.OR4_654                                                      OR4         Y             Out     0.282     4.701 r     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.OR4_654_Y                                                    Net         -             -       0.948     -           1         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\OR4_R_DATA\[0\]                                            OR4         D             In      -         5.649 r     -         
+PF_SRAM_AHB_C0_0.PF_TPSRAM_AHB_AXI_0.\\OR4_R_DATA\[0\]                                            OR4         Y             Out     0.282     5.931 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.HRDATA_S8[0]                                 Net         -             -       0.118     -           1         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.HRDATA_7[0]                                  CFG2        A             In      -         6.050 r     -         
+CoreAHBL_C0_0.CoreAHBL_C0_0.matrix4x16.masterstage_1.HRDATA_7[0]                                  CFG2        Y             Out     0.051     6.100 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.HRDATA[0]                                                   Net         -             -       0.623     -           8         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.rdFIFOWrData_4_iv_0_0[40]     CFG4        D             In      -         6.723 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.rdFIFOWrData_4_iv_0_0[40]     CFG4        Y             Out     0.168     6.891 r     -         
+HTRANS_1_1_0_.rdFIFOWrData_4_iv_2[8]                                                              Net         -             -       0.563     -           4         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.rdFIFOWrData_4_iv_1[40]       CFG4        C             In      -         7.454 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.rdFIFOWrData_4_iv_1[40]       CFG4        Y             Out     0.148     7.602 r     -         
+HTRANS_1_1_0_.rdFIFOWrData_4_iv_1[40]                                                             Net         -             -       0.118     -           1         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.rdFIFOWrData_4_iv_4[40]       CFG4        C             In      -         7.720 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.rdFIFOWrData_4_iv_4[40]       CFG4        Y             Out     0.148     7.868 r     -         
+HTRANS_1_1_0_.rdFIFOWrData_4_iv_4[40]                                                             Net         -             -       0.118     -           1         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.rdFIFOWrData_4_iv[40]         CFG4        C             In      -         7.986 r     -         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.U_AHBMasterCtrl.HTRANS_1_1_0_.rdFIFOWrData_4_iv[40]         CFG4        Y             Out     0.148     8.134 r     -         
+rdFIFOWrData[40]                                                                                  Net         -             -       0.124     -           2         
+CoreAXITOAHBL_C1_0.CoreAXITOAHBL_C1_0.INFER_USRAM\.U_rdFIFORAM.wrDataReg[40]                      SLE         D             In      -         8.258 r     -         
+====================================================================================================================================================================
+Total path delay (propagation time + setup) of 8.258 is 3.749(45.4%) logic and 4.508(54.6%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+Writing compile point status file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\synthesis\COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name                                                 Status     Reason     
+---------------------------------------------------------------------------
+COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl_0     Mapped     No database
+===========================================================================
+
+Process took 0h:00m:26s realtime, 0h:00m:24s cputime
+# Thu May 25 13:57:15 2023
+
+###########################################################]

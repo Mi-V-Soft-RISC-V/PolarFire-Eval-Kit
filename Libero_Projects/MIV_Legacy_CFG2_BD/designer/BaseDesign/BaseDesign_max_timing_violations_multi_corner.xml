@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<title>Timing Violation Multi Corner Report Max Delay Analysis
+</title>
+<text>SmartTime Version 2023.1.0.6</text>
+<text>Microchip Technology Inc. - Microchip Libero Software Release v2023.1 (Version 2023.1.0.6)</text>
+<text>Date: Thu May 25 13:30:57 2023
+</text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Design</cell>
+ <cell>BaseDesign</cell>
+</row>
+<row>
+ <cell>Family</cell>
+ <cell>PolarFire</cell>
+</row>
+<row>
+ <cell>Die</cell>
+ <cell>MPF300TS</cell>
+</row>
+<row>
+ <cell>Package</cell>
+ <cell>FCG1152</cell>
+</row>
+<row>
+ <cell>Temperature Range</cell>
+ <cell>-40 - 100 C</cell>
+</row>
+<row>
+ <cell>Voltage Range</cell>
+ <cell>0.97 - 1.03 V</cell>
+</row>
+<row>
+ <cell>Speed Grade</cell>
+ <cell>-1</cell>
+</row>
+<row>
+ <cell>Design State</cell>
+ <cell>Post-Layout</cell>
+</row>
+<row>
+ <cell>Data source</cell>
+ <cell>Production</cell>
+</row>
+<row>
+ <cell>Multi Corner Report Operating Conditions</cell>
+ <cell>slow_lv_lt,fast_hv_lt,slow_lv_ht</cell>
+</row>
+</table>
+<text></text>
+<table>
+<header>
+ <cell/>
+ <cell>From</cell>
+ <cell>To</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Slack (ns)</cell>
+ <cell>Arrival (ns)</cell>
+ <cell>Required (ns)</cell>
+ <cell>Operating Conditions</cell>
+</header>
+<row>
+ <cell>Path 1</cell>
+ <cell>CoreGPIO_OUT_C0_0/CoreGPIO_OUT_C0_0/xhdl1.GEN_BITS[1].APB_32.GPOUT_reg[1]:CLK</cell>
+ <cell>LED_5</cell>
+ <cell>4.878</cell>
+ <cell>-7.741</cell>
+ <cell>7.733</cell>
+ <cell>-0.008</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 2</cell>
+ <cell>CoreGPIO_OUT_C0_0/CoreGPIO_OUT_C0_0/xhdl1.GEN_BITS[2].APB_32.GPOUT_reg[2]:CLK</cell>
+ <cell>LED_6</cell>
+ <cell>4.798</cell>
+ <cell>-7.673</cell>
+ <cell>7.665</cell>
+ <cell>-0.008</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 3</cell>
+ <cell>CoreGPIO_OUT_C0_0/CoreGPIO_OUT_C0_0/xhdl1.GEN_BITS[3].APB_32.GPOUT_reg[3]:CLK</cell>
+ <cell>LED_7</cell>
+ <cell>4.693</cell>
+ <cell>-7.568</cell>
+ <cell>7.560</cell>
+ <cell>-0.008</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 4</cell>
+ <cell>CoreGPIO_OUT_C0_0/CoreGPIO_OUT_C0_0/xhdl1.GEN_BITS[0].APB_32.GPOUT_reg[0]:CLK</cell>
+ <cell>LED_4</cell>
+ <cell>4.425</cell>
+ <cell>-7.282</cell>
+ <cell>7.274</cell>
+ <cell>-0.008</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 5</cell>
+ <cell>CoreUARTapb_C0_0/CoreUARTapb_C0_0/uUART/make_TX/tx:CLK</cell>
+ <cell>TX</cell>
+ <cell>4.365</cell>
+ <cell>-7.203</cell>
+ <cell>7.195</cell>
+ <cell>-0.008</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 6</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[1]:EN</cell>
+ <cell>20.914</cell>
+ <cell>-1.184</cell>
+ <cell>23.774</cell>
+ <cell>22.590</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 7</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[6]:EN</cell>
+ <cell>20.687</cell>
+ <cell>-0.950</cell>
+ <cell>23.547</cell>
+ <cell>22.597</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 8</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[8]:EN</cell>
+ <cell>20.665</cell>
+ <cell>-0.921</cell>
+ <cell>23.525</cell>
+ <cell>22.604</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 9</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[11]:EN</cell>
+ <cell>20.620</cell>
+ <cell>-0.882</cell>
+ <cell>23.480</cell>
+ <cell>22.598</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 10</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[15]:EN</cell>
+ <cell>20.567</cell>
+ <cell>-0.852</cell>
+ <cell>23.427</cell>
+ <cell>22.575</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 11</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[16]:EN</cell>
+ <cell>20.535</cell>
+ <cell>-0.833</cell>
+ <cell>23.395</cell>
+ <cell>22.562</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 12</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/Queue_3/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[1]:EN</cell>
+ <cell>20.555</cell>
+ <cell>-0.767</cell>
+ <cell>23.357</cell>
+ <cell>22.590</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 13</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[4]:EN</cell>
+ <cell>20.462</cell>
+ <cell>-0.740</cell>
+ <cell>23.322</cell>
+ <cell>22.582</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 14</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[12]:EN</cell>
+ <cell>20.316</cell>
+ <cell>-0.577</cell>
+ <cell>23.176</cell>
+ <cell>22.599</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 15</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/Queue_3/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[6]:EN</cell>
+ <cell>20.328</cell>
+ <cell>-0.544</cell>
+ <cell>23.130</cell>
+ <cell>22.586</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 16</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/Queue_3/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[8]:EN</cell>
+ <cell>20.306</cell>
+ <cell>-0.504</cell>
+ <cell>23.108</cell>
+ <cell>22.604</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 17</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/ram_source.SystemBus_TLBuffer.MIV_RV32IMA_L1_AHB_QUEUE.ram_source_ram0_[9]:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[1]:EN</cell>
+ <cell>20.327</cell>
+ <cell>-0.503</cell>
+ <cell>23.157</cell>
+ <cell>22.654</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 18</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/Queue_3/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[11]:EN</cell>
+ <cell>20.261</cell>
+ <cell>-0.465</cell>
+ <cell>23.063</cell>
+ <cell>22.598</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 19</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/Queue_3/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[15]:EN</cell>
+ <cell>20.208</cell>
+ <cell>-0.435</cell>
+ <cell>23.010</cell>
+ <cell>22.575</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 20</cell>
+ <cell>MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/SystemBus_TLBuffer/MIV_RV32IMA_L1_AHB_QUEUE/value_1:CLK</cell>
+ <cell>PF_SRAM_AHB_C0_0/COREAHBLSRAM_PF_0/genblk1.U_PF_SRAM_AHB_C0_COREAHBLSRAM_PF_0_AHBLSram/genblk1.raddr_c[14]:EN</cell>
+ <cell>20.158</cell>
+ <cell>-0.435</cell>
+ <cell>23.018</cell>
+ <cell>22.583</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+</table>
+<text></text>
+</doc>

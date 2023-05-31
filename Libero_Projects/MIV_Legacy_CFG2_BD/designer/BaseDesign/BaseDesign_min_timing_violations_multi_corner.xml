@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<title>Timing Violation Multi Corner Report Min Delay Analysis
+</title>
+<text>SmartTime Version 2023.1.0.6</text>
+<text>Microchip Technology Inc. - Microchip Libero Software Release v2023.1 (Version 2023.1.0.6)</text>
+<text>Date: Thu May 25 13:31:01 2023
+</text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Design</cell>
+ <cell>BaseDesign</cell>
+</row>
+<row>
+ <cell>Family</cell>
+ <cell>PolarFire</cell>
+</row>
+<row>
+ <cell>Die</cell>
+ <cell>MPF300TS</cell>
+</row>
+<row>
+ <cell>Package</cell>
+ <cell>FCG1152</cell>
+</row>
+<row>
+ <cell>Temperature Range</cell>
+ <cell>-40 - 100 C</cell>
+</row>
+<row>
+ <cell>Voltage Range</cell>
+ <cell>0.97 - 1.03 V</cell>
+</row>
+<row>
+ <cell>Speed Grade</cell>
+ <cell>-1</cell>
+</row>
+<row>
+ <cell>Design State</cell>
+ <cell>Post-Layout</cell>
+</row>
+<row>
+ <cell>Data source</cell>
+ <cell>Production</cell>
+</row>
+<row>
+ <cell>Multi Corner Report Operating Conditions</cell>
+ <cell>slow_lv_lt,fast_hv_lt,slow_lv_ht</cell>
+</row>
+</table>
+<text></text>
+<table>
+<header>
+ <cell/>
+ <cell>From</cell>
+ <cell>To</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Slack (ns)</cell>
+ <cell>Arrival (ns)</cell>
+ <cell>Required (ns)</cell>
+ <cell>Operating Conditions</cell>
+</header>
+<row>
+ <cell>Path 1</cell>
+ <cell>RX</cell>
+ <cell>CoreUARTapb_C0_0/CoreUARTapb_C0_0/uUART/make_RX/samples[2]:D</cell>
+ <cell>2.029</cell>
+ <cell>-0.912</cell>
+ <cell>2.029</cell>
+ <cell>2.941</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 2</cell>
+ <cell>SW_7</cell>
+ <cell>CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_0_.gpin1:D</cell>
+ <cell>1.017</cell>
+ <cell>-0.909</cell>
+ <cell>1.017</cell>
+ <cell>1.926</cell>
+ <cell>fast_hv_lt</cell>
+</row>
+<row>
+ <cell>Path 3</cell>
+ <cell>SW_8</cell>
+ <cell>CoreGPIO_IN_C0_0/CoreGPIO_IN_C0_0/xhdl1.GEN_BITS_1_.gpin1:D</cell>
+ <cell>1.003</cell>
+ <cell>-0.899</cell>
+ <cell>1.003</cell>
+ <cell>1.902</cell>
+ <cell>fast_hv_lt</cell>
+</row>
+</table>
+<text></text>
+</doc>

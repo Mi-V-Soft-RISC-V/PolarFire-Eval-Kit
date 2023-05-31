@@ -1,0 +1,10 @@
+
+fsm_encoding {1757373273734} sequential
+
+fsm_state_encoding {1757373273734} 00 {00}
+
+fsm_state_encoding {1757373273734} 01 {01}
+
+fsm_state_encoding {1757373273734} 10 {10}
+
+fsm_registers {1757373273734} {ctrlStateReg[1]}  {ctrlStateReg[0]} 
