@@ -23,6 +23,7 @@ set config [verify_config $config]
 set designFlow [verify_designFlow $designFlow]
 set dieType [verify_dieType $dieType]
 set sdBuildScript [get_config_builder $config $validConfigs $softCpu]
+set legacyCpu [get_legacy_core_name $config]
 get_die_configuration $hwPlatform $dieType
 print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlow $dieType \nDesign Build Script: $sdBuildScript"
 

@@ -129,6 +129,17 @@ proc get_config_builder {config validConfigs softCpu} {
     return "${mappedValue}_build_sd.tcl"
 }
 
+proc get_legacy_core_name {config} {
+
+    if {$config eq "CFG1"} {
+        return "MIV_RV32IMAF_L1_AHB"
+    } elseif {$config eq "CFG2"} {
+        return "MIV_RV32IMA_L1_AHB"
+    } elseif {$config eq "CFG3"} {
+        return "MIV_RV32IMA_L1_AXI"
+    }
+}
+
 proc get_die_configuration { hwPlatform dieType } {
 
     # Hardware Platforms (other devices require constraints to be matched)
@@ -212,7 +223,7 @@ proc update_param {config param_to_update value_to_set} {
     close $config_file
 }
 
-proc configure_ram_device {config sd_name projectDir} {
+proc configure_ram_device {scriptDir config sd_name projectDir} {
 	# Import RAM.cfg for design initialization memory for Hard-RAM TCM config
 	print_message "Generating Design Initialization Data..."
 	file copy -force $scriptDir/import/software_example/$config/RAM.cfg ./$projectDir/designer/$sd_name
