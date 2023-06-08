@@ -2,7 +2,7 @@
 # Family: PolarFire
 # Part Number: MPF300TS-1FCG1152I
 # Create and Configure the core component SPI_Controller
-create_and_configure_core -core_vlnv {Actel:DirectCore:CORESPI:5.2.104} -component_name {SPI_Controller} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:CORESPI:5.2.104} -download_core -component_name {SPI_Controller} -params {\
 "APB_DWIDTH:32"  \
 "CFG_CLK:16"  \
 "CFG_FIFO_DEPTH:32"  \

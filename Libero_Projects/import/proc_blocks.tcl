@@ -180,12 +180,18 @@ proc download_required_direct_cores  {hwPlatform softCpu config} {
 	download_core -vlnv {Actel:DirectCore:CoreAPB3:4.2.100} -location {www.microchip-ip.com/repositories/DirectCore}
 	download_core -vlnv {Actel:DirectCore:COREAHBTOAPB3:3.2.101} -location {www.microchip-ip.com/repositories/DirectCore}
 	download_core -vlnv {Actel:DirectCore:CoreAHBLite:5.6.105} -location {www.microchip-ip.com/repositories/DirectCore}
-	if {$softCpu eq "MIV_RV32"} {download_core -vlnv {Microsemi:MiV:MIV_RV32:3.0.100} -location {www.microchip-ip.com/repositories/DirectCore} }
+    if {$softCpu eq "MIV_RV32"} {
+        download_core -vlnv {Microsemi:MiV:MIV_RV32:3.1.100} -location {www.microchip-ip.com/repositories/DirectCore} 
+        download_core -vlnv {Actel:SystemBuilder:MIV_ESS:2.0.100} -location {www.microchip-ip.com/repositories/SgCore}
+        download_core -vlnv {Actel:SystemBuilder:MIV_ESS:2.0.100} -location {www.microchip-ip.com/repositories/SgCore}  
+    }
 	if {$softCpu eq "MIV_RV32IMA_L1_AHB"} {download_core -vlnv {Microsemi:MiV:MIV_RV32IMA_L1_AHB:2.3.100} -location {www.microchip-ip.com/repositories/DirectCore} }
 	if {$softCpu eq "MIV_RV32IMA_L1_AXI"} {download_core -vlnv {Microsemi:MiV:MIV_RV32IMA_L1_AXI:2.1.100} -location {www.microchip-ip.com/repositories/DirectCore} }
 	if {$softCpu eq "MIV_RV32IMAF_L1_AHB"} {download_core -vlnv {Microsemi:MiV:MIV_RV32IMAF_L1_AHB:2.1.100} -location {www.microchip-ip.com/repositories/DirectCore} }
     if {($hwPlatform eq "PF_Eval_Kit") && ($config eq "CFG4")} {
-        download_core -vlnv {Actel:SystemBuilder:PF_DDR3:2.4.122} -location {www.microchip-ip.com/repositories/SgCore} 
+        download_core -vlnv {Actel:SystemBuilder:PF_DDR3:2.4.122} -location {www.microchip-ip.com/repositories/SgCore}
+        download_core -vlnv {Actel:DirectCore:CORESPI:5.2.104} -location {www.microchip-ip.com/repositories/SgCore} 
+        download_core -vlnv {Actel:DirectCore:COREAXI4INTERCONNECT:2.8.103} -location {www.microchip-ip.com/repositories/DirectCore}
     }
 }
 

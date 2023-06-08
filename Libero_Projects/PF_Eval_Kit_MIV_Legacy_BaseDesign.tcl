@@ -13,7 +13,7 @@ source $scriptDir/import/proc_blocks.tcl
 # Set valid configurations
 set hwPlatform "PF_EVAL"
 set hwFamily "POLARFIRE"
-set softCpu "MIV_RV32"
+set softCpu "MIV_Legacy"
 set validConfigs [list "CFG1" "CFG2" "CFG3"]
 set validDesignFlows [list "SYNTHESIZE" "PLACE_AND_ROUTE" "GENERATE_BITSTREAM" "EXPORT_PROGRAMMING_FILE"]
 set validDieTypes [list "PS" "ES" ""]

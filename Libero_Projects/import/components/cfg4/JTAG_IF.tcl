@@ -2,7 +2,7 @@
 # Family: PolarFire
 # Part Number: MPF300TS-1FCG1152I
 # Create and Configure the core component JTAG_IF
-create_and_configure_core -core_vlnv {Actel:DirectCore:COREJTAGDEBUG:4.0.100} -component_name {JTAG_IF} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:COREJTAGDEBUG:4.0.100} -download_core -component_name {JTAG_IF} -params {\
 "IR_CODE_TGT_0:0x55"  \
 "IR_CODE_TGT_1:0x56"  \
 "IR_CODE_TGT_2:0x57"  \

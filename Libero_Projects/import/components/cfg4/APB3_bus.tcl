@@ -2,7 +2,7 @@
 # Family: PolarFire
 # Part Number: MPF300TS-1FCG1152I
 # Create and Configure the core component APB3_bus
-create_and_configure_core -core_vlnv {Actel:DirectCore:CoreAPB3:4.2.100} -component_name {APB3_bus} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:CoreAPB3:4.2.100} -download_core -component_name {APB3_bus} -params {\
 "APB_DWIDTH:32"  \
 "APBSLOT0ENABLE:true"  \
 "APBSLOT1ENABLE:true"  \
