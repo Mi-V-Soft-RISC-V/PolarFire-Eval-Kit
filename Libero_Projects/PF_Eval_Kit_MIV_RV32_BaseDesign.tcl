@@ -28,7 +28,6 @@ print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlo
 
 set sdName {BaseDesign}
 set cjdRstType [expr {$softCpu eq "MIV_RV32" ? "TRSTN" : "TRST"}]
-set swProgram "miv-rv32i-systick-blinky.hex"
 set swDeployment "SNVM"
 set overwrite_projects "yes"
 
