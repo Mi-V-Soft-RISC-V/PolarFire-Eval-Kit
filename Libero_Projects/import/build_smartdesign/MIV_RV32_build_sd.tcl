@@ -18,7 +18,7 @@ source $scriptDir/import/components/CoreJTAGDebug_${cjdRstType}_C0.tcl
 source $scriptDir/import/components/CoreTimer_C0.tcl 
 source $scriptDir/import/components/CoreTimer_C1.tcl 
 source $scriptDir/import/components/MIV_ESS_C0.tcl 
-source $scriptDir/import/components/${legacyCpu}_${config}_C0.tcl
+source $scriptDir/import/components/${softCpu}_${config}_C0.tcl
 if {$config eq "CFG1"} {source $scriptDir/import/components/PF_SRAM_AHB_C0.tcl }
 if {$config eq "CFG2"} {source $scriptDir/import/components/PF_SRAM_AXI4_C0.tcl}
 
@@ -48,13 +48,13 @@ sd_create_scalar_port -sd_name ${sdName} -port_name {LED_4} -port_direction {OUT
 
 
 # MIV_RV32 instance setup
-sd_instantiate_component -sd_name ${sdName} -component_name "${legacyCpu}_${config}_C0" -instance_name "${legacyCpu}_${config}_C0_0"
-sd_mark_pins_unused -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:JTAG_TDO_DR"
-sd_mark_pins_unused -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:EXT_RESETN"
-sd_mark_pins_unused -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:TIME_COUNT_OUT"
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:EXT_IRQ" -value {GND}
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:TMR_IRQ" -value {GND}
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:MSYS_EI" -value {GND}
+sd_instantiate_component -sd_name ${sdName} -component_name "${softCpu}_${config}_C0" -instance_name "${softCpu}_${config}_C0_0"
+sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:JTAG_TDO_DR"
+sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:EXT_RESETN"
+sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:TIME_COUNT_OUT"
+#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:EXT_IRQ" -value {GND}
+#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:TMR_IRQ" -value {GND}
+#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI" -value {GND}
 
 
 # Add MIV_ESS_C0 instance
@@ -120,7 +120,7 @@ if {$config eq "CFG2"} {sd_instantiate_component -sd_name ${sdName} -component_n
 
 # Clock connections
 sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CoreRESET_PF_C0_0:CLK"}
-sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK ${legacyCpu}_${config}_C0_0:CLK" 
+sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK ${softCpu}_${config}_C0_0:CLK" 
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK MIV_ESS_C0_0:PCLK"
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK CoreTimer_C0_0:PCLK"
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK CoreTimer_C1_0:PCLK"
@@ -130,20 +130,20 @@ if {$config eq "CFG2"} {sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK"
 						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FABRIC_RESET_N" "PF_SRAM_AXI4_C0_0:ARESETN"} }
 
 sd_connect_pins -sd_name ${sdName} -pin_names {"USER_RST" "CoreRESET_PF_C0_0:EXT_RST_N"}
-sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N ${legacyCpu}_${config}_C0_0:RESETN"
+sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N ${softCpu}_${config}_C0_0:RESETN"
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N MIV_ESS_C0_0:PRESETN"
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N CoreTimer_C0_0:PRESETn"
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N CoreTimer_C1_0:PRESETn"
 
-sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TCK_0 ${legacyCpu}_${config}_C0_0:JTAG_TCK"
-sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TDI_0 ${legacyCpu}_${config}_C0_0:JTAG_TDI"
-sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TDO_0 ${legacyCpu}_${config}_C0_0:JTAG_TDO"
-sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TMS_0 ${legacyCpu}_${config}_C0_0:JTAG_TMS"
-sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_${cjdRstType}_0 ${legacyCpu}_${config}_C0_0:JTAG_${cjdRstType}" 
+sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TCK_0 ${softCpu}_${config}_C0_0:JTAG_TCK"
+sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TDI_0 ${softCpu}_${config}_C0_0:JTAG_TDI"
+sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TDO_0 ${softCpu}_${config}_C0_0:JTAG_TDO"
+sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TMS_0 ${softCpu}_${config}_C0_0:JTAG_TMS"
+sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_${cjdRstType}_0 ${softCpu}_${config}_C0_0:JTAG_${cjdRstType}" 
 sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FPGA_POR_N" "PF_INIT_MONITOR_C0_0:FABRIC_POR_N" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:INIT_DONE" "PF_INIT_MONITOR_C0_0:DEVICE_INIT_DONE" }
-sd_connect_pins -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:MSYS_EI CoreTimer_C0_0:TIMINT"
-sd_connect_pins -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:EXT_IRQ CoreTimer_C1_0:TIMINT"
+sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI CoreTimer_C0_0:TIMINT"
+sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:EXT_IRQ CoreTimer_C1_0:TIMINT"
 sd_connect_pins -sd_name ${sdName} -pin_names {"MIV_ESS_C0_0:UART_RX" "RX" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"MIV_ESS_C0_0:UART_TX" "TX" }
 
@@ -164,9 +164,9 @@ sd_connect_pins -sd_name ${sdName} -pin_names {"MIV_ESS_C0_0:GPIO_OUT[3]" "LED_4
 # Add bus interface netconnections
 sd_connect_pins -sd_name ${sdName} -pin_names {"MIV_ESS_C0_0:APB_3_mTARGET" "CoreTimer_C0_0:APBslave" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"MIV_ESS_C0_0:APB_4_mTARGET" "CoreTimer_C1_0:APBslave" }
-sd_connect_pins -sd_name ${sdName} -pin_names "MIV_ESS_C0_0:APB_0_mINITIATOR ${legacyCpu}_${config}_C0_0:APB_INITIATOR"
-if {$config eq "CFG1"} {sd_connect_pins -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:AHBL_M_TARGET PF_SRAM_AHB_C0_0:AHBSlaveInterface"}
-if {$config eq "CFG2"} {sd_connect_pins -sd_name ${sdName} -pin_names "${legacyCpu}_${config}_C0_0:AXI4_M_TARGET PF_SRAM_AXI4_C0_0:AXI4_Slave"}
+sd_connect_pins -sd_name ${sdName} -pin_names "MIV_ESS_C0_0:APB_0_mINITIATOR ${softCpu}_${config}_C0_0:APB_INITIATOR"
+if {$config eq "CFG1"} {sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:AHBL_M_TARGET PF_SRAM_AHB_C0_0:AHBSlaveInterface"}
+if {$config eq "CFG2"} {sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:AXI4_M_TARGET PF_SRAM_AXI4_C0_0:AXI4_Slave"}
 
 
 
