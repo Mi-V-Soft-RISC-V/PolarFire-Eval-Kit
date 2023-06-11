@@ -13,7 +13,7 @@
 #Sourcing the Tcl files for each of the design's components
 
 source $scriptDir/import/components/PF_INIT_MONITOR_C0.tcl 
-source $scriptDir/import/components/CoreRESET_PF_C0.tcl 
+source $scriptDir/import/components/CORERESET_PF_C0.tcl 
 source $scriptDir/import/components/CoreJTAGDebug_${cjdRstType}_C0.tcl 
 source $scriptDir/import/components/CoreTimer_C0.tcl 
 source $scriptDir/import/components/CoreTimer_C1.tcl 
@@ -119,7 +119,7 @@ if {$config eq "CFG2"} {sd_instantiate_component -sd_name ${sdName} -component_n
 # Add scalar net connections
 
 # Clock connections
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CoreRESET_PF_C0_0:CLK"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CORERESET_PF_C0_0:CLK"}
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK ${softCpu}_${config}_C0_0:CLK" 
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK MIV_ESS_C0_0:PCLK"
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK CoreTimer_C0_0:PCLK"
@@ -129,7 +129,7 @@ if {$config eq "CFG1"} {sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK"
 if {$config eq "CFG2"} {sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "PF_SRAM_AXI4_C0_0:ACLK"}
 						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FABRIC_RESET_N" "PF_SRAM_AXI4_C0_0:ARESETN"} }
 
-sd_connect_pins -sd_name ${sdName} -pin_names {"USER_RST" "CoreRESET_PF_C0_0:EXT_RST_N"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"USER_RST" "CORERESET_PF_C0_0:EXT_RST_N"}
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N ${softCpu}_${config}_C0_0:RESETN"
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N MIV_ESS_C0_0:PRESETN"
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N CoreTimer_C0_0:PRESETn"
