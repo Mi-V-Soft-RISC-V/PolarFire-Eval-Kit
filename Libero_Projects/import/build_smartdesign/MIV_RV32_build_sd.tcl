@@ -13,7 +13,8 @@
 #Sourcing the Tcl files for each of the design's components
 
 source $scriptDir/import/components/PF_INIT_MONITOR_C0.tcl 
-source $scriptDir/import/components/CORERESET_PF_C0.tcl 
+source $scriptDir/import/components/CORERESET_PF_C1.tcl 
+source $scriptDir/import/components/PF_CCC_C0.tcl
 source $scriptDir/import/components/CoreJTAGDebug_${cjdRstType}_C0.tcl 
 source $scriptDir/import/components/CoreTimer_C0.tcl 
 source $scriptDir/import/components/CoreTimer_C1.tcl 
@@ -70,14 +71,14 @@ sd_create_pin_slices -sd_name ${sdName} -pin_name {MIV_ESS_C0_0:GPIO_OUT} -pin_s
 sd_mark_pins_unused -sd_name ${sdName} -pin_names {MIV_ESS_C0_0:GPIO_INT}
 
 
-# Add CORERESET_PF_C0_0 instance
-sd_instantiate_component -sd_name ${sdName} -component_name {CORERESET_PF_C0} -instance_name {CORERESET_PF_C0_0}
-sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:BANK_x_VDDI_STATUS} -value {VCC}
-sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:BANK_y_VDDI_STATUS} -value {VCC}
-sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:PLL_LOCK} -value {VCC}
-sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:SS_BUSY} -value {GND}
-sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:FF_US_RESTORE} -value {GND}
-sd_mark_pins_unused -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:PLL_POWERDOWN_B}
+# Add CORERESET_PF_C1_0 instance
+sd_instantiate_component -sd_name ${sdName} -component_name {CORERESET_PF_C1} -instance_name {CORERESET_PF_C1_0}
+sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C1_0:BANK_x_VDDI_STATUS} -value {VCC}
+sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C1_0:BANK_y_VDDI_STATUS} -value {VCC}
+sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C1_0:PLL_LOCK} -value {VCC}
+sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C1_0:SS_BUSY} -value {GND}
+sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C1_0:FF_US_RESTORE} -value {GND}
+sd_mark_pins_unused -sd_name ${sdName} -pin_names {CORERESET_PF_C1_0:PLL_POWERDOWN_B}
 
 
 # Add PF_INIT_MONITOR_C0_0 instance
@@ -93,6 +94,10 @@ sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:SRAM_INI
 sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:SRAM_INIT_FROM_UPROM_DONE}
 sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:SRAM_INIT_FROM_SPI_DONE}
 sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:AUTOCALIB_DONE}
+
+
+# Add PF_CCC_0 instance
+sd_instantiate_component -sd_name ${sd_name} -component_name {PF_CCC_0} -instance_name {PF_CCC_0}
 
 
 # Add CoreTimer_C0 instance
@@ -119,29 +124,29 @@ if {$config eq "CFG2"} {sd_instantiate_component -sd_name ${sdName} -component_n
 # Add scalar net connections
 
 # Clock connections
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CORERESET_PF_C0_0:CLK"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CORERESET_PF_C1_0:CLK"}
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK ${softCpu}_${config}_C0_0:CLK" 
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK MIV_ESS_C0_0:PCLK"
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK CoreTimer_C0_0:PCLK"
 sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK CoreTimer_C1_0:PCLK"
 if {$config eq "CFG1"} {sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "PF_SRAM_AHB_C0_0:HCLK"} 
-						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FABRIC_RESET_N" "PF_SRAM_AHB_C0_0:HRESETN"} }
+						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C1_0:FABRIC_RESET_N" "PF_SRAM_AHB_C0_0:HRESETN"} }
 if {$config eq "CFG2"} {sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "PF_SRAM_AXI4_C0_0:ACLK"}
-						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FABRIC_RESET_N" "PF_SRAM_AXI4_C0_0:ARESETN"} }
+						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C1_0:FABRIC_RESET_N" "PF_SRAM_AXI4_C0_0:ARESETN"} }
 
-sd_connect_pins -sd_name ${sdName} -pin_names {"USER_RST" "CORERESET_PF_C0_0:EXT_RST_N"}
-sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N ${softCpu}_${config}_C0_0:RESETN"
-sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N MIV_ESS_C0_0:PRESETN"
-sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N CoreTimer_C0_0:PRESETn"
-sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N CoreTimer_C1_0:PRESETn"
+sd_connect_pins -sd_name ${sdName} -pin_names {"USER_RST" "CORERESET_PF_C1_0:EXT_RST_N"}
+sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C1_0:FABRIC_RESET_N ${softCpu}_${config}_C0_0:RESETN"
+sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C1_0:FABRIC_RESET_N MIV_ESS_C0_0:PRESETN"
+sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C1_0:FABRIC_RESET_N CoreTimer_C0_0:PRESETn"
+sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C1_0:FABRIC_RESET_N CoreTimer_C1_0:PRESETn"
 
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TCK_0 ${softCpu}_${config}_C0_0:JTAG_TCK"
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TDI_0 ${softCpu}_${config}_C0_0:JTAG_TDI"
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TDO_0 ${softCpu}_${config}_C0_0:JTAG_TDO"
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TMS_0 ${softCpu}_${config}_C0_0:JTAG_TMS"
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_${cjdRstType}_0 ${softCpu}_${config}_C0_0:JTAG_${cjdRstType}" 
-sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FPGA_POR_N" "PF_INIT_MONITOR_C0_0:FABRIC_POR_N" }
-sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:INIT_DONE" "PF_INIT_MONITOR_C0_0:DEVICE_INIT_DONE" }
+sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C1_0:FPGA_POR_N" "PF_INIT_MONITOR_C0_0:FABRIC_POR_N" }
+sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C1_0:INIT_DONE" "PF_INIT_MONITOR_C0_0:DEVICE_INIT_DONE" }
 sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI CoreTimer_C0_0:TIMINT"
 sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:EXT_IRQ CoreTimer_C1_0:TIMINT"
 sd_connect_pins -sd_name ${sdName} -pin_names {"MIV_ESS_C0_0:UART_RX" "RX" }
