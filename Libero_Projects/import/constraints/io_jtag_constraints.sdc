@@ -4,4 +4,4 @@ create_clock -name { TCK } \
 [ get_ports { TCK } ]
 
 # JTAG and Mi-V clocks are independent - adding asynchronous clock group
-set_clock_groups -name {async1} -asynchronous -group [ get_clocks { SYS_CLK} ] -group [ get_clocks { TCK } ]
+set_clock_groups -name {async1} -asynchronous -group [ get_clocks { REF_CLK} ] -group [ get_clocks { TCK } ]

@@ -48,7 +48,7 @@ if {$config eq "DGC1"} {sd_create_scalar_port -sd_name ${sdName} -port_name {FLA
 						sd_create_scalar_port -sd_name ${sdName} -port_name {PF_IO_SPI_HOLDn} -port_direction {OUT} }
 
 sd_create_scalar_port -sd_name ${sdName} -port_name {USER_RST} -port_direction {IN}
-sd_create_scalar_port -sd_name ${sdName} -port_name {SYS_CLK} -port_direction {IN}
+sd_create_scalar_port -sd_name ${sdName} -port_name {REF_CLK} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {RX} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {TX} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sdName} -port_name {TCK} -port_direction {IN}
@@ -69,17 +69,7 @@ sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:EXT
 sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:TIME_COUNT_OUT"
 sd_create_pin_slices -sd_name ${sdName} -pin_name "${softCpu}_${config}_C0_0:MSYS_EI" -pin_slices {[0:0]}
 sd_create_pin_slices -sd_name ${sdName} -pin_name "${softCpu}_${config}_C0_0:MSYS_EI" -pin_slices {[1:5]}
-#sd_create_pin_slices -sd_name ${sdName} -pin_name "${softCpu}_${config}_C0_0:MSYS_EI" -pin_slices {[1:1]}
-#sd_create_pin_slices -sd_name ${sdName} -pin_name "${softCpu}_${config}_C0_0:MSYS_EI" -pin_slices {[2:2]}
-#sd_create_pin_slices -sd_name ${sdName} -pin_name "${softCpu}_${config}_C0_0:MSYS_EI" -pin_slices {[3:3]}
-#sd_create_pin_slices -sd_name ${sdName} -pin_name "${softCpu}_${config}_C0_0:MSYS_EI" -pin_slices {[4:4]}
-#sd_create_pin_slices -sd_name ${sdName} -pin_name "${softCpu}_${config}_C0_0:MSYS_EI" -pin_slices {[5:5]}
 sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI\[1:5\]" -value {GND}
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI[1:1]" -value {GND}
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI[2:2]" -value {GND}
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI[3:3]" -value {GND}
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI[4:4]" -value {GND}
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI[5:5]" -value {GND}
 sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:JTAG_TDO_DR"
 sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:EXT_RESETN"
 sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:TIME_COUNT_OUT"
@@ -101,7 +91,6 @@ if {$config eq "DGC1"} {sd_connect_pins_to_constant -sd_name ${sdName} -pin_name
 sd_instantiate_component -sd_name ${sdName} -component_name {CORERESET_PF_C0} -instance_name {CORERESET_PF_C0_0}
 sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:BANK_x_VDDI_STATUS} -value {VCC}
 sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:BANK_y_VDDI_STATUS} -value {VCC}
-sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:PLL_LOCK} -value {VCC}
 sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:SS_BUSY} -value {GND}
 sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:FF_US_RESTORE} -value {GND}
 sd_mark_pins_unused -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:PLL_POWERDOWN_B}
@@ -122,8 +111,8 @@ sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:SRAM_INI
 sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:AUTOCALIB_DONE}
 
 
-# Add PF_CCC_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {PF_CCC_0} -instance_name {PF_CCC_0}
+# Add PF_CCC_C0 instance
+sd_instantiate_component -sd_name ${sdName}  -component_name {PF_CCC_C0} -instance_name {PF_CCC_C0_0}
 
 
 # Add CoreTimer_C0 instance
@@ -180,8 +169,8 @@ if {$config eq "DGC1"} {
 
 } elseif {$config eq "DGC4"} {
 	# Add scalar net connections
-	sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK CoreTimer_C0_0:PCLK" 
-	sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK CoreTimer_C1_0:PCLK" 
+	sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 CoreTimer_C0_0:PCLK" 
+	sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 CoreTimer_C1_0:PCLK" 
 	sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N CoreTimer_C0_0:PRESETn"
 	sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N CoreTimer_C1_0:PRESETn" 
 	sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI\[0:0\] CoreTimer_C0_0:TIMINT"
@@ -193,13 +182,15 @@ if {$config eq "DGC1"} {
 
 # Add scalar net connections
 
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CoreRESET_PF_C0_0:CLK"}
-sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK ${softCpu}_${config}_C0_0:CLK" 
-sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK MIV_ESS_${config}_C0_0:PCLK"
-sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK ${sramMemComp}_C0_0:HCLK" 
+sd_connect_pins -sd_name ${sdName} -pin_names {"REF_CLK" "PF_CCC_C0_0:REF_CLK_0" }
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CORERESET_PF_C0_0:CLK"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:PLL_LOCK_0" "CORERESET_PF_C0_0:PLL_LOCK" }
+sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 ${softCpu}_${config}_C0_0:CLK" 
+sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 MIV_ESS_${config}_C0_0:PCLK"
+sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 ${sramMemComp}_C0_0:HCLK" 
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N ${sramMemComp}_C0_0:HRESETN"
 
-sd_connect_pins -sd_name ${sdName} -pin_names {"USER_RST" "CoreRESET_PF_C0_0:EXT_RST_N"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"USER_RST" "CORERESET_PF_C0_0:EXT_RST_N"}
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N ${softCpu}_${config}_C0_0:RESETN"
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N MIV_ESS_${config}_C0_0:PRESETN"
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_C0_0:TGT_TCK_0 ${softCpu}_${config}_C0_0:JTAG_TCK"

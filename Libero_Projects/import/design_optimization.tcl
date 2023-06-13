@@ -25,7 +25,7 @@ if {$config in {"CFG1" "CFG2" "CFG3" "DGC1" "DGC3" "DGC4"}} then {
 	} elseif {$config eq "DGC3"} {
 		import_files -io_pdc $scriptDir/import/constraints/io_dgc3/io_constraints.pdc
 	} elseif {$config eq "DGC4"} {
-		import_files -io_pdc $scriptDir/import/constraints/io_dgc3/io_constraints.pdc
+		import_files -io_pdc $scriptDir/import/constraints/io_dgc4/io_constraints.pdc
 	}
 } elseif {$config eq "CFG4"} {
 	import_files -io_pdc $scriptDir/import/constraints/cfg4/io_constraints.pdc

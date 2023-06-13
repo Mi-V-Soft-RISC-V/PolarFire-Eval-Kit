@@ -28,7 +28,7 @@
 # -- Clock (50MHz) -- #
 # HSIO63PB6/CLKIN_S_12/CCC_SE_CLKIN_S_12/CCC_SE_PLL0_OUT0
 
-set_io -port_name {SYS_CLK}  \
+set_io -port_name {REF_CLK}  \
     -pin_name E25               \
     -fixed true                 \
     -DIRECTION INPUT

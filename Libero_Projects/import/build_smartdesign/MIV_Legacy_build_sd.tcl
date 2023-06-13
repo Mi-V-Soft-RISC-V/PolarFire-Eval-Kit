@@ -34,7 +34,7 @@ create_smartdesign -sd_name ${sdName}
 auto_promote_pad_pins -promote_all 0
 
 # Create top level Ports
-sd_create_scalar_port -sd_name ${sdName} -port_name {SYS_CLK} -port_direction {IN}
+sd_create_scalar_port -sd_name ${sdName} -port_name {REF_CLK} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {TRSTB} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {TCK} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {TDI} -port_direction {IN}
@@ -68,7 +68,6 @@ if {$config in {"CFG1" "CFG2"}} {sd_mark_pins_unused -sd_name ${sdName} -pin_nam
 sd_instantiate_component -sd_name ${sdName} -component_name {CORERESET_PF_C0} -instance_name {CORERESET_PF_C0_0}
 sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:BANK_x_VDDI_STATUS} -value {VCC}
 sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:BANK_y_VDDI_STATUS} -value {VCC}
-sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:PLL_LOCK} -value {VCC}
 sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:SS_BUSY} -value {GND}
 sd_connect_pins_to_constant -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:FF_US_RESTORE} -value {GND}
 sd_mark_pins_unused -sd_name ${sdName} -pin_names {CORERESET_PF_C0_0:PLL_POWERDOWN_B}
@@ -89,8 +88,8 @@ sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:SRAM_INI
 sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:AUTOCALIB_DONE}
 
 
-# Add PF_CCC_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {PF_CCC_0} -instance_name {PF_CCC_0}
+# Add PF_CCC_C0 instance
+sd_instantiate_component -sd_name ${sdName}  -component_name {PF_CCC_C0} -instance_name {PF_CCC_C0_0}
 
 
 # Add CoreTimer_C0 instance
@@ -161,19 +160,21 @@ if {$config eq "CFG3"} {sd_instantiate_component -sd_name ${sdName} -component_n
 # Add scalar net connections
 
 # Clock connections
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CORERESET_PF_C0_0:CLK"}
-sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK ${legacyCpu}_C0_0:CLK" 
-sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK CoreTimer_C0_0:PCLK"
-sd_connect_pins -sd_name ${sdName} -pin_names "SYS_CLK CoreTimer_C1_0:PCLK"
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "PF_SRAM_AHB_C0_0:HCLK"} 
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CoreAHBL_C0_0:HCLK"}
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "COREAHBTOAPB3_C0_0:HCLK"}
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CoreUARTapb_C0_0:PCLK"}
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CoreGPIO_IN_C0_0:PCLK"}
-sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CoreGPIO_OUT_C0_0:PCLK"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"REF_CLK" "PF_CCC_C0_0:REF_CLK_0" }
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CORERESET_PF_C0_0:CLK"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:PLL_LOCK_0" "CORERESET_PF_C0_0:PLL_LOCK" }
+sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 ${legacyCpu}_C0_0:CLK" 
+sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 CoreTimer_C0_0:PCLK"
+sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 CoreTimer_C1_0:PCLK"
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "PF_SRAM_AHB_C0_0:HCLK"} 
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CoreAHBL_C0_0:HCLK"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "COREAHBTOAPB3_C0_0:HCLK"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CoreUARTapb_C0_0:PCLK"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CoreGPIO_IN_C0_0:PCLK"}
+sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CoreGPIO_OUT_C0_0:PCLK"}
 sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FABRIC_RESET_N" "PF_SRAM_AHB_C0_0:HRESETN"}
-if {$config eq "CFG3"} {sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CoreAXITOAHBL_C0_0:HCLK" "CoreAXITOAHBL_C0_0:ACLK"}
-						sd_connect_pins -sd_name ${sdName} -pin_names {"SYS_CLK" "CoreAXITOAHBL_C1_0:HCLK" "CoreAXITOAHBL_C1_0:ACLK"}
+if {$config eq "CFG3"} {sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CoreAXITOAHBL_C0_0:HCLK" "CoreAXITOAHBL_C0_0:ACLK"}
+						sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CoreAXITOAHBL_C1_0:HCLK" "CoreAXITOAHBL_C1_0:ACLK"}
 						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FABRIC_RESET_N" "CoreAXITOAHBL_C0_0:HRESETN" "CoreAXITOAHBL_C0_0:ARESETN"}
 						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FABRIC_RESET_N" "CoreAXITOAHBL_C1_0:HRESETN" "CoreAXITOAHBL_C1_0:ARESETN"} }
 
