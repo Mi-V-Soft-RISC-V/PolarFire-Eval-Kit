@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu May 25 13:52:46 2023
+// Created by SmartDesign Fri Jun 16 18:34:36 2023
 // Version: 2023.1 2023.1.0.6
 //////////////////////////////////////////////////////////////////////
 
@@ -9,16 +9,16 @@
 // Component Description (Tcl) 
 //////////////////////////////////////////////////////////////////////
 /*
-# Exporting Component Description of CoreRESET_PF_C0 to TCL
+# Exporting Component Description of CORERESET_PF_C0 to TCL
 # Family: PolarFire
 # Part Number: MPF300TS-1FCG1152I
-# Create and Configure the core component CoreRESET_PF_C0
-create_and_configure_core -core_vlnv {Actel:DirectCore:CORERESET_PF:2.3.100} -component_name {CoreRESET_PF_C0} -params { }
-# Exporting Component Description of CoreRESET_PF_C0 to TCL done
+# Create and Configure the core component CORERESET_PF_C0
+create_and_configure_core -core_vlnv {Actel:DirectCore:CORERESET_PF:2.3.100} -component_name {CORERESET_PF_C0} -params { }
+# Exporting Component Description of CORERESET_PF_C0 to TCL done
 */
 
-// CoreRESET_PF_C0
-module CoreRESET_PF_C0(
+// CORERESET_PF_C0
+module CORERESET_PF_C0(
     // Inputs
     BANK_x_VDDI_STATUS,
     BANK_y_VDDI_STATUS,
@@ -77,8 +77,8 @@ assign FABRIC_RESET_N        = FABRIC_RESET_N_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
-//--------CoreRESET_PF_C0_CoreRESET_PF_C0_0_CORERESET_PF   -   Actel:DirectCore:CORERESET_PF:2.3.100
-CoreRESET_PF_C0_CoreRESET_PF_C0_0_CORERESET_PF CoreRESET_PF_C0_0(
+//--------CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF   -   Actel:DirectCore:CORERESET_PF:2.3.100
+CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF CORERESET_PF_C0_0(
         // Inputs
         .CLK                ( CLK ),
         .EXT_RST_N          ( EXT_RST_N ),

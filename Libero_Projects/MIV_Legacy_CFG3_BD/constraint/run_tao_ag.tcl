@@ -4,6 +4,8 @@ read_verilog -mode system_verilog -lib COREAHBTOAPB3_LIB {C:\esip_projects\FPGA_
 read_verilog -mode system_verilog -lib COREAHBTOAPB3_LIB {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\Actel\DirectCore\COREAHBTOAPB3\3.2.101\rtl\vlog\core\coreahbtoapb3_penablescheduler.v}
 read_verilog -mode system_verilog -lib COREAHBTOAPB3_LIB {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\Actel\DirectCore\COREAHBTOAPB3\3.2.101\rtl\vlog\core\coreahbtoapb3.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\COREAHBTOAPB3_C0\COREAHBTOAPB3_C0.v}
+read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\core\corereset_pf.v}
+read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\CORERESET_PF_C0\CORERESET_PF_C0.v}
 read_verilog -mode system_verilog -lib COREAHBLITE_LIB {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v}
 read_verilog -mode system_verilog -lib COREAHBLITE_LIB {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_slavestage.v}
 read_verilog -mode system_verilog -lib COREAHBLITE_LIB {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_defaultslavesm.v}
@@ -39,8 +41,6 @@ read_verilog -mode system_verilog -lib COREJTAGDEBUG_LIB {C:\esip_projects\FPGA_
 read_verilog -mode system_verilog -lib COREJTAGDEBUG_LIB {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\Actel\DirectCore\COREJTAGDEBUG\4.0.100\core\corejtagdebug_ujtag_wrapper.v}
 read_verilog -mode system_verilog -lib COREJTAGDEBUG_LIB {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\Actel\DirectCore\COREJTAGDEBUG\4.0.100\core\corejtagdebug.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\CoreJTAGDebug_TRST_C0\CoreJTAGDebug_TRST_C0.v}
-read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\CoreRESET_PF_C0\CoreRESET_PF_C0_0\core\corereset_pf.v}
-read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\CoreRESET_PF_C0\CoreRESET_PF_C0.v}
 read_verilog -mode system_verilog -lib CORETIMER_LIB {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\Actel\DirectCore\CoreTimer\2.0.103\rtl\vlog\core\coretimer.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\CoreTimer_C0\CoreTimer_C0.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\CoreTimer_C1\CoreTimer_C1.v}
@@ -199,6 +199,8 @@ read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eva
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\MIV_RV32IMA_L1_AXI_C0\MIV_RV32IMA_L1_AXI_C0_0\core\miv_rv32ima_l1_axi_rocket_system.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\MIV_RV32IMA_L1_AXI_C0\MIV_RV32IMA_L1_AXI_C0_0\core\miv_rv32ima_l1_axi.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\MIV_RV32IMA_L1_AXI_C0\MIV_RV32IMA_L1_AXI_C0.v}
+read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v}
+read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\PF_CCC_C0\PF_CCC_C0.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0_0\PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\PF_SRAM_AHB_C0\PF_TPSRAM_AHB_AXI_0\PF_SRAM_AHB_C0_PF_TPSRAM_AHB_AXI_0_PF_TPSRAM.v}
@@ -208,6 +210,7 @@ read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eva
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\PF_SRAM_AHB_C0\PF_SRAM_AHB_C0.v}
 read_verilog -mode system_verilog {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\BaseDesign\BaseDesign.v}
 set_top_level {BaseDesign}
+read_sdc -component {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.sdc}
 derive_constraints
 write_sdc {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\constraint\BaseDesign_derived_constraints.sdc}
 write_ndc {C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\constraint\BaseDesign_derived_constraints.ndc}

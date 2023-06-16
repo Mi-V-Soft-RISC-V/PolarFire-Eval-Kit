@@ -56,7 +56,6 @@ if {$config eq "DGC3"} {
 
 
 sd_create_scalar_port -sd_name ${sdName} -port_name {USER_RST} -port_direction {IN}
-sd_create_scalar_port -sd_name ${sdName} -port_name {REF_CLK} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {RX} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {TX} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sdName} -port_name {TCK} -port_direction {IN}
@@ -121,6 +120,10 @@ sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:AUTOCALI
 
 # Add PF_CCC_C0 instance
 sd_instantiate_component -sd_name ${sdName}  -component_name {PF_CCC_C0} -instance_name {PF_CCC_C0_0}
+
+
+# Add Clock Buffer Macro for ref clock
+sd_instantiate_macro -sd_name ${sdName} -macro_name {CLKBUF} -instance_name {CLKBUF_0} 
 
 
 # Add CoreTimer_C0 instance
@@ -189,8 +192,8 @@ if {$config eq "DGC1"} {
 }
 
 # Add scalar net connections
-
-sd_connect_pins -sd_name ${sdName} -pin_names {"REF_CLK" "PF_CCC_C0_0:REF_CLK_0" }
+sd_connect_pins -sd_name ${sdName} -pin_names {"CLKBUF_0:Y" "PF_CCC_C0_0:REF_CLK_0"} 
+sd_connect_pins -sd_name ${sdName} -pin_names {"CLKBUF_0:PAD" "REF_CLK"}
 sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CORERESET_PF_C0_0:CLK"}
 sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:PLL_LOCK_0" "CORERESET_PF_C0_0:PLL_LOCK" }
 sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 ${softCpu}_${config}_C0_0:CLK" 

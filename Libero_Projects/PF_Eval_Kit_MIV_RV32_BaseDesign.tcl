@@ -22,30 +22,29 @@ set validDieTypes [list "PS" "ES" ""]
 set config [verify_config $config]
 set designFlow [verify_designFlow $designFlow]
 set dieType [verify_dieType $dieType]
+set sdName {BaseDesign}
+set exProgramHex "miv-rv32i-systick-blinky.hex"
+
+# Prime the TCL builder script for desired build settings
 set sdBuildScript [get_config_builder $config $validConfigs $softCpu]
+set legacyCpu [get_legacy_core_name $config]
 get_die_configuration $hwPlatform $dieType
+set cjdRstType [expr {$softCpu eq "MIV_RV32" ? "TRSTN" : "TRST"}]
 print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlow $dieType \nDesign Build Script: $sdBuildScript"
 
-set sdName {BaseDesign}
-set cjdRstType [expr {$softCpu eq "MIV_RV32" ? "TRSTN" : "TRST"}]
-set swDeployment "SNVM"
-set overwrite_projects "yes"
+# Configure Libero project files and directories
+append projectName $hwPlatform _ $dieType _ $softCpu _ $config _ $sdName
+append projectFolderName MIV_ $config _BD
+set projectDir $scriptDir/$projectFolderName
 
-append target_board $hwPlatform _ $dieType
-append project_folder_name MIV_ $config _BD
-set projectDir $scriptDir/$project_folder_name
-append project_name $target_board _ $softCpu _ $config _ $sdName
-
-# Developer aid 2: delete Libero design if it already exists so as to not run into "project exists errors"
-if {$overwrite_projects == "yes"} {file delete -force -- $projectDir}
-
+# Build Libero design project for selected configuration and hardware
 if {[file exists $projectDir] == 1} then {
 	print_message "Error: A project with '$config' configuration already exists for the '$hwPlatform'."
 } else {
 	print_message "Creating a new project for the '$hwPlatform' board."
 	new_project \
 		-location $projectDir \
-		-name $project_name \
+		-name $projectName \
 		-project_description {} \
 		-block_mode 0 \
 		-standalone_peripheral_initialization 0 \
@@ -140,7 +139,7 @@ if {"$designFlow" == "SYNTHESIZE"} then {
 	}
 
 	export_prog_job \
-		-job_file_name $project_name \
+		-job_file_name $projectName \
 		-export_dir $projectDir/designer/$sdName/export \
 		-bitstream_file_type {TRUSTED_FACILITY} \
 		-bitstream_file_components {}

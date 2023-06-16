@@ -1,6 +1,6 @@
 Microchip Technology Inc. - Microchip Libero Software Release v2023.1 (Version 2023.1.0.6)
 
-Date      :  Thu May 25 13:53:08 2023
+Date      :  Fri Jun 16 18:35:14 2023
 Project   :  C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD
 Component :  CoreTimer_C1
 Family    :  PolarFire

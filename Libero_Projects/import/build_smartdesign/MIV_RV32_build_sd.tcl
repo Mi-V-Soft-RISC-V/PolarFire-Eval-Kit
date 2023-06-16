@@ -53,9 +53,6 @@ sd_instantiate_component -sd_name ${sdName} -component_name "${softCpu}_${config
 sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:JTAG_TDO_DR"
 sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:EXT_RESETN"
 sd_mark_pins_unused -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:TIME_COUNT_OUT"
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:EXT_IRQ" -value {GND}
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:TMR_IRQ" -value {GND}
-#sd_connect_pins_to_constant -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI" -value {GND}
 
 
 # Add MIV_ESS_C0 instance
@@ -99,6 +96,10 @@ sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:AUTOCALI
 sd_instantiate_component -sd_name ${sdName}  -component_name {PF_CCC_C0} -instance_name {PF_CCC_C0_0}
 
 
+# Add Clock Buffer Macro for ref clock
+sd_instantiate_macro -sd_name ${sdName} -macro_name {CLKBUF} -instance_name {CLKBUF_0} 
+
+
 # Add CoreTimer_C0 instance
 sd_instantiate_component -sd_name ${sdName} -component_name {CoreTimer_C0} -instance_name {CoreTimer_C0_0}
 
@@ -121,9 +122,8 @@ if {$config eq "CFG2"} {sd_instantiate_component -sd_name ${sdName} -component_n
 
 
 # Add scalar net connections
-
-# Clock connections
-sd_connect_pins -sd_name ${sdName} -pin_names {"REF_CLK" "PF_CCC_C0_0:REF_CLK_0" }
+sd_connect_pins -sd_name ${sdName} -pin_names {"CLKBUF_0:Y" "PF_CCC_C0_0:REF_CLK_0"} 
+sd_connect_pins -sd_name ${sdName} -pin_names {"CLKBUF_0:PAD" "REF_CLK"}
 sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CORERESET_PF_C0_0:CLK"}
 sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:PLL_LOCK_0" "CORERESET_PF_C0_0:PLL_LOCK" }
 sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 ${softCpu}_${config}_C0_0:CLK" 

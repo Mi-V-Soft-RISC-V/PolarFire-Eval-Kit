@@ -223,7 +223,7 @@ always @(SYSCLK)
 //////////////////////////////////////////////////////////////////////
 // Instantiate Unit Under Test:  CORERESET_PF
 //////////////////////////////////////////////////////////////////////
-CoreRESET_PF_C0_CoreRESET_PF_C0_0_CORERESET_PF CORERESET_PF_0 (
+CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF CORERESET_PF_0 (
     .CLK(SYSCLK),
     .EXT_RST_N(EXT_RST_N),
     .PLL_LOCK(PLL_LOCK),

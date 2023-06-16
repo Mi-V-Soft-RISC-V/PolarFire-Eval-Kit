@@ -1,94 +1,0 @@
-INFO: Reading User SDC file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\constraint\BaseDesign_derived_constraints.sdc.
-INFO: Reading User SDC file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\constraint\io_jtag_constraints.sdc.
-INFO: Reading User SDC file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\constraint\io_sys_constraints.sdc.
-INFO: The option "Abort flow if errors are found in SDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated SDC files. Please uncheck the option to ignore the errors and continue running the tool.
-
-No errors or warnings found.
-INFO: The option "Abort flow if errors are found in PDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated PDC files. Please uncheck the option to ignore the errors and continue running the tool
-***** Place and Route Configurations *****
-Timing-driven            : ON
-Power-driven             : OFF
-I/O Register Combining   : OFF
-Global Pins Demotion     : ON
-Driver Replication       : OFF
-High-effort              : OFF
-Repair min-delay         : ON
-Incremental              : OFF
-Inter-clock optimization : ON
-
-INFO: Reading User PDC file C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\constraint\io\io_constraints.pdc. 0 error(s) and 0 warning(s)
-
- Running Timing based Global Demotion. 
-        Demoted 0 global pins.
-
- Timing based Global Demotion completed successfully. 
-
-Running the I/O Bank and Globals Assigner.
-Info:  I/O Bank and Globals Assigner identified 10 fixed I/O macros, 0 unfixed I/O macros
-
-I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 7 seconds
-
-Placer V5.0 - 2023.1.0 
-Design: BaseDesign                      Started: Thu May 25 14:01:37 2023
-
-Initializing Normal-Effort Timing-Driven Placement ...
-Clustering ...
-Placing ...
-Improving placement ...
-End of placement.
-
-Placer Runtime Summary   :
-Clustering (1 pass)      : 16 seconds
-Placement                : 45 seconds
-Improvement              : 162 seconds
-
-Placer completed successfully.
-
-Design: BaseDesign                      
-Finished: Thu May 25 14:06:15 2023
-Total CPU Time:     00:05:31            Total Elapsed Time: 00:04:38
-Total Memory Usage: 1489.4 Mbytes
-                        o - o - o - o - o - o
-
-
-Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
-    Driver: CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/genblk3.genblk1.TGT_TCK_GLB_RNICJD7:Y
-       Net: CoreJTAGDebug_TRST_C0_0_TGT_TCK_0
-Clock pins: 6
-
-Router 
-Design: C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\designer\BaseDesign\BaseDesignStarted: Thu May 25 14:06:44 2023
-
-
-Router completed successfully.
-
-Design: C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_Legacy_CFG3_BD\designer\BaseDesign\BaseDesign
-Finished: Thu May 25 14:08:00 2023
-Total CPU Time:     00:01:38            Total Elapsed Time: 00:01:16
-Total Memory Usage: 5344.3 Mbytes
-                        o - o - o - o - o - o
-
-Info: Iteration 1:
-  Worst minimum delay slack: 
-  Total violating paths eligible for improvement: 0
-  Total violating paths improved: 0
-Resource Usage
-+---------------+-------+--------+------------+
-| Type          | Used  | Total  | Percentage |
-+---------------+-------+--------+------------+
-| 4LUT          | 21102 | 299544 | 7.04       |
-| DFF           | 13876 | 299544 | 4.63       |
-| I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 25743 | 299544 | 8.59       |
-+---------------+-------+--------+------------+
-
-I/O Placement
-+--------+-------+------------+
-| Type   | Count | Percentage |
-+--------+-------+------------+
-| Locked |  10   | 100.00%    |
-| Placed |  0    | 0.00%      |
-+--------+-------+------------+
-
-Completed writing pin report files.

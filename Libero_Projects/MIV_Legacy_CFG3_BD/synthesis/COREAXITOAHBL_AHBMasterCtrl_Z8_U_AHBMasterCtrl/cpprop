@@ -1,9 +1,0 @@
-n COREAXITOAHBL_LIB COREAXITOAHBL_AHBMasterCtrl_Z8_U_AHBMasterCtrl verilog;
-av .compile_point_summary_status "Mapped";
-av .compile_point_summary_reason "No database";
-av .compile_point_update_model 0;
-av .compile_point_fast_synthesis "No";
-av .compile_point_cputime_used 13.6562;
-av .compile_point_starttime_stamp "Thu May 25 13:57:16 2023";
-av .compile_point_endtime_stamp "Thu May 25 13:57:30 2023";
-av .compile_point_realtime_used 13.692;

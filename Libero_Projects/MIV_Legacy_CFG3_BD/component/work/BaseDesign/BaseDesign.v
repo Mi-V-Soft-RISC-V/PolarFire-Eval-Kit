@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu May 25 13:53:58 2023
+// Created by SmartDesign Fri Jun 16 18:36:28 2023
 // Version: 2023.1 2023.1.0.6
 //////////////////////////////////////////////////////////////////////
 
@@ -8,20 +8,20 @@
 // BaseDesign
 module BaseDesign(
     // Inputs
+    REF_CLK,
     RX,
-    SW_7,
-    SW_8,
-    SYS_CLK,
+    SW_1,
+    SW_2,
     TCK,
     TDI,
     TMS,
     TRSTB,
     USER_RST,
     // Outputs
+    LED_1,
+    LED_2,
+    LED_3,
     LED_4,
-    LED_5,
-    LED_6,
-    LED_7,
     TDO,
     TX
 );
@@ -29,10 +29,10 @@ module BaseDesign(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+input  REF_CLK;
 input  RX;
-input  SW_7;
-input  SW_8;
-input  SYS_CLK;
+input  SW_1;
+input  SW_2;
 input  TCK;
 input  TDI;
 input  TMS;
@@ -41,15 +41,16 @@ input  USER_RST;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
+output LED_1;
+output LED_2;
+output LED_3;
 output LED_4;
-output LED_5;
-output LED_6;
-output LED_7;
 output TDO;
 output TX;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire          CLKBUF_0_Y;
 wire   [31:0] CoreAHBL_C0_0_AHBmslave7_HADDR;
 wire   [2:0]  CoreAHBL_C0_0_AHBmslave7_HBURST;
 wire          CoreAHBL_C0_0_AHBmslave7_HMASTLOCK;
@@ -124,10 +125,10 @@ wire          CoreJTAGDebug_TRST_C0_0_TGT_TRST_0;
 wire          CORERESET_PF_C0_0_FABRIC_RESET_N;
 wire          CoreTimer_C0_0_TIMINT;
 wire          CoreTimer_C1_0_TIMINT;
-wire   [0:0]  LED_4_net_0;
-wire   [1:1]  LED_5_net_0;
-wire   [2:2]  LED_6_net_0;
-wire   [3:3]  LED_7_net_0;
+wire   [0:0]  LED_1_net_0;
+wire   [1:1]  LED_2_net_0;
+wire   [2:2]  LED_3_net_0;
+wire   [3:3]  LED_4_net_0;
 wire   [31:0] MIV_RV32IMA_L1_AXI_C0_0_MEM_MST_AXI_ARADDR;
 wire   [1:0]  MIV_RV32IMA_L1_AXI_C0_0_MEM_MST_AXI_ARBURST;
 wire   [3:0]  MIV_RV32IMA_L1_AXI_C0_0_MEM_MST_AXI_ARCACHE;
@@ -185,12 +186,14 @@ wire          MIV_RV32IMA_L1_AXI_C0_0_MMIO_MST_AXI_WREADY;
 wire   [7:0]  MIV_RV32IMA_L1_AXI_C0_0_MMIO_MST_AXI_WSTRB;
 wire          MIV_RV32IMA_L1_AXI_C0_0_MMIO_MST_AXI_WVALID;
 wire          MIV_RV32IMA_L1_AXI_C0_0_TDO;
+wire          PF_CCC_C0_0_OUT0_FABCLK_0;
+wire          PF_CCC_C0_0_PLL_LOCK_0;
 wire          PF_INIT_MONITOR_C0_0_DEVICE_INIT_DONE;
 wire          PF_INIT_MONITOR_C0_0_FABRIC_POR_N;
+wire          REF_CLK;
 wire          RX;
-wire          SW_7;
-wire          SW_8;
-wire          SYS_CLK;
+wire          SW_1;
+wire          SW_2;
 wire          TCK;
 wire          TDI;
 wire          TDO_net_0;
@@ -200,10 +203,10 @@ wire          TX_net_0;
 wire          USER_RST;
 wire          TDO_net_1;
 wire          TX_net_1;
+wire          LED_1_net_1;
+wire          LED_2_net_1;
+wire          LED_3_net_1;
 wire          LED_4_net_1;
-wire          LED_5_net_1;
-wire          LED_6_net_1;
-wire          LED_7_net_1;
 wire   [30:0] IRQ_net_0;
 wire   [1:0]  GPIO_IN_net_0;
 wire   [3:0]  GPIO_OUT_net_0;
@@ -315,26 +318,26 @@ assign TDO_net_1   = TDO_net_0;
 assign TDO         = TDO_net_1;
 assign TX_net_1    = TX_net_0;
 assign TX          = TX_net_1;
-assign LED_4_net_1 = LED_4_net_0[0];
+assign LED_1_net_1 = LED_1_net_0[0];
+assign LED_1       = LED_1_net_1;
+assign LED_2_net_1 = LED_2_net_0[1];
+assign LED_2       = LED_2_net_1;
+assign LED_3_net_1 = LED_3_net_0[2];
+assign LED_3       = LED_3_net_1;
+assign LED_4_net_1 = LED_4_net_0[3];
 assign LED_4       = LED_4_net_1;
-assign LED_5_net_1 = LED_5_net_0[1];
-assign LED_5       = LED_5_net_1;
-assign LED_6_net_1 = LED_6_net_0[2];
-assign LED_6       = LED_6_net_1;
-assign LED_7_net_1 = LED_7_net_0[3];
-assign LED_7       = LED_7_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
-assign LED_4_net_0[0] = GPIO_OUT_net_0[0:0];
-assign LED_5_net_0[1] = GPIO_OUT_net_0[1:1];
-assign LED_6_net_0[2] = GPIO_OUT_net_0[2:2];
-assign LED_7_net_0[3] = GPIO_OUT_net_0[3:3];
+assign LED_1_net_0[0] = GPIO_OUT_net_0[0:0];
+assign LED_2_net_0[1] = GPIO_OUT_net_0[1:1];
+assign LED_3_net_0[2] = GPIO_OUT_net_0[2:2];
+assign LED_4_net_0[3] = GPIO_OUT_net_0[3:3];
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
 assign IRQ_net_0     = { CoreTimer_C1_0_TIMINT , CoreTimer_C0_0_TIMINT , 29'h00000000 };
-assign GPIO_IN_net_0 = { SW_8 , SW_7 };
+assign GPIO_IN_net_0 = { SW_2 , SW_1 };
 //--------------------------------------------------------------------
 // Bus Interface Nets Assignments - Unequal Pin Widths
 //--------------------------------------------------------------------
@@ -421,10 +424,18 @@ assign MIV_RV32IMA_L1_AXI_C0_0_MMIO_MST_AXI_WID_0_4to4 = 1'b0;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
+//--------CLKBUF
+CLKBUF CLKBUF_0(
+        // Inputs
+        .PAD ( REF_CLK ),
+        // Outputs
+        .Y   ( CLKBUF_0_Y ) 
+        );
+
 //--------CoreAHBL_C0
 CoreAHBL_C0 CoreAHBL_C0_0(
         // Inputs
-        .HCLK         ( SYS_CLK ),
+        .HCLK         ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .HRESETN      ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
         .REMAP_M0     ( GND_net ),
         .HADDR_M0     ( CoreAXITOAHBL_C0_0_AHBMasterIF_HADDR ),
@@ -481,7 +492,7 @@ CoreAHBL_C0 CoreAHBL_C0_0(
 //--------COREAHBTOAPB3_C0
 COREAHBTOAPB3_C0 COREAHBTOAPB3_C0_0(
         // Inputs
-        .HCLK      ( SYS_CLK ),
+        .HCLK      ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .HRESETN   ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
         .HADDR     ( CoreAHBL_C0_0_AHBmslave7_HADDR ),
         .HTRANS    ( CoreAHBL_C0_0_AHBmslave7_HTRANS ),
@@ -544,9 +555,9 @@ CoreAPB3_C0 CoreAPB3_C0_0(
 //--------CoreAXITOAHBL_C0
 CoreAXITOAHBL_C0 CoreAXITOAHBL_C0_0(
         // Inputs
-        .ACLK     ( SYS_CLK ),
+        .ACLK     ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .ARESETN  ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
-        .HCLK     ( SYS_CLK ),
+        .HCLK     ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .HRESETN  ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
         .AWID     ( MIV_RV32IMA_L1_AXI_C0_0_MMIO_MST_AXI_AWID_0 ),
         .AWADDR   ( MIV_RV32IMA_L1_AXI_C0_0_MMIO_MST_AXI_AWADDR_0 ),
@@ -593,9 +604,9 @@ CoreAXITOAHBL_C0 CoreAXITOAHBL_C0_0(
 //--------CoreAXITOAHBL_C1
 CoreAXITOAHBL_C1 CoreAXITOAHBL_C1_0(
         // Inputs
-        .ACLK     ( SYS_CLK ),
+        .ACLK     ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .ARESETN  ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
-        .HCLK     ( SYS_CLK ),
+        .HCLK     ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .HRESETN  ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
         .AWID     ( MIV_RV32IMA_L1_AXI_C0_0_MEM_MST_AXI_AWID_0 ),
         .AWADDR   ( MIV_RV32IMA_L1_AXI_C0_0_MEM_MST_AXI_AWADDR ),
@@ -643,7 +654,7 @@ CoreAXITOAHBL_C1 CoreAXITOAHBL_C1_0(
 CoreGPIO_IN_C0 CoreGPIO_IN_C0_0(
         // Inputs
         .PRESETN  ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
-        .PCLK     ( SYS_CLK ),
+        .PCLK     ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .GPIO_IN  ( GPIO_IN_net_0 ),
         .PADDR    ( CoreAPB3_C0_0_APBmslave1_PADDR_1 ),
         .PSEL     ( CoreAPB3_C0_0_APBmslave2_PSELx ),
@@ -662,7 +673,7 @@ CoreGPIO_IN_C0 CoreGPIO_IN_C0_0(
 CoreGPIO_OUT_C0 CoreGPIO_OUT_C0_0(
         // Inputs
         .PRESETN  ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
-        .PCLK     ( SYS_CLK ),
+        .PCLK     ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .GPIO_IN  ( GPIO_IN_const_net_0 ),
         .PADDR    ( CoreAPB3_C0_0_APBmslave1_PADDR_4 ),
         .PSEL     ( CoreAPB3_C0_0_APBmslave5_PSELx ),
@@ -693,14 +704,14 @@ CoreJTAGDebug_TRST_C0 CoreJTAGDebug_TRST_C0_0(
         .TGT_TRST_0 ( CoreJTAGDebug_TRST_C0_0_TGT_TRST_0 ) 
         );
 
-//--------CoreRESET_PF_C0
-CoreRESET_PF_C0 CORERESET_PF_C0_0(
+//--------CORERESET_PF_C0
+CORERESET_PF_C0 CORERESET_PF_C0_0(
         // Inputs
-        .CLK                ( SYS_CLK ),
+        .CLK                ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .EXT_RST_N          ( USER_RST ),
         .BANK_x_VDDI_STATUS ( VCC_net ),
         .BANK_y_VDDI_STATUS ( VCC_net ),
-        .PLL_LOCK           ( VCC_net ),
+        .PLL_LOCK           ( PF_CCC_C0_0_PLL_LOCK_0 ),
         .SS_BUSY            ( GND_net ),
         .INIT_DONE          ( PF_INIT_MONITOR_C0_0_DEVICE_INIT_DONE ),
         .FF_US_RESTORE      ( GND_net ),
@@ -713,7 +724,7 @@ CoreRESET_PF_C0 CORERESET_PF_C0_0(
 //--------CoreTimer_C0
 CoreTimer_C0 CoreTimer_C0_0(
         // Inputs
-        .PCLK    ( SYS_CLK ),
+        .PCLK    ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .PRESETn ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
         .PSEL    ( CoreAPB3_C0_0_APBmslave3_PSELx ),
         .PENABLE ( CoreAPB3_C0_0_APBmslave1_PENABLE ),
@@ -728,7 +739,7 @@ CoreTimer_C0 CoreTimer_C0_0(
 //--------CoreTimer_C1
 CoreTimer_C1 CoreTimer_C1_0(
         // Inputs
-        .PCLK    ( SYS_CLK ),
+        .PCLK    ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .PRESETn ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
         .PSEL    ( CoreAPB3_C0_0_APBmslave4_PSELx ),
         .PENABLE ( CoreAPB3_C0_0_APBmslave1_PENABLE ),
@@ -743,7 +754,7 @@ CoreTimer_C1 CoreTimer_C1_0(
 //--------CoreUARTapb_C0
 CoreUARTapb_C0 CoreUARTapb_C0_0(
         // Inputs
-        .PCLK        ( SYS_CLK ),
+        .PCLK        ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .PRESETN     ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
         .RX          ( RX ),
         .PADDR       ( CoreAPB3_C0_0_APBmslave1_PADDR_0 ),
@@ -766,7 +777,7 @@ CoreUARTapb_C0 CoreUARTapb_C0_0(
 //--------MIV_RV32IMA_L1_AXI_C0
 MIV_RV32IMA_L1_AXI_C0 MIV_RV32IMA_L1_AXI_C0_0(
         // Inputs
-        .CLK                      ( SYS_CLK ),
+        .CLK                      ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .RESETN                   ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
         .IRQ                      ( IRQ_net_0 ),
         .TDI                      ( CoreJTAGDebug_TRST_C0_0_TGT_TDI_0 ),
@@ -851,6 +862,15 @@ MIV_RV32IMA_L1_AXI_C0 MIV_RV32IMA_L1_AXI_C0_0(
         .MMIO_AXI_0_W_BITS_WID    ( MIV_RV32IMA_L1_AXI_C0_0_MMIO_MST_AXI_WID ) 
         );
 
+//--------PF_CCC_C0
+PF_CCC_C0 PF_CCC_C0_0(
+        // Inputs
+        .REF_CLK_0     ( CLKBUF_0_Y ),
+        // Outputs
+        .OUT0_FABCLK_0 ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
+        .PLL_LOCK_0    ( PF_CCC_C0_0_PLL_LOCK_0 ) 
+        );
+
 //--------PF_INIT_MONITOR_C0
 PF_INIT_MONITOR_C0 PF_INIT_MONITOR_C0_0(
         // Outputs
@@ -872,7 +892,7 @@ PF_INIT_MONITOR_C0 PF_INIT_MONITOR_C0_0(
 //--------PF_SRAM_AHB_C0
 PF_SRAM_AHB_C0 PF_SRAM_AHB_C0_0(
         // Inputs
-        .HCLK      ( SYS_CLK ),
+        .HCLK      ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
         .HRESETN   ( CORERESET_PF_C0_0_FABRIC_RESET_N ),
         .HADDR     ( CoreAHBL_C0_0_AHBmslave8_HADDR ),
         .HTRANS    ( CoreAHBL_C0_0_AHBmslave8_HTRANS ),
