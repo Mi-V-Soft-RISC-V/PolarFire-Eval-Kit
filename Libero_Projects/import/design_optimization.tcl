@@ -14,7 +14,7 @@ if {($hwFamily eq "POLARFIRE") && ($softCpu eq "MIV_RV32") && ($config eq "CFG3"
 
 # Import constraint files for all base and design guide configurations
 if {$config in {"CFG1" "CFG2" "CFG3" "DGC1" "DGC3" "DGC4"}} then {
-	import_files -sdc $scriptDir/import/constraints/io_sys_constraints.sdc
+	#import_files -sdc $scriptDir/import/constraints/io_sys_constraints.sdc
 	import_files -sdc $scriptDir/import/constraints/io_jtag_constraints.sdc
 
 	if {$config in {"CFG1" "CFG2" "CFG3"}} {
@@ -42,17 +42,14 @@ if {$config in {"CFG1" "CFG2" "CFG3" "DGC3" "DGC4"}} {
 	organize_tool_files -tool {PLACEROUTE} \
 		-file $projectDir/constraint/io/io_constraints.pdc \
 		-file $projectDir/constraint/io_jtag_constraints.sdc \
-		-file $projectDir/constraint/io_sys_constraints.sdc \
 		-module ${sdName}::work -input_type {constraint}
 
 	organize_tool_files -tool {SYNTHESIZE} \
 		-file $projectDir/constraint/io_jtag_constraints.sdc \
-		-file $projectDir/constraint/io_sys_constraints.sdc \
 		-module ${sdName}::work -input_type {constraint}
 
 	organize_tool_files -tool {VERIFYTIMING} \
 		-file $projectDir/constraint/io_jtag_constraints.sdc \
-		-file $projectDir/constraint/io_sys_constraints.sdc \
 		-module ${sdName}::work -input_type {constraint}
 
 # DGC1 MIV_ESS: SPI-Boot
@@ -61,17 +58,14 @@ if {$config in {"CFG1" "CFG2" "CFG3" "DGC3" "DGC4"}} {
 		-file $projectDir/constraint/io/io_constraints.pdc \
 		-file $projectDir/constraint/io/spi_constraints.pdc \
 		-file $projectDir/constraint/io_jtag_constraints.sdc \
-		-file $projectDir/constraint/io_sys_constraints.sdc \
 		-module ${sdName}::work -input_type {constraint}
 
 	organize_tool_files -tool {SYNTHESIZE} \
 		-file $projectDir/constraint/io_jtag_constraints.sdc \
-		-file $projectDir/constraint/io_sys_constraints.sdc \
 		-module ${sdName}::work -input_type {constraint}
 
 	organize_tool_files -tool {VERIFYTIMING} \
 		-file $projectDir/constraint/io_jtag_constraints.sdc \
-		-file $projectDir/constraint/io_sys_constraints.sdc \
 		-module ${sdName}::work -input_type {constraint}
 
 # CFG4: Crypto design with MIV_RV32

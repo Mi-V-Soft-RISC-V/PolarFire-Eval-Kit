@@ -39,13 +39,21 @@ create_smartdesign -sd_name ${sdName}
 auto_promote_pad_pins -promote_all 0
 
 # Create top level Scalar Ports
-if {$config in {"DGC1" "DGC3"}} {sd_create_scalar_port -sd_name ${sdName} -port_name {BOOTSTRAP_BYPASS} -port_direction {IN} 
-								 sd_create_scalar_port -sd_name ${sdName} -port_name {SYS_RESET_REQ} -port_direction {IN} }
-if {$config eq "DGC1"} {sd_create_scalar_port -sd_name ${sdName} -port_name {FLASH_SDI} -port_direction {IN}
-						sd_create_scalar_port -sd_name ${sdName} -port_name {FLASH_SCK} -port_direction {OUT}
-						sd_create_scalar_port -sd_name ${sdName} -port_name {FLASH_SDO} -port_direction {OUT}
-						sd_create_scalar_port -sd_name ${sdName} -port_name {FLASH_SS} -port_direction {OUT} 
-						sd_create_scalar_port -sd_name ${sdName} -port_name {PF_IO_SPI_HOLDn} -port_direction {OUT} }
+# Create top level Scalar Ports
+if {$config eq "DGC1"} {
+	sd_create_scalar_port -sd_name ${sdName} -port_name {BOOTSTRAP_BYPASS} -port_direction {IN} 
+	sd_create_scalar_port -sd_name ${sdName} -port_name {SYS_RESET_REQ} -port_direction {IN}
+	sd_create_scalar_port -sd_name ${sdName} -port_name {FLASH_SDI} -port_direction {IN}
+	sd_create_scalar_port -sd_name ${sdName} -port_name {FLASH_SCK} -port_direction {OUT}
+	sd_create_scalar_port -sd_name ${sdName} -port_name {FLASH_SDO} -port_direction {OUT}
+	sd_create_scalar_port -sd_name ${sdName} -port_name {FLASH_SS} -port_direction {OUT} 
+	sd_create_scalar_port -sd_name ${sdName} -port_name {PF_IO_SPI_HOLDn} -port_direction {OUT} 
+}
+if {$config eq "DGC3"} {
+	sd_create_scalar_port -sd_name ${sdName} -port_name {BOOTSTRAP_BYPASS} -port_direction {IN} 
+	sd_create_scalar_port -sd_name ${sdName} -port_name {SYS_RESET_REQ} -port_direction {IN} 
+}
+
 
 sd_create_scalar_port -sd_name ${sdName} -port_name {USER_RST} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {REF_CLK} -port_direction {IN}

@@ -212,7 +212,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:*} -download_core -com
 "PLL_FB_CLK_1:GL0_1"  \
 "PLL_FEEDBACK_MODE_0:Post-VCO"  \
 "PLL_FEEDBACK_MODE_1:Post-VCO"  \
-"PLL_IN_FREQ_0:160"  \
+"PLL_IN_FREQ_0:50"  \
 "PLL_IN_FREQ_1:100"  \
 "PLL_INT_MODE_EN_0:false"  \
 "PLL_INT_MODE_EN_1:false"  \
@@ -225,8 +225,9 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:*} -download_core -com
 "PLL_POSTDIVIDERADDSOFTLOGIC_0:true"  \
 "PLL_REF_CLK_SEL_0:false"  \
 "PLL_REF_CLK_SEL_1:false"  \
-"PLL_REFDIV_0:1"  \
+"PLL_REFDIV_0:4"  \
 "PLL_REFDIV_1:1"  \
+"PLL_RESET_ON_LOCK_0:true"  \
 "PLL_SPREAD_MODE_0:false"  \
 "PLL_SPREAD_MODE_1:false"  \
 "PLL_SSM_DEPTH_0:5"  \
