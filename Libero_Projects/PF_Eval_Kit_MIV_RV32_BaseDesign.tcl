@@ -107,14 +107,16 @@ if {"$designFlow" == "SYNTHESIZE"} then {
 
 	# Generate Design Initialization Data -- only specific PolarFire Eval TCM designs
 	if {($hwFamily == "POLARFIRE") && ($config == "CFG3")} {
-		configure_ram_device "$scriptDir" "$config" "$sdName" "$projectDir"
+		# configure_ram_device "$scriptDir" "$config" "$sdName" "$projectDir"
+        puts "Info: This configuration does not include example software prorgam booting from memory after hardware programming."
 	}
 
 # Run 'Generate Bitstream' from the design flow
 } elseif {"$designFlow" == "GENERATE_BITSTREAM"} then {
 	# Generate Design Initialization Data -- only specific PolarFire Eval TCM designs
 	if {($hwFamily == "POLARFIRE") && ($config == "CFG3")} {
-		configure_ram_device "$scriptDir" "$config" "$sdName" "$projectDir"
+		# configure_ram_device "$scriptDir" "$config" "$sdName" "$projectDir"
+        puts "Info: This configuration does not include example software prorgam booting from memory after hardware programming."
 	}
 	
 	print_message "Generating Bitstream..."
@@ -133,7 +135,8 @@ if {"$designFlow" == "SYNTHESIZE"} then {
 	run_tool -name {GENERATEPROGRAMMINGFILE}
 	# Generate Design Initialization Data -- only specific PolarFire Eval TCM designs
 	if {($hwFamily == "POLARFIRE") && ($config == "CFG3")} {
-		configure_ram_device "$scriptDir" "$config" "$sdName" "$projectDir"
+		# configure_ram_device "$scriptDir" "$config" "$sdName" "$projectDir"
+        puts "Info: This configuration does not include example software prorgam booting from memory after hardware programming."
 	}
 
 	export_prog_job \

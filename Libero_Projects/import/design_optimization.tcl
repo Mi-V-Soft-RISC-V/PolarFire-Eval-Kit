@@ -2,15 +2,16 @@
 build_design_hierarchy
 set_root $sdName
 
+# Not currently supported feature
 # If LPR (Low-Powered RAM) memory client selected for TCM, modify .pkg files
-if {($hwFamily eq "POLARFIRE") && ($softCpu eq "MIV_RV32") && ($config eq "CFG3")} then {
-    set tcmRamCfg_fp $projectDir/component/Microsemi/MiV/MIV_RV32/3.1.100/pkg/miv_rv32_subsys_pkg.v
-	puts "Info: Configuring Low-powered RAM for TCM, modifying pkg file: $tcmRamCfg_fp"
-	update_param $tcmRamCfg_fp \
-		"  localparam logic        l_cfg_hard_tcm0_en              " \
-		"= 1'b1;"
-	build_design_hierarchy
-}
+#if {($hwFamily eq "POLARFIRE") && ($softCpu eq "MIV_RV32") && ($config eq "CFG3")} then {
+#    set tcmRamCfg_fp $projectDir/component/Microsemi/MiV/MIV_RV32/3.1.100/pkg/miv_rv32_subsys_pkg.v
+#	puts "Info: Configuring Low-powered RAM for TCM, modifying pkg file: $tcmRamCfg_fp"
+#	update_param $tcmRamCfg_fp \
+#		"  localparam logic        l_cfg_hard_tcm0_en              " \
+#		"= 1'b1;"
+#	build_design_hierarchy
+#}
 
 # Import constraint files for all base and design guide configurations
 if {$config in {"CFG1" "CFG2" "CFG3" "DGC1" "DGC3" "DGC4"}} then {
