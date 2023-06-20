@@ -71,7 +71,7 @@ if {[file exists $projectDir] == 1} then {
 }
 
 # Download the required direct cores
-download_required_direct_cores "$hwPlatform" "$softCpu" "$config"
+#download_required_direct_cores "$hwPlatform" "$softCpu" "$config"
 
 # Copy the example software program into the project directory
 file copy -force $scriptDir/import/software_example/$softCpu/$config/hex $projectDir

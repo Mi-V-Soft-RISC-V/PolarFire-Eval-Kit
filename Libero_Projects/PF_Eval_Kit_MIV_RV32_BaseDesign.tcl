@@ -71,11 +71,11 @@ if {[file exists $projectDir] == 1} then {
 }
 
 # Download the required direct cores
-download_required_direct_cores "$hwPlatform" "$softCpu" "$config"
+#download_required_direct_cores "$hwPlatform" "$softCpu" "$config"
 
 # Copy the example software program into the project directory (and bootloader elf for DGC1 and DGC2 configs)
 file copy -force $scriptDir/import/software_example/$softCpu/$config/hex $projectDir
-if {$config in {"DGC1" "DGC2"}} {file copy -force $scriptDir/import/software_example/$config/bootloader_elf $projectDir}
+if {$config in {"DGC1" "DGC2"}} {file copy -force $scriptDir/import/software_example/$softCpu/$config/bootloader_elf $projectDir}
 
 # Import and build the design's SmartDesign
 print_message "Building the $sdName..."
