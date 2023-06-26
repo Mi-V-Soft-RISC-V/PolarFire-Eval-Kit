@@ -1,12 +1,12 @@
-## Mi-V Extended Subsystem Design Guide Configuration 3: PF uPROM Boot
-This folder contains Tcl scripts that build Libero SoC v2022.2 MIV_ESS DGC3 design project for the PolarFire Eval Kit. The script is executed in Libero SoC to generate the sample design. 
-> This design is compatible with Libero SoC v2022.2. Using older versions of Libero SoC will result in errors.
+## Mi-V Extended Subsystem Design Guide Configuration 4: Basic Peripherals
+This folder contains Tcl scripts that build Libero SoC v2023.1 MIV_ESS DGC4 design project for the PolarFire Eval Kit. The script is executed in Libero SoC to generate the sample design. 
+> This design is compatible with Libero SoC v2023.1. Using older versions of Libero SoC will result in errors.
 
 #### PF_Eval_Kit_MIV_RV32_BaseDesign
 
 | Config  | Description |
 | :------:|:----------------------------------------|
-| DGC3    | This design uses the **MIV_RV32** core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: MACC (Pipelined)</li><li>Interfaces: AHB Master (mirrored), APB3 Master</li><li>Reset Vector Address: 0x4000_0000</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>TCM APB Slave (TAS): Enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>This design uses the **MIV_ESS** core configured as follows: <ul><li>Bootstrap: Enabled</li><li>Bootstrap Source: uPROM</li><li>uDMA: Disabled</li><li>GPIO: Enabled, 2 GPIO_IN and 4 GPIO_OUT (fixed config)</li><li>I2C: Disabled</li><li>PLIC: Disabled</li><li>SPI: Disabled</li><li>Timer: Disabled</li><li>UART: Enabled</li><li>Watchdog: Disabled</li></ul>|
+| DGC4    | This design uses the **MIV_RV32** core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: MACC (Pipelined)</li><li>Interfaces: AHB Master (mirrored), APB3 Master</li><li>Reset Vector Address: 0x8000_0000</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>TCM APB Slave (TAS): Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: Enabled</li></ul>This design uses the **MIV_ESS** core configured as follows: <ul><li>Bootstrap: Disabled</li><li>Bootstrap Source: None</li><li>uDMA: Disabled</li><li>GPIO: Enabled, 2 GPIO_IN and 4 GPIO_OUT (fixed config)</li><li>I2C: Disabled</li><li>PLIC: Disabled</li><li>SPI: Disabled</li><li>Timer: Disabled</li><li>UART: Enabled</li><li>Watchdog: Disabled</li></ul>|
 
 > This design configuration is only available for the PolarFire Eval Kit (Revision D with production silicon devices).
 
@@ -18,11 +18,11 @@ This folder contains Tcl scripts that build Libero SoC v2022.2 MIV_ESS DGC3 desi
     2. Execute the selected script, Project -> Execute Script
     3. Select the directory that the script is located in, using the "..."
     4. Select the script and select "Open"
-    5. In the arguments text box, enter "DGC3 SYNTHESIZE PS"
+    5. In the arguments text box, enter "DGC4 SYNTHESIZE PS"
     6. Select the "Run" button to execute the script
     7. Once complete, a script report will be generated.
 
-In this example, the arguments "DGC3 SYNTHESIZE PS" are entered to take the production silicon (PS) die project through to Synthesis.
+In this example, the arguments "DGC4 SYNTHESIZE PS" are entered to take the production silicon (PS) die project through to Synthesis.
 
 Libero executes the script and opens the Mi-V sample project targeted for a production silicon (PS) die. The script adds Timing constraints to the project for Synthesis, Place and Route, and Timing Verification. Additionally, I/O Constraints are added to the project for Place and Route. The project can now be taken through the remainder of the Libero SoC design flow.
 
@@ -32,7 +32,7 @@ The complete set of script arguments are documented here.
 #### First argument:
 | Argument                  |  Description   |
 | ------------------------- |:---------------|
-| DGC3                      | Generate a MIV_ESS example design from the *MIV_ESS v2.0 Design Guide* (accessible from the Libero catalog)  |
+| DGC4                      | Generate a MIV_ESS example design from the *MIV_ESS v2.0 Design Guide* (accessible from the Libero catalog)  |
 
 
 #### Second argument:
@@ -53,12 +53,12 @@ The complete set of script arguments are documented here.
 
 ## <a name="Software Provided"></a> Software Provided
 There are two programs included with this configuration:
-* **miv-rv32i-systick-blinky.hex**: A Hex program configured to run from TCM's address (0x4000_0000). The program is initialized in the uPROM system controller component (PF_uPROM).
+* **miv-rv32i-systick-blinky.hex**: A Hex program configured to run from LSRAM's address (0x8000_0000). MIV_RV32 reset vector is setup to boot from 0x8000_0000.
 
-    > The example hex program was created using  miv-rv32i-systick-blinky in release mode (miv32i-Release). For more information about the project go to bare metal example: [miv-rv32i-systick-blinky](https://mi-v-ecosystem.github.io/_redirects/mi-v-soft-risc-v/miv-rv32i-systick-blinky)
+    > The example hex program was created using  miv-rv32i-systick-blinky in release mode (miv32imc-Release). For more information about the project go to bare metal example: [miv-rv32i-systick-blinky](https://mi-v-ecosystem.github.io/_redirects/mi-v-soft-risc-v/miv-rv32i-systick-blinky)
 
 
-## <a name="Design Guide Configuration - DGC3: PF uPROM Boot"></a> Design Guide Configuration - DGC3: PF uPROM Boot
+## <a name="Design Guide Configuration - DGC4: Basic Peripherals"></a> Design Guide Configuration - DGC4: Basic Peripherals
 
 ### Features
 The Libero designs include the following features:
@@ -66,18 +66,16 @@ The Libero designs include the following features:
 * A RISC-V debug block allowing on-target debug using SoftConsole
 * An Extended Subsystem with integrated peripherals
 * Target SRAM/TCM memory (32kB)
-* User peripherals: MIV_ESS (Bootstrap, GPIO, UART), PF_uPROM
+* User peripherals: MIV_ESS (GPIO, UART)
 
 ### Boot Sequence Operation
 A more detailed description of the boot sequence can be found in this section.
 
 > Pre-requisites:
-> * The board needs to be programmed with DGC3 bitstream. Refer to this section, run the [Libero Design](#Running Libero SoC in GUI mode, with Script Arguments)
+> * The board needs to be programmed with DGC4 bitstream. Refer to this section, run the [Libero Design](#Running Libero SoC in GUI mode, with Script Arguments)
 
-    1. Once the board has been powered-on, hold SW8 to enable the Bootstrap functionality in the MIV_ESS. Then press and release SW6 or SW7 to perform a system reset request or reset cycle the board.
-    2. MIV_ESS copies a program from the PF_uPROM component to the MIV_RV32 Tightly-Coupled Memory (TCM) via the TCM APB Slave (TAS) interface.
-    3. When the transfer from PF_uPROM component is complete, MIV_ESS releases MIV_RV32 core from reset and MIV_RV32 is allowed to boot the program from TCM.
-    4. The LEDs on the PolarFire Eval Kit will start blinking, signifying Bootstrap has completed its transfer and SW6 can then be released.   
+    1. Once the board has been powered-on, MIV_RV32  is allowed to boot the program from LSRAM.
+    2. The LEDs on the PolarFire Eval Kit will start blinking, signifying successful boot.   
 
 ### Peripherals - MIV_ESS
 
@@ -104,5 +102,6 @@ A more detailed description of the boot sequence can be found in this section.
 | Memory Source                    | Address Start | Address End | Size   |
 | -------------------------------: |:-------------:|:-----------:|:------:|
 | TCM                              | 0x4000_0000   | 0x4000_7FFF | 32kB   | 
+| LSRAM                            | 0x8000_0000   | 0x8000_7FFF | 32kB   |
 
 
