@@ -15,7 +15,6 @@ set_root $sdName
 
 # Import constraint files for all base and design guide configurations
 if {$config in {"CFG1" "CFG2" "CFG3" "DGC1" "DGC3" "DGC4"}} then {
-	#import_files -sdc $scriptDir/import/constraints/io_sys_constraints.sdc
 	import_files -sdc $scriptDir/import/constraints/io_jtag_constraints.sdc
 
 	if {$config in {"CFG1" "CFG2" "CFG3"}} {
