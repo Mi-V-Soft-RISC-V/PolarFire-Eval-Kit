@@ -54,7 +54,7 @@ if {$config eq "DGC3"} {
 	sd_create_scalar_port -sd_name ${sdName} -port_name {SYS_RESET_REQ} -port_direction {IN} 
 }
 
-
+sd_create_scalar_port -sd_name ${sdName} -port_name {REF_CLK} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {USER_RST} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {RX} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sdName} -port_name {TX} -port_direction {OUT}
@@ -138,7 +138,7 @@ if {$config eq "DGC4"} {sd_instantiate_component -sd_name ${sdName} -component_n
 sd_instantiate_component -sd_name ${sdName} -component_name {COREJTAGDEBUG_C0} -instance_name {COREJTAGDEBUG_C0_0}
 
 
-#Add PF_SRAM_AXI4_C0_0 instance
+# Add SRAM component instance
 sd_instantiate_component -sd_name ${sdName} -component_name "${sramMemComp}_C0" -instance_name "${sramMemComp}_C0_0"
 
 
