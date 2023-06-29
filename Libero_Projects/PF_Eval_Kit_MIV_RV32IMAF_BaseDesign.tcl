@@ -13,8 +13,8 @@ source $scriptDir/import/proc_blocks.tcl
 # Set valid configurations
 set hwPlatform "PF_EVAL"
 set hwFamily "POLARFIRE"
-set softCpu "MIV_RV32"
-set validConfigs [list "CFG1" "CFG2" "CFG3" "CFG4" "DGC1" "DGC3" "DGC4"]
+set cpuRef "MIV_RV32IMAF"
+set validConfigs [list "CFG1"]
 set validDesignFlows [list "SYNTHESIZE" "PLACE_AND_ROUTE" "GENERATE_BITSTREAM" "EXPORT_PROGRAMMING_FILE"]
 set validDieTypes [list "PS" "ES" ""]
 set sdName {BaseDesign}
@@ -26,15 +26,15 @@ set designFlow [verify_designFlow $designFlow]
 set dieType [verify_dieType $dieType]
 
 # Prime the TCL builder script for desired build settings
+set softCpu [get_legacy_core_name $config $cpuRef]
 set cpuGroup [expr {$softCpu eq "MIV_RV32" ? "MIV_RV32" : "MIV_Legacy"}]
 set sdBuildScript [get_config_builder $config $validConfigs $cpuGroup]
 get_die_configuration $hwPlatform $dieType
-set cpuRef [string range $softCpu 0 [expr [string first "_" $softCpu 5] - 1]]
 print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlow $dieType \nDesign Build Script: $sdBuildScript"
 
 # Configure Libero project files and directories
 append projectName $hwPlatform _ $dieType _ $cpuGroup _ $config _ $sdName
-append projectFolderName [expr { ($dieType eq "PS" ) ? "${softCpu}_${config}_BD" : "${softCpu}_${config}_BD_ES"}]
+append projectFolderName [expr { ($dieType eq "PS" ) ? "${cpuRef}_${config}_BD" : "${cpuRef}_${config}_BD_ES"}]
 set projectDir $scriptDir/$projectFolderName
 
 # Build Libero design project for selected configuration and hardware
@@ -73,9 +73,8 @@ if {[file exists $projectDir] == 1} then {
 # Download the required direct cores
 #download_required_direct_cores "$hwPlatform" "$softCpu" "$config"
 
-# Copy the example software program into the project directory (and bootloader elf for DGC1 and DGC2 configs)
+# Copy the example software program into the project directory
 file copy -force $scriptDir/import/software_example/$cpuGroup/$config/hex $projectDir
-if {$config in {"DGC1" "DGC2"}} {file copy -force $scriptDir/import/software_example/$softCpu/$config/bootloader_elf $projectDir}
 
 # Import and build the design's SmartDesign
 print_message "Building the $sdName..."
@@ -93,6 +92,10 @@ pre_configure_place_and_route
 # Run 'Synthesize' from the design flow
 if {"$designFlow" == "SYNTHESIZE"} then {
 	print_message "Starting Synthesis..."
+	if {"$config" == "CFG3"} {
+		configure_tool -name {SYNTHESIZE} -params {SYNPLIFY_OPTIONS:set_option -looplimit 4000} 
+		print_alternative_message "The loop limit had to be increased to 4000 for this MIV_RV32IMA_L1_AXI design."
+		}
     run_tool -name {SYNTHESIZE}
     save_project
 	print_message "Synthesis Complete."
@@ -104,20 +107,8 @@ if {"$designFlow" == "SYNTHESIZE"} then {
 	save_project
 	print_message "Place and Route Completed successfully."
 
-	# Generate Design Initialization Data -- only specific PolarFire Eval TCM designs
-	if {($hwFamily == "POLARFIRE") && ($config == "CFG3")} {
-		# configure_ram_device "$scriptDir" "$config" "$sdName" "$projectDir"
-        puts "Info: This configuration does not include example software prorgam booting from memory after hardware programming."
-	}
-
 # Run 'Generate Bitstream' from the design flow
 } elseif {"$designFlow" == "GENERATE_BITSTREAM"} then {
-	# Generate Design Initialization Data -- only specific PolarFire Eval TCM designs
-	if {($hwFamily == "POLARFIRE") && ($config == "CFG3")} {
-		# configure_ram_device "$scriptDir" "$config" "$sdName" "$projectDir"
-        puts "Info: This configuration does not include example software prorgam booting from memory after hardware programming."
-	}
-	
 	print_message "Generating Bitstream..."
 	run_verify_timing
     run_tool -name {GENERATEPROGRAMMINGDATA}
@@ -130,14 +121,8 @@ if {"$designFlow" == "SYNTHESIZE"} then {
 	print_message "Exporting Programming Files..."
 
 	run_verify_timing
-
+	
 	run_tool -name {GENERATEPROGRAMMINGFILE}
-	# Generate Design Initialization Data -- only specific PolarFire Eval TCM designs
-	if {($hwFamily == "POLARFIRE") && ($config == "CFG3")} {
-		# configure_ram_device "$scriptDir" "$config" "$sdName" "$projectDir"
-        puts "Info: This configuration does not include example software prorgam booting from memory after hardware programming."
-	}
-
 	export_prog_job \
 		-job_file_name $projectName \
 		-export_dir $projectDir/designer/$sdName/export \

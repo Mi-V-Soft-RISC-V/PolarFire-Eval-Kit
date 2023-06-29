@@ -32,6 +32,9 @@ if {$config eq "DGC1"} {
 	source $scriptDir/import/components/CoreTimer_C1.tcl 
 }
 
+# Specify CoreJTAGDebug component (name extension)
+set cjdRstType [expr {$softCpu eq "MIV_RV32" ? "TRSTN" : "TRST"}]
+
 # Creating SmartDesign BaseDesign
 create_smartdesign -sd_name ${sdName}
 
