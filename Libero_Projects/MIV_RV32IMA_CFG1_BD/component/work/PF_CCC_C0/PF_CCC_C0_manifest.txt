@@ -1,0 +1,14 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.1 (Version 2023.1.0.6)
+
+Date      :  Thu Jun 29 20:27:40 2023
+Project   :  C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD
+Component :  PF_CCC_C0
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD/component/work/PF_CCC_C0/PF_CCC_C0.v
+
+Constraint files:
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD/component/work/PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.sdc

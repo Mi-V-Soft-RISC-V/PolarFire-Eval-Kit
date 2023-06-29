@@ -11,6 +11,7 @@
 #This Tcl file sources other Tcl files to build the design(on which recursive export is run) in a bottom-up fashion
 
 #Sourcing the Tcl files for each of the design's components
+set cjdRstType [expr {$softCpu eq "MIV_RV32" ? "TRSTN" : "TRST"}]
 
 source $scriptDir/import/components/CORERESET_PF_C0.tcl 
 source $scriptDir/import/components/PF_CCC_C0.tcl
@@ -31,9 +32,6 @@ if {$config eq "DGC1"} {
 	source $scriptDir/import/components/CoreTimer_C0.tcl
 	source $scriptDir/import/components/CoreTimer_C1.tcl 
 }
-
-# Specify CoreJTAGDebug component (name extension)
-set cjdRstType [expr {$softCpu eq "MIV_RV32" ? "TRSTN" : "TRST"}]
 
 # Creating SmartDesign BaseDesign
 create_smartdesign -sd_name ${sdName}

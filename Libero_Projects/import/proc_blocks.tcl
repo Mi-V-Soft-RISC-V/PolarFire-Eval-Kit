@@ -96,7 +96,7 @@ proc verify_dieType { dieType } {
     return $dieType
 }
 
-proc get_config_builder {config validConfigs cpuGroup} {
+proc get_config_builder {config validConfigs tclSdRef} {
     set configMapping [dict create]
 
     foreach validConfig $validConfigs {
@@ -104,7 +104,7 @@ proc get_config_builder {config validConfigs cpuGroup} {
             "CFG1" -
             "CFG2" -
             "CFG3" {
-                dict set configMapping $validConfig $cpuGroup
+                dict set configMapping $validConfig $tclSdRef
             }
             "CFG4" {
                 dict set configMapping $validConfig "MIV_RV32_Crypto"
@@ -116,20 +116,20 @@ proc get_config_builder {config validConfigs cpuGroup} {
                 dict set configMapping $validConfig "MIV_ESS"
             }
             default {
-                dict set configMapping $validConfig $cpuGroup
+                dict set configMapping $validConfig $tclSdRef
             }
         }
     }
 
     set mappedValue [dict get $configMapping $config]
     if {$mappedValue eq ""} {
-        set mappedValue $cpuGroup
+        set mappedValue $tclSdRef
     }
 
     return "${mappedValue}_build_sd.tcl"
 }
 
-proc get_legacy_core_name {config, coreRef} {
+proc get_legacy_core_name {config coreRef} {
 
     if { ($config eq "CFG1") && ($coreRef eq "MIV_RV32IMAF")} {
         return "MIV_RV32IMAF_L1_AHB"
