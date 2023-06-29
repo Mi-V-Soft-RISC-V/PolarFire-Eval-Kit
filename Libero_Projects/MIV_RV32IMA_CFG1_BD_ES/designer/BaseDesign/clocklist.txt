@@ -1,3 +1,0 @@
-"PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0:OUT0",,"PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0:OUT0","PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0:OUT0"
-"REF_CLK",,"REF_CLK","REF_CLK"
-"TCK",,"TCK","TCK"
