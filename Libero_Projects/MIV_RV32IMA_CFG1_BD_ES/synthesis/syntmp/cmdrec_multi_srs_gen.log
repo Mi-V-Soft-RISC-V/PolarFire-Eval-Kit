@@ -1,0 +1,7 @@
+C:\Microchip\Libero_SoC_v2023.1\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  BaseDesign  -multisrs  C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\synthesis\synwork\BaseDesign_comp.srs  -osyn  C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\synthesis\synwork\BaseDesign_mult.srs  -log  C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\synthesis\synlog\BaseDesign_multi_srs_gen.srr 
+relcom:..\..\..\..\..\..\..\Microchip\Libero_SoC_v2023.1\SynplifyPro\bin64\syn_nfilter.exe -link -top BaseDesign -multisrs ..\synwork\BaseDesign_comp.srs -osyn ..\synwork\BaseDesign_mult.srs -log ..\synlog\BaseDesign_multi_srs_gen.srr
+rc:0 success:1 runtime:1
+file:..\synwork\BaseDesign_comp.srs|io:i|time:1688068931|size:704447|exec:0|csum:BB9113F0E12BC61ACFE8580EC0BAACA7
+file:..\synwork\BaseDesign_mult.srs|io:o|time:1688068934|size:14476|exec:0|csum:
+file:..\synlog\BaseDesign_multi_srs_gen.srr|io:o|time:1688068934|size:1065|exec:0|csum:
+file:..\..\..\..\..\..\..\Microchip\Libero_SoC_v2023.1\SynplifyPro\bin64\syn_nfilter.exe|io:i|time:1679051022|size:10452480|exec:1|csum:A770B913F6CDB978B199579E58FDD8FE

@@ -1,0 +1,26 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.1 (Version 2023.1.0.6)
+
+Date      :  Thu Jun 29 20:59:04 2023
+Project   :  C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES
+Component :  CoreTimer_C1
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/core/coretimer.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/work/CoreTimer_C1/CoreTimer_C1.v
+
+Stimulus files for all Simulation tools:
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/mti/bfmtovec.exe
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/mti/bfmtovec.lin
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/mti/bfmtovec_compile.do
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/mti/wave.do
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/test/user_tb.bfm
+
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/amba_bfm/bfm_ahbtoapb.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/amba_bfm/bfm_apb.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/amba_bfm/bfm_apbtoapb.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/amba_bfm/bfm_main.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/amba_bfm/bfm_package.v
+    C:/esip_projects/FPGA_BU_ESIP/gh-libsd-pf-eval/Libero_Projects/MIV_RV32IMA_CFG1_BD_ES/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/test/testbench.v
+

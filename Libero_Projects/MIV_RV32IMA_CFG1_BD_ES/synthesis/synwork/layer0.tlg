@@ -1,0 +1,186 @@
+Selecting top level module BaseDesign
+@N: CG775 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\work\CoreAHBL_C0\CoreAHBL_C0_0\rtl\vlog\core\coreahblite.v":23:7:23:43|Component CoreAHBL_C0_CoreAHBL_C0_0_CoreAHBLite not found in library "work" or "__hyper__lib__", but found in library COREAHBLITE_LIB
+@N: CG775 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\COREAHBTOAPB3\3.2.101\rtl\vlog\core\coreahbtoapb3.v":25:7:25:19|Component COREAHBTOAPB3 not found in library "work" or "__hyper__lib__", but found in library COREAHBTOAPB3_LIB
+@N: CG775 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Component CoreAPB3 not found in library "work" or "__hyper__lib__", but found in library COREAPB3_LIB
+@N: CG775 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\COREJTAGDEBUG\4.0.100\core\corejtagdebug.v":22:7:22:19|Component COREJTAGDEBUG not found in library "work" or "__hyper__lib__", but found in library COREJTAGDEBUG_LIB
+@N: CG775 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreTimer\2.0.103\rtl\vlog\core\coretimer.v":24:7:24:15|Component CoreTimer not found in library "work" or "__hyper__lib__", but found in library CORETIMER_LIB
+@N: CG364 :"C:\Microchip\Libero_SoC_v2023.1\SynplifyPro\lib\generic\acg5.v":1662:7:1662:12|Synthesizing module CLKBUF in library work.
+Running optimization stage 1 on CLKBUF .......
+Finished optimization stage 1 on CLKBUF (CPU Time 0h:00m:00s, Memory Used current: 149MB peak: 150MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_addrdec.v":20:7:20:25|Synthesizing module COREAHBLITE_ADDRDEC in library COREAHBLITE_LIB.
+
+	MEMSPACE=3'b001
+	HADDR_SHG_CFG=1'b1
+	SC=16'b0000000000000000
+	M_AHBSLOTENABLE=17'b00000000010000000
+	MSB_ADDR=32'b00000000000000000000000000011111
+	SLAVE_0=16'b0000000000000001
+	SLAVE_1=16'b0000000000000010
+	SLAVE_2=16'b0000000000000100
+	SLAVE_3=16'b0000000000001000
+	SLAVE_4=16'b0000000000010000
+	SLAVE_5=16'b0000000000100000
+	SLAVE_6=16'b0000000001000000
+	SLAVE_7=16'b0000000010000000
+	SLAVE_8=16'b0000000100000000
+	SLAVE_9=16'b0000001000000000
+	SLAVE_10=16'b0000010000000000
+	SLAVE_11=16'b0000100000000000
+	SLAVE_12=16'b0001000000000000
+	SLAVE_13=16'b0010000000000000
+	SLAVE_14=16'b0100000000000000
+	SLAVE_15=16'b1000000000000000
+	NONE=16'b0000000000000000
+   Generated name = COREAHBLITE_ADDRDEC_Z1
+Running optimization stage 1 on COREAHBLITE_ADDRDEC_Z1 .......
+Finished optimization stage 1 on COREAHBLITE_ADDRDEC_Z1 (CPU Time 0h:00m:00s, Memory Used current: 150MB peak: 150MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_defaultslavesm.v":20:7:20:32|Synthesizing module COREAHBLITE_DEFAULTSLAVESM in library COREAHBLITE_LIB.
+
+	SYNC_RESET=32'b00000000000000000000000000000000
+	IDLE=1'b0
+	HRESPEXTEND=1'b1
+   Generated name = COREAHBLITE_DEFAULTSLAVESM_0s_0_1
+Running optimization stage 1 on COREAHBLITE_DEFAULTSLAVESM_0s_0_1 .......
+Finished optimization stage 1 on COREAHBLITE_DEFAULTSLAVESM_0s_0_1 (CPU Time 0h:00m:00s, Memory Used current: 150MB peak: 150MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_masterstage.v":22:7:22:29|Synthesizing module COREAHBLITE_MASTERSTAGE in library COREAHBLITE_LIB.
+
+	MEMSPACE=3'b001
+	HADDR_SHG_CFG=1'b1
+	SC=16'b0000000000000000
+	M_AHBSLOTENABLE=17'b00000000010000000
+	SYNC_RESET=32'b00000000000000000000000000000000
+	IDLE=1'b0
+	REGISTERED=1'b1
+	SLAVE_NONE=17'b00000000000000000
+   Generated name = COREAHBLITE_MASTERSTAGE_1_1_0_128_0s_0_1_0
+Running optimization stage 1 on COREAHBLITE_MASTERSTAGE_1_1_0_128_0s_0_1_0 .......
+@W: CL177 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_masterstage.v":634:0:634:5|Sharing sequential element addrRegSMCurrentState and merging masterRegAddrSel. Add a syn_preserve attribute to the element to prevent sharing.
+Finished optimization stage 1 on COREAHBLITE_MASTERSTAGE_1_1_0_128_0s_0_1_0 (CPU Time 0h:00m:00s, Memory Used current: 153MB peak: 153MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_addrdec.v":20:7:20:25|Synthesizing module COREAHBLITE_ADDRDEC in library COREAHBLITE_LIB.
+
+	MEMSPACE=3'b001
+	HADDR_SHG_CFG=1'b1
+	SC=16'b0000000000000000
+	M_AHBSLOTENABLE=17'b00000000100000000
+	MSB_ADDR=32'b00000000000000000000000000011111
+	SLAVE_0=16'b0000000000000001
+	SLAVE_1=16'b0000000000000010
+	SLAVE_2=16'b0000000000000100
+	SLAVE_3=16'b0000000000001000
+	SLAVE_4=16'b0000000000010000
+	SLAVE_5=16'b0000000000100000
+	SLAVE_6=16'b0000000001000000
+	SLAVE_7=16'b0000000010000000
+	SLAVE_8=16'b0000000100000000
+	SLAVE_9=16'b0000001000000000
+	SLAVE_10=16'b0000010000000000
+	SLAVE_11=16'b0000100000000000
+	SLAVE_12=16'b0001000000000000
+	SLAVE_13=16'b0010000000000000
+	SLAVE_14=16'b0100000000000000
+	SLAVE_15=16'b1000000000000000
+	NONE=16'b0000000000000000
+   Generated name = COREAHBLITE_ADDRDEC_Z2
+Running optimization stage 1 on COREAHBLITE_ADDRDEC_Z2 .......
+Finished optimization stage 1 on COREAHBLITE_ADDRDEC_Z2 (CPU Time 0h:00m:00s, Memory Used current: 153MB peak: 153MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_masterstage.v":22:7:22:29|Synthesizing module COREAHBLITE_MASTERSTAGE in library COREAHBLITE_LIB.
+
+	MEMSPACE=3'b001
+	HADDR_SHG_CFG=1'b1
+	SC=16'b0000000000000000
+	M_AHBSLOTENABLE=17'b00000000100000000
+	SYNC_RESET=32'b00000000000000000000000000000000
+	IDLE=1'b0
+	REGISTERED=1'b1
+	SLAVE_NONE=17'b00000000000000000
+   Generated name = COREAHBLITE_MASTERSTAGE_1_1_0_256_0s_0_1_0
+Running optimization stage 1 on COREAHBLITE_MASTERSTAGE_1_1_0_256_0s_0_1_0 .......
+@W: CL177 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_masterstage.v":634:0:634:5|Sharing sequential element addrRegSMCurrentState and merging masterRegAddrSel. Add a syn_preserve attribute to the element to prevent sharing.
+Finished optimization stage 1 on COREAHBLITE_MASTERSTAGE_1_1_0_256_0s_0_1_0 (CPU Time 0h:00m:00s, Memory Used current: 153MB peak: 154MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_addrdec.v":20:7:20:25|Synthesizing module COREAHBLITE_ADDRDEC in library COREAHBLITE_LIB.
+
+	MEMSPACE=3'b001
+	HADDR_SHG_CFG=1'b1
+	SC=16'b0000000000000000
+	M_AHBSLOTENABLE=17'b00000000000000000
+	MSB_ADDR=32'b00000000000000000000000000011111
+	SLAVE_0=16'b0000000000000001
+	SLAVE_1=16'b0000000000000010
+	SLAVE_2=16'b0000000000000100
+	SLAVE_3=16'b0000000000001000
+	SLAVE_4=16'b0000000000010000
+	SLAVE_5=16'b0000000000100000
+	SLAVE_6=16'b0000000001000000
+	SLAVE_7=16'b0000000010000000
+	SLAVE_8=16'b0000000100000000
+	SLAVE_9=16'b0000001000000000
+	SLAVE_10=16'b0000010000000000
+	SLAVE_11=16'b0000100000000000
+	SLAVE_12=16'b0001000000000000
+	SLAVE_13=16'b0010000000000000
+	SLAVE_14=16'b0100000000000000
+	SLAVE_15=16'b1000000000000000
+	NONE=16'b0000000000000000
+   Generated name = COREAHBLITE_ADDRDEC_Z3
+Running optimization stage 1 on COREAHBLITE_ADDRDEC_Z3 .......
+Finished optimization stage 1 on COREAHBLITE_ADDRDEC_Z3 (CPU Time 0h:00m:00s, Memory Used current: 153MB peak: 154MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_masterstage.v":22:7:22:29|Synthesizing module COREAHBLITE_MASTERSTAGE in library COREAHBLITE_LIB.
+
+	MEMSPACE=3'b001
+	HADDR_SHG_CFG=1'b1
+	SC=16'b0000000000000000
+	M_AHBSLOTENABLE=17'b00000000000000000
+	SYNC_RESET=32'b00000000000000000000000000000000
+	IDLE=1'b0
+	REGISTERED=1'b1
+	SLAVE_NONE=17'b00000000000000000
+   Generated name = COREAHBLITE_MASTERSTAGE_1_1_0_0_0s_0_1_0
+Running optimization stage 1 on COREAHBLITE_MASTERSTAGE_1_1_0_0_0s_0_1_0 .......
+@W: CL177 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_masterstage.v":634:0:634:5|Sharing sequential element addrRegSMCurrentState and merging masterRegAddrSel. Add a syn_preserve attribute to the element to prevent sharing.
+Finished optimization stage 1 on COREAHBLITE_MASTERSTAGE_1_1_0_0_0s_0_1_0 (CPU Time 0h:00m:00s, Memory Used current: 154MB peak: 154MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_slavearbiter.v":20:7:20:30|Synthesizing module COREAHBLITE_SLAVEARBITER in library COREAHBLITE_LIB.
+
+	SYNC_RESET=32'b00000000000000000000000000000000
+	M0EXTEND=4'b0000
+	M0DONE=4'b0001
+	M0LOCK=4'b0010
+	M0LOCKEXTEND=4'b0011
+	M1EXTEND=4'b0100
+	M1DONE=4'b0101
+	M1LOCK=4'b0110
+	M1LOCKEXTEND=4'b0111
+	M2EXTEND=4'b1000
+	M2DONE=4'b1001
+	M2LOCK=4'b1010
+	M2LOCKEXTEND=4'b1011
+	M3EXTEND=4'b1100
+	M3DONE=4'b1101
+	M3LOCK=4'b1110
+	M3LOCKEXTEND=4'b1111
+	MASTER_0=4'b0001
+	MASTER_1=4'b0010
+	MASTER_2=4'b0100
+	MASTER_3=4'b1000
+	MASTER_NONE=4'b0000
+   Generated name = COREAHBLITE_SLAVEARBITER_Z4
+Running optimization stage 1 on COREAHBLITE_SLAVEARBITER_Z4 .......
+Finished optimization stage 1 on COREAHBLITE_SLAVEARBITER_Z4 (CPU Time 0h:00m:00s, Memory Used current: 154MB peak: 155MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_slavestage.v":22:7:22:28|Synthesizing module COREAHBLITE_SLAVESTAGE in library COREAHBLITE_LIB.
+
+	SYNC_RESET=32'b00000000000000000000000000000000
+	TRN_IDLE=1'b0
+	MASTER_NONE=4'b0000
+   Generated name = COREAHBLITE_SLAVESTAGE_0s_0_0
+Running optimization stage 1 on COREAHBLITE_SLAVESTAGE_0s_0_0 .......
+Finished optimization stage 1 on COREAHBLITE_SLAVESTAGE_0s_0_0 (CPU Time 0h:00m:00s, Memory Used current: 154MB peak: 155MB)
+@N: CG364 :"C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\component\Actel\DirectCore\CoreAHBLite\5.6.105\rtl\vlog\core\coreahblite_matrix4x16.v":23:7:23:28|Synthesizing module COREAHBLITE_MATRIX4X16 in library COREAHBLITE_LIB.
+
+	MEMSPACE=3'b001
+	HADDR_SHG_CFG=1'b1
+	SC=16'b0000000000000000
+	M0_AHBSLOTENABLE=17'b00000000010000000
+	M1_AHBSLOTENABLE=17'b00000000100000000
+	M2_AHBSLOTENABLE=17'b00000000000000000
+	M3_AHBSLOTENABLE=17'b00000000000000000
+	SYNC_RESET=32'b00000000000000000000000000000000
+   Generated name = COREAHBLITE_MATRIX4X16_1_1_0_128_256_0_0_0s

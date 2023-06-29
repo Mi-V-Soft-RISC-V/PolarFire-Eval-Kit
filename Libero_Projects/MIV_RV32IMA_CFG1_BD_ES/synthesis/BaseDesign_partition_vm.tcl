@@ -1,0 +1,5 @@
+set_partition_info -name "/BaseDesign" -timestamp "1688068944"
+set_partition_info -name "/BaseDesign/MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/genblk1\.core" -timestamp "1688068944"
+set_partition_info -name "/BaseDesign/MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile" -timestamp "1688068944"
+set_partition_info -name "/BaseDesign/MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1" -timestamp "1688068944"
+set_partition_info -name "/BaseDesign/MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0" -timestamp "1688068944"

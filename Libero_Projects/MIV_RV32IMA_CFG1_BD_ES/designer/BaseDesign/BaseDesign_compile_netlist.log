@@ -1,0 +1,70 @@
+
+Info: Device 'MPF300TS_ES' requires Two-port LSRAM cells with Read-width > 20 to be remapped 
+      Two-port LSRAM instances with Read-width > 20:                     22
+      Two-port LSRAM instances with Read-width > 20 and a single clock:  22
+      Two-port LSRAM instances with read-width > 20 and two clocks:       0
+      Number of AND gates inserted:                                      88
+      Number of LSRAM cells inserted:                                     0
+
+Info: Following Two-port LSRAM instances with Read-width > 20 and a single clock were remapped: 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/MIV_RV32IMA_L1_AHB_TAG_ARRAY/MIV_RV32IMA_L1_AHB_TAG_ARRAY_EXT/dtag_array/RAM_ECC_RAM_ECC_0_PF_TPSRAM_R0C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram15d8/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R0C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram15d8/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R1C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram15d8/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R2C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram15d8/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R3C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram24d16/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R0C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram24d16/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R1C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram24d16/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R2C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram24d16/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R3C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram31d24/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R0C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram31d24/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R1C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram31d24/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R2C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram31d24/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R3C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram7d0/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R0C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram7d0/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R1C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram7d0/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R2C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/dcache/data/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_EXT/ram7d0/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R3C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_0_EXT/icache_mem/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R0C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_0_EXT/icache_mem/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R1C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_0_EXT/icache_mem/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R2C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0/MIV_RV32IMA_L1_AHB_DATA_ARRAYS_0_0_EXT/icache_mem/RAM_512_WEN_RAM_512_WEN_0_PF_TPSRAM_R3C0 
+      MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/MIV_RV32IMA_L1_AHB_TAG_ARRAY/MIV_RV32IMA_L1_AHB_TAG_ARRAY_0_EXT/icache_tag_array/RAM_ECC_RAM_ECC_0_PF_TPSRAM_R0C0 
+
+Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/N_2_inferred_clock_RNIQ22C:A'.
+Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'PF_CCC_C0_0/PF_CCC_C0_0/clkint_0:A'.
+Warning: [127205465]:  CMPPF_007: Top level port RX is not connected to any I/O pad. Check whether I/O buffer insertion is disabled in Synthesis or whether Block Flow is enabled.
+Warning: [127205465]:  CMPPF_007: Top level port SW_1 is not connected to any I/O pad. Check whether I/O buffer insertion is disabled in Synthesis or whether Block Flow is enabled.
+Warning: [127205465]:  CMPPF_007: Top level port SW_2 is not connected to any I/O pad. Check whether I/O buffer insertion is disabled in Synthesis or whether Block Flow is enabled.
+
+===============================================================================.
+
+Info: Global design data: 
+      Total globals:                       3 
+      Globals that cannot be demoted:      2 
+      Globals considered for demotion:     1 
+
+
+Info: List of globals that cannot be demoted: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    4275   0      0      'PF_CCC_C0_0/PF_CCC_C0_0/clkint_0' 
+    17     0      1      'CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/N_2_inferred_clock_RNIQ22C' 
+
+Info: List of globals considered for demotion: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    307    0      1      'CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/genblk3.genblk1.TGT_TCK_GLB' 
+
+Info: Demotion information: 
+      Disconnected 1 data pins from global 'CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/genblk3.genblk1.TGT_TCK_GLB'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+Info: [127205381]:  CMPPF_302: Added 0 row global instances.
+Info: [127205382]:  CMPPF_303: Deleted 0 global instances.
+
+===============================================================================.
+
+Info: Device 'MPF300TS_ES' requires fabric generated global resources driven from the fabric to be gated by the 'INIT:FABRIC_POR_N' signal 
+    Chip globals:                  1 
+    Row globals:                   0 
+    Number of AND2 gates inserted: 1 
+Info: Chip global resources driven by the following fabric instances were gated by the 'INIT:FABRIC_POR_N' signal: 
+    CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/genblk3.genblk1.UJ_JTAG/un1_DUT_TCK_0

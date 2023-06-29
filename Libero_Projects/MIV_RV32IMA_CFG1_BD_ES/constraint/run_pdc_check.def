@@ -1,0 +1,8 @@
+DESIGN=BaseDesign
+DESDIR=C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\designer\BaseDesign
+TARGET_DIR=C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\designer\BaseDesign
+FAM=PolarFire
+DIE=PA5M300TS_ES
+PACKAGE=fcg1152
+SPEED=-1
+PDC_FILE=C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\constraint\io\io_constraints.pdc,,

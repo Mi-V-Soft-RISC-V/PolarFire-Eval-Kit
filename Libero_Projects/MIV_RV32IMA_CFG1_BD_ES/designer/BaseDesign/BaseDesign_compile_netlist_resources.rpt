@@ -1,0 +1,179 @@
+Compile Report
+Microchip Technology Inc. - Microchip Libero Software Release v2023.1 (Version 2023.1.0.6)
+Date: Thu Jun 29 21:04:05 2023
+
+Device Selection
++------------------------+-------------+
+| Family                 | PolarFire   |
+| Device                 | MPF300TS_ES |
+| Package                | FCG1152     |
+| Speed Grade            | -1          |
+| Core Voltage           | 1.0V        |
+| Part Range             | EXT         |
+| Default I/O technology | LVCMOS 1.8V |
++------------------------+-------------+
+
+Source Files
++---------+---------------------------------------------------------------------------------------------------------------+
+| Topcell | BaseDesign                                                                                                    |
+| Format  | Verilog                                                                                                       |
+| Source  | C:\esip_projects\FPGA_BU_ESIP\gh-libsd-pf-eval\Libero_Projects\MIV_RV32IMA_CFG1_BD_ES\synthesis\BaseDesign.vm |
++---------+---------------------------------------------------------------------------------------------------------------+
+
+Options
++----------------------------------------------------+----+
+| Limit the number of high fanout nets to display to | 10 |
++----------------------------------------------------+----+
+
+Resource Usage
++---------------------------+-------+--------+------------+
+| Type                      | Used  | Total  | Percentage |
++---------------------------+-------+--------+------------+
+| 4LUT                      | 10789 | 299544 | 3.60       |
+| DFF                       | 5491  | 299544 | 1.83       |
+| I/O Register              | 0     | 1536   | 0.00       |
+| User I/O                  | 7     | 512    | 1.37       |
+| -- Single-ended I/O       | 7     | 512    | 1.37       |
+| -- Differential I/O Pairs | 0     | 256    | 0.00       |
+| uSRAM                     | 6     | 2772   | 0.22       |
+| LSRAM                     | 22    | 952    | 2.31       |
+| Math                      | 2     | 924    | 0.22       |
+| H-Chip Global             | 3     | 48     | 6.25       |
+| PLL                       | 1     | 8      | 12.50      |
+| DLL                       | 0     | 8      | 0.00       |
+| UJTAG                     | 1     | 1      | 100.00     |
+| INIT                      | 1     | 1      | 100.00     |
+| Transceiver Lanes         | 0     | 16     | 0.00       |
+| Transceiver PCIe          | 0     | 2      | 0.00       |
+| ICB_CLKINT                | 2     | 72     | 2.78       |
++---------------------------+-------+--------+------------+
+
+Detailed Logic Resource Usage
++-----------------------+-------+------+
+| Type                  | 4LUT  | DFF  |
++-----------------------+-------+------+
+| Fabric Logic          | 9853  | 4555 |
+| uSRAM Interface Logic | 72    | 72   |
+| LSRAM Interface Logic | 792   | 792  |
+| Math Interface Logic  | 72    | 72   |
+| Total Used            | 10789 | 5491 |
++-----------------------+-------+------+
+
+Detailed Carry Chains Resource Usage
++--------+------+
+| Length | Used |
+| 6      | 1    |
+| 7      | 2    |
+| 8      | 1    |
+| 10     | 7    |
+| 11     | 7    |
+| 14     | 1    |
+| 17     | 4    |
+| 30     | 2    |
+| 32     | 3    |
+| 33     | 7    |
+| 49     | 1    |
+| 64     | 1    |
+| 65     | 1    |
+| Total  | 38   |
++--------+------+
+
+Detailed 4LUT Groups Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 167  |
+| 5      | 32   |
+| Total  | 199  |
++--------+------+
+
+Detailed Math Chains Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 1    |
+| Total  | 1    |
++--------+------+
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 2            | 0           | 0               |
+| Output I/O                    | 5            | 0           | 0               |
+| Bidirectional I/O             | 0            | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+Nets assigned to chip global resources
++--------+---------+---------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                        |
++--------+---------+---------------------------------------------------------------------------------------------+
+| 4275   | INT_NET | Net   : PF_CCC_C0_0_OUT0_FABCLK_0                                                           |
+|        |         | Driver: PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                                            |
+|        |         | Source: NETLIST                                                                             |
+| 307    | INT_NET | Net   : CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/TGT_TCK_GLB                         |
+|        |         | Driver: CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/genblk3.genblk1.TGT_TCK_GLB/U0_RGB1 |
+|        |         | Source: NETLIST                                                                             |
+| 18     | INT_NET | Net   : CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/iUDRCK                              |
+|        |         | Driver: CoreJTAGDebug_TRST_C0_0/CoreJTAGDebug_TRST_C0_0/N_2_inferred_clock_RNIQ22C/U0_RGB1  |
+|        |         | Source: NETLIST                                                                             |
++--------+---------+---------------------------------------------------------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                                                                                                          |
++--------+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 672    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/reset_Z                                                                                                    |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/reset                                                                                                      |
+| 608    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/N_1810_i                                                                                   |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmactiveSync/MIV_RV32IMA_L1_AHB_ASYNC_RESET_SYNCHRONIZER_SHIFT_REG_W1_D3_I0/sync_0/reg_0/q |
+| 226    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmiXing_auto_out_a_bits_address[3]                                                         |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmiXing/MIV_RV32IMA_L1_AHB_ASYNC_QUEUE_SINK/deq_bits_reg/sync_0[39]                        |
+| 136    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend_auto_icache_master_out_a_bits_address[12]                                                    |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/refill_addr[12]                                                                       |
+| 133    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmiXing_auto_out_a_bits_address[2]                                                         |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmiXing/MIV_RV32IMA_L1_AHB_ASYNC_QUEUE_SINK/deq_bits_reg/sync_0[38]                        |
+| 128    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/un1__GEN_13_2_sqmuxa_or                                                               |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/refill_one_beat_RNI578O                                                               |
+| 128    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/N_3079_i                                                                              |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/vb_array_689_fast                                                                     |
+| 128    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/_T_232_Z                                                                              |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/_T_232                                                                                |
+| 128    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/clint/_T_448_Z                                                                                             |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/clint/_T_448                                                                                               |
+| 105    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/genblk1.core/un1__T_1900_1_1_i                                                                        |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/genblk1.core/div/ex_pc_valid_RNISDAB                                                                  |
++--------+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                                                                                                          |
++--------+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 672    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/reset_Z                                                                                                    |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/reset                                                                                                      |
+| 608    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/N_1810_i                                                                                   |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmactiveSync/MIV_RV32IMA_L1_AHB_ASYNC_RESET_SYNCHRONIZER_SHIFT_REG_W1_D3_I0/sync_0/reg_0/q |
+| 226    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmiXing_auto_out_a_bits_address[3]                                                         |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmiXing/MIV_RV32IMA_L1_AHB_ASYNC_QUEUE_SINK/deq_bits_reg/sync_0[39]                        |
+| 136    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend_auto_icache_master_out_a_bits_address[12]                                                    |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/refill_addr[12]                                                                       |
+| 133    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmiXing_auto_out_a_bits_address[2]                                                         |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/debug_1/dmInner/dmiXing/MIV_RV32IMA_L1_AHB_ASYNC_QUEUE_SINK/deq_bits_reg/sync_0[38]                        |
+| 128    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/un1__GEN_13_2_sqmuxa_or                                                               |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/refill_one_beat_RNI578O                                                               |
+| 128    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/N_3079_i                                                                              |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/vb_array_689_fast                                                                     |
+| 128    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/_T_232_Z                                                                              |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/frontend/icache/_T_232                                                                                |
+| 128    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/clint/_T_448_Z                                                                                             |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/clint/_T_448                                                                                               |
+| 105    | INT_NET | Net   : MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/genblk1.core/un1__T_1900_1_1_i                                                                        |
+|        |         | Driver: MIV_RV32IMA_L1_AHB_C0_0/MIV_RV32IMA_L1_AHB_C0_0/ChiselTop0/tile/genblk1.core/div/ex_pc_valid_RNISDAB                                                                  |
++--------+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+

@@ -1,0 +1,29 @@
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+2 non-gated/non-generated clock tree(s) driving 18 clock pin(s) of sequential element(s)
+3 gated/generated clock tree(s) driving 4596 clock pin(s) of sequential element(s)
+0 instances converted, 4596 sequential instances remain driven by gated/generated clocks
+
+=================================================================================================== Non-Gated/Non-Generated Clocks ===================================================================================================
+Clock Tree ID     Driving Element                                                                           Drive Element Type           Fanout     Sample Instance                                                                   
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0004       CoreJTAGDebug_TRST_C0_0.CoreJTAGDebug_TRST_C0_0.genblk1\.genblk1\.genblk1\.UJTAG_inst     UJTAG                        17         CoreJTAGDebug_TRST_C0_0.CoreJTAGDebug_TRST_C0_0.genblk3\.genblk1\.UJ_JTAG.count[0]
+@K:CKID0005       REF_CLK                                                                                   clock definition on port     1          PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0                                                
+======================================================================================================================================================================================================================================
+========================================================================================================================================= Gated/Generated Clocks =========================================================================================================================================
+Clock Tree ID     Driving Element                                                                        Drive Element Type     Fanout     Sample Instance                                                                                         Explanation                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0                                                     PLL                    4283       CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_12                                                              No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0002       MIV_RV32IMA_L1_AHB_C0_0.MIV_RV32IMA_L1_AHB_C0_0.TCK                                    port                   171        MIV_RV32IMA_L1_AHB_C0_0.MIV_RV32IMA_L1_AHB_C0_0.ChiselTop0.dtm.dmiReqReg_addr[0]                        No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0003       MIV_RV32IMA_L1_AHB_C0_0.MIV_RV32IMA_L1_AHB_C0_0.ChiselTop0.debug_1.io_dmi_dmiClock     port                   142        MIV_RV32IMA_L1_AHB_C0_0.MIV_RV32IMA_L1_AHB_C0_0.ChiselTop0.debug_1.dmOuter.source1.mem_0_hartsel[0]     No gated clock conversion method for cell cell:ACG4.SLE
+==========================================================================================================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
