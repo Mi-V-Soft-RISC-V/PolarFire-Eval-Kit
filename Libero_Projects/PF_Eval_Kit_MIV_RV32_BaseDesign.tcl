@@ -30,7 +30,6 @@ set dieType [verify_dieType $dieType]
 set cpuGroup [expr {$softCpu eq "MIV_RV32" ? "MIV_RV32" : "MIV_Legacy"}]
 set sdBuildScript [get_config_builder $config $validConfigs $cpuGroup]
 get_die_configuration $hwPlatform $dieType
-set cpuRef [string range $softCpu 0 [expr [string first "_" $softCpu 5] - 1]]
 print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlow $dieType \nDesign Build Script: $sdBuildScript"
 
 # Configure Libero project files and directories
