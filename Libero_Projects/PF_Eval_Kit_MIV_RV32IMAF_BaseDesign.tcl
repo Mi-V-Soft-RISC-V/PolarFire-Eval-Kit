@@ -36,6 +36,7 @@ print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlo
 append projectName $hwPlatform _ $dieType _ $cpuRef _ $config _ $sdName
 append projectFolderName [expr { ($dieType eq "PS" ) ? "${cpuRef}_${config}_BD" : "${cpuRef}_${config}_BD_ES"}]
 set projectDir $scriptDir/$projectFolderName
+puts "Info: softCpu: $softCpu"
 puts "Info: projectName: $projectName"
 puts "Info: projectFolderName: $projectFolderName"
 puts "Info: projectDir: $projectDir"
