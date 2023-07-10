@@ -6,6 +6,17 @@ This folder contains Tcl scripts that build Libero SoC v2023.1 design projects f
 > * For **Design Guide Configuration - DGC3: PF uPROM Boot** refer to this [DGC3 README](../docs//design_dgc3/README.md)
 > * For **Design Guide Configuration - DGC4: Basic Peripherals** refer to this [DGC4 README](../docs//design_dgc4/README.md)
 
+## Notice
+Due to an issues found in the MIV_RV32 v3.1.100 with the MTVECs address, it is not recommended to use MIV_RV32 v3.1.100 for any FreeRTOS examples. A new version of the MIV_RV32 will be released to fix this issue. 
+There is also an issue when using fast interrupts where the return address can become corrupted, there is a change in entry.S file that can be applied as a workaround, but this will also be fixed in the same release as the MTVEC issue. 
+
+.macro STORE_CONTEXT  
+  addi sp, sp, -SP_SHIFT_OFFSET*REGBYTES  
+  SREG x1, 0 * REGBYTES(sp)  
+  SREG x1, 0 * REGBYTES(sp) // re-write the return address.  
+  SREG x2, 1 * REGBYTES(sp)  
+  SREG x3, 2 * REGBYTES(sp)"  
+
 
 #### PF_Eval_Kit_MIV_RV32_BaseDesign
 
