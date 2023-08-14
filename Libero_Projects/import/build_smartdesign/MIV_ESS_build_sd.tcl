@@ -181,6 +181,7 @@ if {$config eq "DGC1"} {
 
 } elseif {$config eq "DGC4"} {
 	# Add scalar net connections
+	sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N ${softCpu}_${config}_C0_0:RESETN"
 	sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 CoreTimer_C0_0:PCLK" 
 	sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 CoreTimer_C1_0:PCLK" 
 	sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N CoreTimer_C0_0:PRESETn"
@@ -203,7 +204,6 @@ sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 ${sramM
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N ${sramMemComp}_C0_0:HRESETN"
 
 sd_connect_pins -sd_name ${sdName} -pin_names {"USER_RST" "CORERESET_PF_C0_0:EXT_RST_N"}
-sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N ${softCpu}_${config}_C0_0:RESETN"
 sd_connect_pins -sd_name ${sdName} -pin_names "CORERESET_PF_C0_0:FABRIC_RESET_N MIV_ESS_${config}_C0_0:PRESETN"
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_C0_0:TGT_TCK_0 ${softCpu}_${config}_C0_0:JTAG_TCK"
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_C0_0:TGT_TDI_0 ${softCpu}_${config}_C0_0:JTAG_TDI"
@@ -228,7 +228,6 @@ sd_connect_pins -sd_name ${sdName} -pin_names "GPIO_OUT MIV_ESS_${config}_C0_0:G
 # Add bus interface netconnections
 sd_connect_pins -sd_name ${sdName} -pin_names "MIV_ESS_${config}_C0_0:APB_0_mINITIATOR ${softCpu}_${config}_C0_0:APB_INITIATOR"
 sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:AHBL_M_TARGET ${sramMemComp}_C0_0:AHBSlaveInterface"
-
 
 # Re-enable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 1
