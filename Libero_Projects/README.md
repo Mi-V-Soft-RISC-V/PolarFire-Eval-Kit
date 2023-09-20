@@ -1,5 +1,5 @@
 # PolarFire Evaluation Kit Mi-V Sample FPGA Designs
-This folder contains Tcl scripts that build Libero SoC v2023.1 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All Configuration (CFG) design cores boot from memory at 0x8000_0000.
+This folder contains Tcl scripts that build Libero SoC v2023.2 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All Configuration (CFG) design cores boot from memory at 0x8000_0000.
 
 > MI-V Extended Subsystem Design Guide Configurations:
 > * For **Design Guide Configuration - DGC1: SPI Write & Boot** refer to this [DGC1 README](../docs//design_dgc1/README.md)
