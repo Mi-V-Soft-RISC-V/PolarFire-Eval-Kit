@@ -47,7 +47,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:*} -download_core -com
 "GL0_0_FABCLK_USED:true"  \
 "GL0_0_FREQ_SEL:false"  \
 "GL0_0_IS_USED:true"  \
-"GL0_0_OUT_FREQ:80"  \
+"GL0_0_OUT_FREQ:70"  \
 "GL0_0_PHASE_INDEX:0"  \
 "GL0_0_PHASE_SEL:false"  \
 "GL0_0_PLL_PHASE:0"  \

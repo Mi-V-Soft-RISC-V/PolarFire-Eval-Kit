@@ -2,7 +2,7 @@
 # Family: PolarFire
 # Part Number: MPF300TS-1FCG1152I
 # Create and Configure the core component AHBL_bus
-create_and_configure_core -core_vlnv {Actel:DirectCore:CoreAHBLite:6.1.101} -download_core -component_name {AHBL_bus} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:CoreAHBLite:5.6.105} -download_core -component_name {AHBL_bus} -params {\
 "HADDR_SHG_CFG:1"  \
 "M0_AHBSLOT0ENABLE:true"  \
 "M0_AHBSLOT1ENABLE:true"  \
