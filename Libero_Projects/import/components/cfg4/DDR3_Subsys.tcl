@@ -15,7 +15,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_DDR3:*} -download_c
 "CAS_LATENCY:9" \
 "CAS_WRITE_LATENCY:7" \
 "CCC_PLL_CLOCK_MULTIPLIER:6" \
-"CK_CA_ADDITIVE_OFFSET:0" \
+"CK_CA_ADDITIVE_OFFSET:4" \
 "CLOCK_DDR:660" \
 "CLOCK_PLL_REFERENCE:110.000" \
 "CLOCK_RATE:4" \
