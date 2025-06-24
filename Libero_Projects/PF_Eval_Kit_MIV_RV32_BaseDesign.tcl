@@ -15,7 +15,7 @@ set hwPlatform "PF_EVAL"
 set hwFamily "POLARFIRE"
 set softCpu "MIV_RV32"
 set cpuRef "MIV_RV32"
-set validConfigs [list "CFG1" "CFG2" "CFG3" "CFG4" "DGC1" "DGC3" "DGC4"]
+set validConfigs [list "CFG1" "CFG2" "CFG3" "DGC1" "DGC3" "DGC4"]
 set validDesignFlows [list "SYNTHESIZE" "PLACE_AND_ROUTE" "GENERATE_BITSTREAM" "EXPORT_PROGRAMMING_FILE"]
 set validDieTypes [list "PS" "ES" ""]
 set sdName {BaseDesign}

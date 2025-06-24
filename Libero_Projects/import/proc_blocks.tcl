@@ -106,9 +106,6 @@ proc get_config_builder {config validConfigs tclSdRef} {
             "CFG3" {
                 dict set configMapping $validConfig $tclSdRef
             }
-            "CFG4" {
-                dict set configMapping $validConfig "MIV_RV32_Crypto"
-            }
             "DGC1" -
             "DGC2" -
             "DGC3" -
@@ -198,11 +195,6 @@ proc download_required_direct_cores  {hwPlatform softCpu config} {
 	if {$softCpu eq "MIV_RV32IMA_L1_AHB"} {download_core -vlnv {Microsemi:MiV:MIV_RV32IMA_L1_AHB:2.3.100} -location {www.microchip-ip.com/repositories/DirectCore} }
 	if {$softCpu eq "MIV_RV32IMA_L1_AXI"} {download_core -vlnv {Microsemi:MiV:MIV_RV32IMA_L1_AXI:2.1.100} -location {www.microchip-ip.com/repositories/DirectCore} }
 	if {$softCpu eq "MIV_RV32IMAF_L1_AHB"} {download_core -vlnv {Microsemi:MiV:MIV_RV32IMAF_L1_AHB:2.1.100} -location {www.microchip-ip.com/repositories/DirectCore} }
-    if {($hwPlatform eq "PF_Eval_Kit") && ($config eq "CFG4")} {
-        download_core -vlnv {Actel:SystemBuilder:PF_DDR3:2.4.122} -location {www.microchip-ip.com/repositories/SgCore}
-        download_core -vlnv {Actel:DirectCore:CORESPI:5.2.104} -location {www.microchip-ip.com/repositories/SgCore} 
-        download_core -vlnv {Actel:DirectCore:COREAXI4INTERCONNECT:2.8.103} -location {www.microchip-ip.com/repositories/DirectCore}
-    }
 }
 
 proc update_param {config param_to_update value_to_set} {
