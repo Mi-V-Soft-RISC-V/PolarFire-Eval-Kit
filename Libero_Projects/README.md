@@ -1,5 +1,5 @@
 # PolarFire Evaluation Kit Mi-V Sample FPGA Designs
-This folder contains Tcl scripts that build Libero SoC v2024.2 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All Configuration (CFG) design cores boot from memory at 0x8000_0000.
+This folder contains Tcl scripts that build Libero SoC v2025.1 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All Configuration (CFG) design cores boot from memory at 0x8000_0000.
 
 > MI-V Extended Subsystem Design Guide Configurations:
 > * For **Design Guide Configuration - DGC1: SPI Write & Boot** refer to this [DGC1 README](../docs//design_dgc1/README.md)
@@ -13,7 +13,7 @@ This folder contains Tcl scripts that build Libero SoC v2024.2 design projects f
 | CFG1    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: MACC (Pipelined)</li><li>Interfaces: AHBL Initiator (mirrored), APB3 Initiator</li><li>Internal IRQs: 1</li><li>TCM: enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: Enabled</li><li>An example program is stored in the LSRAM to boot out the box</ul>|
 | CFG2    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IM</li><li>Multiplier: Fabric</li><li>Interfaces: AXI4 Master (mirrored), APB3 Initiator</li><li>Internal IRQs: 1</li><li>TCM: Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: Enabled</li><li>An example program is stored in the LSRAM to boot out the box</ul>|
 | CFG3    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: I</li><li>Multiplier: none</li><li>Interfaces: APB3 Initiator</li><li>Internal IRQs: 1</li><li>TCM: enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: Enabled</li></ul>|
-| CFG4    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: Fabric</li><li>Interfaces: AHBLite Master, APB3 Initiator, AXI4 Master</li><li>Internal IRQs: 0</li><li>TCM: Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>This design is supported on PolarFire production silicon. The design configuration is specifically for use with the User Crypto processor example firmware and the CoreSysServices_PF example firmware. The memory map of the design is printed in tcl console once the design is created.|
+
 
 ## <a name="quick"></a> Instructions
 
@@ -66,6 +66,7 @@ In the examples above the arguments "CFG1" and "CFG1 SYNTHESIZE PS" were entered
 | PS | Build a base design targeted for 'PS' die |
 | ES | Build a base design targeted for 'ES' die |
 
+Please note: Error messages will be generated if invalid arguments are applied.
 
 ## Design Features
 The Libero designs include the following features:
